@@ -46,4 +46,31 @@
         </div>
     </div>
 
+    <div class="title">
+        Our Teams
+    </div>
+
+    <div class="paragraph">
+        Lorem ipsum dolor sit amet consectetur. Pretium tempus aenean gravida diam non aliquam id ac phasellus. 
+        Cras dui velit pretium purus vitae ipsum in. Quisque nisi laoreet imperdiet mi aliquet.
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="img/pic.png" alt="Team Member 1" class="card-image">
+            <p class="card-description">Being an Innovator at Telkom, makes me an adaptive person and always</p>
+            <div class="name">CTO Komerce</div>
+        </div>
+        <div class="card">
+            <img src="img/pic.png" alt="Team Member 2" class="card-image">
+            <p class="card-description">Being an Innovator at Telkom, makes me an adaptive person and always</p>
+            <div class="name">CTO Komerce</div>
+        </div>
+        <div class="card">
+            <img src="img/pic.png" alt="Team Member 3" class="card-image">
+            <p class="card-description">Being an Innovator at Telkom, makes me an adaptive person and always</p>
+            <div class="name">CTO Komerce</div>
+        </div>
+    </div>
+
 <?php get_footer( ); ?>

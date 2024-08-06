@@ -265,3 +265,78 @@ h2.enlarged {
     margin: 0 auto; 
     border-radius: 15px;
 }
+
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.title {
+    color: var(--Grayscale-Main-Black, #333);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.paragraph {
+    color: var(--Grayscale-Dark-Grey, #626262);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    max-width: 600px;
+    margin: 0 auto 32px;
+}
+
+.card-container {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap; /* Membungkus card ke baris baru jika diperlukan */
+    justify-content: center;
+    max-width: 1000px; /* Maksimal lebar container card */
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 350px; /* ukuran default */
+    width: 250px;
+    padding: 16px;
+    border-radius: 12px;
+    background: var(--Grayscale-Off-White, #FFF);
+    box-shadow: 2px 2px 18px 0px rgba(0, 0, 0, 0.12);
+    color: var(--Gray-2, #4F4F4F);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: bottom center; /* Mengatur titik asal transformasi ke bawah */
+}
+
+.card:hover {
+    transform: scale(1.1); /* Membesar card */
+    box-shadow: 2px 2px 24px 0px rgba(0, 0, 0, 0.24);
+}
+
+.card-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card-description, .name {
+    margin-top: 8px;
+}

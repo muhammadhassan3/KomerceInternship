@@ -1,4 +1,4 @@
-<?php get_header( );?>
+<?php get_header(); ?>
 
 <div class="content-wrapper">
     <h1 class="main-heading">How’s Life at Komerce?</h1>
@@ -27,4 +27,4 @@
     <div class="text">Komtim Talent</div>
 </div>
 
-<?php get_footer( ); ?>
+<?php get_footer(); ?>

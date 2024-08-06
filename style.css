@@ -1,0 +1,121 @@
+
+:root {
+    --Komerce-Dark: #AB2900;
+    --Grayscale-Off-White: #FFF;
+    --Grayscale-Main-Black: #333;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.content-wrapper {
+    width: 858px;
+    margin: 20px auto; 
+    text-align: center;
+}
+
+.main-heading {
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+}
+
+.sub-heading {
+    color: var(--Grayscale-Dark-Grey, #626262);
+    text-align: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.styled-button {
+    display: flex;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--Komerce-Dark);
+    background: var(--Komerce-Dark);
+    color: var(--Grayscale-Off-White);
+    text-align: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 20px;
+    text-decoration: none; 
+}
+
+
+.styled-button:hover {
+    background-color: rgb(255, 45, 45);
+    border-color: darken(var(--Komerce-Dark), 10%); 
+}
+
+.styled-button:focus {
+    outline: 2px solid var(--Grayscale-Off-White); 
+    outline-offset: 2px;
+}
+
+.arrow-icon {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+
+.background-container {
+    width: 1240px; 
+    height: 827.418px; 
+    background: url('Assets/komerce-18\ 1.png') center / cover no-repeat, lightgray;
+    margin: 0 auto; 
+}
+
+
+.flex-container {
+    display: flex;
+    width: 100%;
+    padding: 32px 120px;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    background: var(--Komerce-Dark); /* Latar belakang kontainer */
+}
+
+
+.number {
+    color: var(--Grayscale-Off-White);
+    font-size: 60px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.text {
+    color: var(--Grayscale-Off-White);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+}

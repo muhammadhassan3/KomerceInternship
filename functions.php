@@ -20,7 +20,7 @@ function lintang_menus()
 
 function initStyle(){
     $version = wp_get_theme()->get("Version");
-    wp_enqueue_style("css", get_template_directory().'/style.css', array(), $version);
+    wp_enqueue_style("custom-css", get_template_directory_uri().'/style.css', array(), $version, "all");
 }
 add_action( 'init', 'lintang_menus' );
 add_action("wp_enqueue_scripts", 'initStyle')

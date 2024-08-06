@@ -22,7 +22,7 @@
             
         }
         ?>
-        <img src="<?php echo $logo[0] ?>" alt="Logo"  height="40" class="mb-3 mx-auto logo">
+        <img src="<?php echo $logo[0] ?>" alt="Logo"  height="40" class="mb-3.5 mt-2 mx-auto logo">
 
         <?php 
         // wp_nav_menu(
@@ -34,7 +34,7 @@
         //   )
         //   ); ?>
       </a>
-      <div class="collapse navbar-collapse justify-content-center">
+      <div class="collapse navbar-collapse justify-content-center mt-2">
         <ul class="navbar-nav">
           <li class=nav-item><a class='nav-link activate text-dark' aria-current='page' href='/'> Home</a></li>
           <?php 
@@ -70,8 +70,10 @@
           </li> -->
         </ul>
       </div>
-      <div class="d-flex align-items-center">
-        <a href="#" class="btn btn-danger ml-3">Hubungi Kami</a>
+      <div class="d-flex align-items-center" style="gap: 15px;">
+        <div class="ind_text" style="color: red;">ID</div>
+        <div>|</div>
+        <div class="en_text">EN</div>
       </div>
     </div>
   </nav>

@@ -1,6 +1,6 @@
 <?php wp_footer(  ); ?>
 <footer>
-    <div class="container d-flex flex-column ">
+    <div class="container d-flex flex-column mt-5 ">
         <ul>
             <?php
             if(function_exists('the_custom_logo'))
@@ -10,7 +10,7 @@
 
             }
             ?>
-            <img src="<?php echo $logo[0] ?>" alt="Logo"  height="40" class="mb-3 mx-auto logo">
+            <img src="<?php echo $logo[0] ?>" alt="Logo"  height="40" class="mb-3 logo">
         </ul>
 
         <div class="max-vw-100 row ">

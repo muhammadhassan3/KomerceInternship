@@ -6,7 +6,7 @@
 </div>
 
 <div class="button-container">
-    <a class="styled-button" href="howslife.php">
+    <a class="styled-button" href="#">
         <span class="text">Lets Go</span>
         <div class="arrow-icon">→</div>
     </a>
@@ -27,8 +27,8 @@
     <div class="text">Komtim Talent</div>
 </div>
 
- <div class="container">
-        <h1>Komerce Society</h1>
+ <div class="container d-flex flex-column mt-4">
+        <h1 class="justify-content-center">Komerce Society</h1>
         <div class="mb-3"></div>
         <div class="content">
             <div class="text-boxes">
@@ -46,7 +46,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="title mt-4">
         <h1>Our Teams</h1>
     </div>
 

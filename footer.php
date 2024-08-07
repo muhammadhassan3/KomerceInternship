@@ -1,5 +1,5 @@
 <?php wp_footer(  ); ?>
-<footer>
+<footer class="footer-container>
     <div class="container d-flex flex-column ">
         <ul>
             <?php
@@ -13,7 +13,7 @@
             <img src="<?php echo $logo[0] ?>" alt="Logo"  height="40" class="mb-3 mx-auto logo">
         </ul>
 
-        <div class="vw-100 row ms-1">
+        <div class="max-vw-100 row ">
             <div class="col-sm d-flex flex-column">
                 <div class="d-flex flex-row">
                     <img src="https://storage.googleapis.com/komerce/assets/LP-Komcard/location.svg" alt="location"
@@ -51,7 +51,7 @@
         </div>
     </div>
     <div class="h-divider"></div>
-    <div class="vw-100 d-flex flex-row justify-content-between b-0 p-1 container">
+    <div class="max-vw-100 d-flex flex-row justify-content-between ontainer">
         <p class="">Komerce</p>
         <p class=""> Copyright &copy 2024</p>
     </div>

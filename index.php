@@ -6,7 +6,7 @@
 </div>
 
 <div class="button-container">
-    <a class="styled-button" href="home.php">
+    <a class="styled-button" href="howslife.php">
         <span class="text">Lets Go</span>
         <div class="arrow-icon">→</div>
     </a>
@@ -46,8 +46,8 @@
         </div>
     </div>
 
-    <div class="title">
-        Our Teams
+    <div class="container">
+        <h1>Our Teams</h1>
     </div>
 
     <div class="paragraph">
@@ -57,17 +57,17 @@
 
     <div class="card-container">
         <div class="card">
-            <img src="img/pic.png" alt="Team Member 1" class="card-image">
+            <img src="Images/pic.jpeg" alt="Team Member 1" class="card-image">
             <p class="card-description">Being an Innovator at Telkom, makes me an adaptive person and always</p>
             <div class="name">CTO Komerce</div>
         </div>
         <div class="card">
-            <img src="img/pic.png" alt="Team Member 2" class="card-image">
+            <img src="Images/pic.jpeg" alt="Team Member 2" class="card-image">
             <p class="card-description">Being an Innovator at Telkom, makes me an adaptive person and always</p>
             <div class="name">CTO Komerce</div>
         </div>
         <div class="card">
-            <img src="img/pic.png" alt="Team Member 3" class="card-image">
+            <img src="Images/pic.jpeg" alt="Team Member 3" class="card-image">
             <p class="card-description">Being an Innovator at Telkom, makes me an adaptive person and always</p>
             <div class="name">CTO Komerce</div>
         </div>

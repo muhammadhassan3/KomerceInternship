@@ -1,4 +1,3 @@
-<script>
         // JavaScript code to add the 'visible' class when elements are in viewport
         document.addEventListener('DOMContentLoaded', function() {
             const elements = document.querySelectorAll('.fade-in');
@@ -15,8 +14,6 @@
             window.addEventListener('scroll', checkVisibility);
             checkVisibility(); // Initial check
         });
-    </script>
-     <script>
         // JavaScript code to add 'enlarged' class on hover for h2 elements
         document.addEventListener('DOMContentLoaded', function() {
             const headings = document.querySelectorAll('h2');
@@ -31,8 +28,6 @@
                 });
             });
         });
-    </script>
-    <script>
         // JavaScript code to add 'hover' class on hover for the h1 element
         document.addEventListener('DOMContentLoaded', function() {
             const heading = document.querySelector('h1');
@@ -45,10 +40,8 @@
                 heading.classList.remove('hover');
             });
         });
-    </script>
 
-    <!-- script fade menu -->
-    <script>
+    // script fade menu 
       // script.js
         document.addEventListener('DOMContentLoaded', () => {
             const menuItems = document.querySelectorAll('.menu-item');
@@ -63,5 +56,3 @@
                 });
             });
         });
-
-    </script>

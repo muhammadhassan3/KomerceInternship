@@ -81,9 +81,12 @@
     </div>
 
     <div class="paragraph">
-    Lorem ipsum dolor sit amet consectetur. Pretium tempus aenean gravida diam non aliquam id 
-    ac phasellus. Cras dui velit pretium purus vitae ipsum in. Quisque nisi laoreet imperdiet mi aliquet 
+    <p > Lorem ipsum dolor sit amet consectetur. Pretium tempus aenean gravida diam non aliquam id 
+    ac phasellus. Cras dui velit pretium purus vitae ipsum in. Quisque nisi laoreet imperdiet mi aliquet  </p>
     </div>
 
+    <div class="background-container2">
+    <!-- Konten lainnya bisa ditambahkan di sini -->
+</div>
 
 <?php get_footer( ); ?>

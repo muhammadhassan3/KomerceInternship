@@ -106,11 +106,12 @@
                         </div>
                 </div>
             <p>Registered in</p>
-                <div class="d-flex flex-row mb-2">
+                <div class="d-flex flex-column mb-2">
                     <?php 
                     $kominfo = get_template_directory_uri()."/Images/kominfo.png";  
                     ?>
-                    <img src=<?= $kominfo?> alt="Kominfo"height="48">
+                    <img src=<?= $kominfo?> alt="Kominfo" class="image-brand">
+                    <p><a>PSE Kominfo</a></p>
                 </div>
         </div>
             </div>

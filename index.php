@@ -67,19 +67,19 @@
         <div class="card ">
         <?php $image = get_template_directory_uri()."/Images/pic.jpeg" ?>
         <img src=<?= $image?> alt="Team Member 1" class="card-image">
-            <p class="card-description">Being an Innovator at Telkom, makes me an adaptive person and always</p>
+            <p class="paragraph">Being an Innovator at Telkom, makes me an adaptive person and always</p>
             <div class="name">CTO Komerce</div>
         </div>
         <div class="card">
         <?php $image = get_template_directory_uri()."/Images/pic.jpeg" ?>
         <img src=<?= $image?> alt="Team Member 2" class="card-image">
-            <p class="card-description">Being an Innovator at Telkom, makes me an adaptive person and always</p>
+            <p class="paragraph">Being an Innovator at Telkom, makes me an adaptive person and always</p>
             <div class="name">CTO Komerce</div>
         </div>
         <div class="card">
         <?php $image = get_template_directory_uri()."/Images/pic.jpeg" ?>
             <img src=<?= $image?> alt="Team Member 3" class="card-image">
-            <p class="card-description">Being an Innovator at Telkom, makes me an adaptive person and always</p>
+            <p class="paragraph">Being an Innovator at Telkom, makes me an adaptive person and always</p>
             <div class="name">CTO Komerce</div>
         </div>
     </div>

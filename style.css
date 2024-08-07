@@ -68,7 +68,6 @@ header {
     text-decoration: none; 
 }
 
-
 .styled-button:hover {
     background-color: rgb(255, 45, 45);
     border-color: darken(var(--Komerce-Dark), 10%); 
@@ -93,8 +92,11 @@ header {
     height: 500px; 
     margin: 0 auto;
     margin-top: 35px; 
+    background: center / cover no-repeat, lightgray;
+}
+
+.background-image{
     border-radius: 15px 15px 0px 0px;
-    
 }
 
 .flex-container {
@@ -144,7 +146,7 @@ h1 {
     margin-top: 200px;
 }
 .margin2 {
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 /* h1::after {
@@ -261,8 +263,12 @@ ul .nav-item{
 .background-containers {
     width: 1096px;
     height: 579.331px;
-    
+    background: center / cover no-repeat, lightgray;;
     margin: 0 auto; 
+   
+}
+
+.background-image1{
     border-radius: 15px;
 }
 

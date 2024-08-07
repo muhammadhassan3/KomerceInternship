@@ -13,9 +13,9 @@
     </a>
 </div>
 
-<div class="background-container center / cover no-repeat, lightgray;">
+<div class="background-container">
     <?php $image = get_template_directory_uri()."/Images/komerce.jpeg" ?>
-    <img src=<?= $image?> alt="Komerce">
+    <img src=<?= $image?> alt="Komerce" class="background-image1">
 </div>
 
 <div class="flex-container">
@@ -45,9 +45,9 @@
                     <h2>What we do?</h2>
                 </div>
             </div>
-            <div class="background-containers center / cover no-repeat, lightgray;">
+            <div class="background-containers ">
                 <?php $image = get_template_directory_uri()."/Images/komerce-team.png" ?>
-                <img src=<?= $image?> alt="KomerceTeam" >
+                <img src=<?= $image?> alt="KomerceTeam" class="background-containers ">
             </div>
         </div>
     </div>

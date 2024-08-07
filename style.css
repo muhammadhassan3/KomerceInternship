@@ -92,7 +92,7 @@ header {
     height: 500px; 
     margin: 0 auto;
     margin-top: 35px; 
-    background: center / cover no-repeat, lightgray;
+    background: center / cover no-repeat;
 }
 
 .background-image{
@@ -263,7 +263,7 @@ ul .nav-item{
 .background-containers {
     width: 1096px;
     height: 579.331px;
-    background: center / cover no-repeat, lightgray;;
+    background: center / cover no-repeat;
     margin: 0 auto; 
    
 }

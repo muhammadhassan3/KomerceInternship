@@ -181,7 +181,8 @@ h1.hover::after {
 .text-boxes {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    position: absolute;
+    margin-top: 125px;
 }
 
 .text-box {
@@ -348,3 +349,4 @@ h2.enlarged {
 .h-divider {
     background-color : gray
 }
+

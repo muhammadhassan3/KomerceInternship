@@ -1,5 +1,6 @@
 <?php get_header( );?>
 
+<!-- hows life at komerce -->
 <div class="content-wrapper">
     <h1 class="main-heading">How’s Life at Komerce?</h1>
     <p class="sub-heading">Get an inside look into what working at Komerce is like!</p>
@@ -27,6 +28,9 @@
     <div class="text">Komtim Talent</div>
 </div>
 
+<!-- hows life at komerce -->
+
+<!-- Komerce Society -->
  <div class="container d-flex flex-column mt-4">
         <h1 class="justify-content-center">Komerce Society</h1>
         <div class="mb-3"></div>
@@ -45,7 +49,9 @@
             </div>
         </div>
     </div>
+    <!-- Komerce Society -->
 
+    <!-- Our Teams -->
     <div class="title mt-4">
         <h1>Our Teams</h1>
     </div>
@@ -75,7 +81,9 @@
             <div class="name">CTO Komerce</div>
         </div>
     </div>
+    <!-- Our Teams -->
 
+    <!-- Blog -->
     <div class="title mt-4">
         <h1>Blog</h1>
     </div>
@@ -84,9 +92,28 @@
     <p > Lorem ipsum dolor sit amet consectetur. Pretium tempus aenean gravida diam non aliquam id 
     ac phasellus. Cras dui velit pretium purus vitae ipsum in. Quisque nisi laoreet imperdiet mi aliquet  </p>
     </div>
+    
+    <!-- Blog -->
 
+
+    <!-- Photos -->
     <div class="background-container2">
-    <!-- Konten lainnya bisa ditambahkan di sini -->
+        <div class="background1">
+    <div class="content">
+            <div class="text-boxes ms-5">
+                <div class="ms-5 mt-5">
+                    <div class="mt-5">
+                <div class="text-box2 text-white">
+                    <h2>“We have the resources to go as far as we want with ideas. And no idea is too crazy.”</h2>
+                    <br>
+                    <p>Is Nursamsi, Lead Front-End Engineer</p>
+                </div>
+            </div>
+</div>
+            </div>
+            </div>
+        </div>
+    <!-- Photos -->
 </div>
 
 <?php get_footer( ); ?>

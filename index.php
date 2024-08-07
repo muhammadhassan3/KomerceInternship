@@ -55,22 +55,35 @@
         Cras dui velit pretium purus vitae ipsum in. Quisque nisi laoreet imperdiet mi aliquet.
     </div>
 
-    <div class="card-container">
-        <div class="card">
-            <img src="Images/pic.jpeg" alt="Team Member 1" class="card-image">
+    <div class="card-container mt-5">
+        <div class="card ">
+        <?php $image = get_template_directory_uri()."/Images/pic.jpeg" ?>
+        <img src=<?= $image?> alt="Team Member 1" class="card-image">
             <p class="card-description">Being an Innovator at Telkom, makes me an adaptive person and always</p>
             <div class="name">CTO Komerce</div>
         </div>
         <div class="card">
-            <img src="Images/pic.jpeg" alt="Team Member 2" class="card-image">
+        <?php $image = get_template_directory_uri()."/Images/pic.jpeg" ?>
+        <img src=<?= $image?> alt="Team Member 2" class="card-image">
             <p class="card-description">Being an Innovator at Telkom, makes me an adaptive person and always</p>
             <div class="name">CTO Komerce</div>
         </div>
         <div class="card">
-            <img src="Images/pic.jpeg" alt="Team Member 3" class="card-image">
+        <?php $image = get_template_directory_uri()."/Images/pic.jpeg" ?>
+            <img src=<?= $image?> alt="Team Member 3" class="card-image">
             <p class="card-description">Being an Innovator at Telkom, makes me an adaptive person and always</p>
             <div class="name">CTO Komerce</div>
         </div>
     </div>
+
+    <div class="title mt-4">
+        <h1>Blog</h1>
+    </div>
+
+    <div class="paragraph">
+    Lorem ipsum dolor sit amet consectetur. Pretium tempus aenean gravida diam non aliquam id 
+    ac phasellus. Cras dui velit pretium purus vitae ipsum in. Quisque nisi laoreet imperdiet mi aliquet 
+    </div>
+
 
 <?php get_footer( ); ?>

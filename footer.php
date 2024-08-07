@@ -18,8 +18,13 @@
                 <div class="d-flex flex-row">
                     <img src="https://storage.googleapis.com/komerce/assets/LP-Komcard/location.svg" alt="location"
                          height="24" class="me-2">
-                    <p>Head Office Komerce<br>
-                        Purbalingga, Jawa Tengah (53355)</p>
+                    <p class="text-wrap">aHead Office Komerce<br>Sawah Tengah Street No. 3 Desa Tunjungmuli Kecamatan Karangmoncol<br>Kabupaten Purbalingga (53355)</p>
+                </div>
+                <div class="d-flex flex-row">
+                    <?php $image = get_template_directory_uri()."/Images/whatsapp.svg" ?>
+                    <img src=<?= $image?> alt="Phone number"
+                         height="24" class="me-2">
+                    <p>+62 813 6064 6002</p>
                 </div>
                 <div class="d-flex flex-row">
                     <img src="https://storage.googleapis.com/komerce/assets/LP-Komcard/sms.svg" alt="location"
@@ -29,18 +34,27 @@
             </div>
             <div class="col-sm row">
                 <div class="col d-flex flex-column">
-                    <h4>Perusahaan</h4>
+                    <h4>Company</h4>
                     <ul class="list-unstyled">
-                        <li><a href="http://google.com" class="nav-link">atu</a></li>
-                        <li>atu</li>
-                        <li>atu</li>
-                        <li>atu</li>
+                        <li><a href="http://google.com" class="nav-link">Event</a></li>
+                        <li>Affiliate</li>
+                        <li>Blog</li>
+                        <li>Career</li>
+                        <li>Social Impact</li>
                     </ul>
                 </div>
                 <div class="col d-flex flex-column">
-                    <h4>Produk</h4>
+                    <h4>Product</h4>
                     <ul class="list-unstyled">
-                        <li>atu</li>
+                        <li>Komtim</li>
+                        <li>Komship</li>
+                        <li>Kompack</li>
+                        <li>Komplace</li>
+                        <li>Komcards</li>
+                        <li>Product</li>
+                        <li>Komchat</li>
+                        <li>Komclass</li>
+                        <li>Pendamping UMKM</li>
                     </ul>
                 </div>
             </div>

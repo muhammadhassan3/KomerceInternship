@@ -38,14 +38,14 @@
       </a>
       <div class="collapse navbar-collapse justify-content-center mt-2">
         <ul class="navbar-nav">
-          <li class=nav-item><a class='nav-link activate text-dark' aria-current='page' href='/'> Home</a></li>
+          <li class="nav-item menu-item"><a class='nav-link activate text-dark' aria-current='page' href='/'> Home</a></li>
           <?php
           $menuLocation = get_nav_menu_locations();
           $menuId = $menuLocation['primary'];
           $menu = wp_get_nav_menu_items($menuId);
 
           foreach ($menu as $item) {
-            echo "<li class=nav-item><a class='nav-link activate text-dark' aria-current='page' href='" . $item->url . "'> " . $item->title . "</a></li>";
+            echo "<li class='nav-item menu-item'><a class='nav-link activate text-dark' aria-current='page' href='" . $item->url . "'> " . $item->title . "</a></li>";
           }
           ?>
           <!-- <li class="nav-item dropdown">
@@ -73,9 +73,9 @@
         </ul>
       </div>
       <div class="d-flex align-items-center" style="gap: 15px;">
-        <div class="ind_text" style="color: red;">ID</div>
+        <a  href="#" class="ind_text" style="color: red;">ID</a>
         <div>|</div>
-        <div class="en_text">EN</div>
+        <a href="#" class="en_text" style="color: #333;">EN</a>
       </div>
     </div>
   </nav>

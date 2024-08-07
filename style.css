@@ -94,6 +94,8 @@ header {
     height: 827.418px; 
     background: url('Images/komerce.jpeg') center / cover no-repeat, lightgray;
     margin: 0 auto; 
+    border-radius: 15px 15px 0px 0px;
+    
 }
 
 
@@ -104,7 +106,7 @@ header {
     justify-content: center;
     align-items: center;
     gap: 64px;
-    background: var(--Komerce-Dark); /* Latar belakang kontainer */
+    background: var(--Komerce-Dark); 
 }
 
 
@@ -259,7 +261,9 @@ h2.enlarged {
     background-color: #d0d0d0;
 }
 
-
+ul .nav-item{
+    cursor: pointer;
+}
 
 .background-containers {
     width: 1096px;
@@ -316,7 +320,7 @@ h2.enlarged {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 350px; 
+    height: 400px; 
     width: 250px;
     padding: 16px;
     border-radius: 12px;
@@ -351,3 +355,7 @@ h2.enlarged {
     background-color : gray
 }
 
+a {
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+}

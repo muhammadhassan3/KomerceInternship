@@ -92,7 +92,7 @@ header {
 .background-container {
     width: 1240px; 
     height: 827.418px; 
-    background: url('Images/komerce\ .jpeg') center / cover no-repeat, lightgray;
+    background: url('Images/komerce.jpeg') center / cover no-repeat, lightgray;
     margin: 0 auto; 
 }
 
@@ -263,7 +263,7 @@ h2.enlarged {
 .background-containers {
     width: 1096px;
     height: 579.331px;
-    background: url('/Images/komerce-team.png') center / cover no-repeat, lightgray;
+    background: url('Images/komerce-team.png') center / cover no-repeat, lightgray;
     margin: 0 auto; 
     border-radius: 15px;
 }

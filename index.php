@@ -32,6 +32,10 @@
         <div class="mb-3"></div>
         <div class="content">
             <div class="text-boxes">
+                
+            <div class="background-containers">
+                <img  class="fade-in background-containers">
+            </div>
                 <div class="text-box fade-in">
                     <h2>Who are we?</h2>
                     <p>We strongly believe that finding your purpose can be done by helping others achieve theirs. The impact we made for millions is the reason we come to work every day.</p>
@@ -39,9 +43,6 @@
                 <div class="text-box fade-in">
                     <h2>What we do?</h2>
                 </div>
-            </div>
-            <div class="background-containers">
-                <img  class="fade-in background-containers">
             </div>
         </div>
     </div>

@@ -1,5 +1,5 @@
 <?php wp_footer(  ); ?>
-<footer class="footer-container>
+<footer>
     <div class="container d-flex flex-column ">
         <ul>
             <?php
@@ -51,7 +51,7 @@
         </div>
     </div>
     <div class="h-divider"></div>
-    <div class="max-vw-100 d-flex flex-row justify-content-between ontainer">
+    <div class="max-vw-100 d-flex flex-row justify-content-between container">
         <p class="">Komerce</p>
         <p class=""> Copyright &copy 2024</p>
     </div>

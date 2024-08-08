@@ -2,7 +2,6 @@
 <footer>
     <div class="background-footer">
     <div class="container d-flex flex-column ">
-        <ul>
             <div class="mt-5">
             <?php
             if(function_exists('the_custom_logo'))
@@ -14,7 +13,6 @@
             ?>
             <img src="<?php echo $logo[0] ?>" alt="Logo"  height="40" class="mb-3 logo">
         </div>
-        </ul>
 
         <div class="max-vw-100 row ">
             <div class="col-sm d-flex flex-column">

@@ -1,7 +1,9 @@
 <?php wp_footer(  ); ?>
 <footer>
-    <div class="container d-flex flex-column mt-5 ">
+    <div class="background-footer">
+    <div class="container d-flex flex-column ">
         <ul>
+            <div class="mt-5">
             <?php
             if(function_exists('the_custom_logo'))
             {
@@ -11,6 +13,7 @@
             }
             ?>
             <img src="<?php echo $logo[0] ?>" alt="Logo"  height="40" class="mb-3 logo">
+        </div>
         </ul>
 
         <div class="max-vw-100 row ">
@@ -110,7 +113,7 @@
                     <?php 
                     $kominfo = get_template_directory_uri()."/Images/kominfo.png";  
                     ?>
-                    <img src=<?= $kominfo?> alt="Kominfo" class="image-brand">
+                    <img src=<?= $kominfo?> alt="Kominfo" class="image-brand-container">
                     <p><a>PSE Kominfo</a></p>
                 </div>
         </div>
@@ -124,6 +127,7 @@
             <p><a>Privacy Policy</a></p>>
         </div>
     </div>
+        </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

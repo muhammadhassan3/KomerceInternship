@@ -28,12 +28,11 @@
     <div class="number">500K</div>
     <div class="text">Komtim Talent</div>
 </div>
-
 <!-- hows life at komerce -->
 
 <!-- Komerce Society -->
  <div class="container d-flex flex-column mt-4">
-        <h1 class=" margin1 justify-content-center">Komerce Society</h1>
+        <h1 class=" margin1 justify-content-center h1-komerce-society">Komerce Society</h1>
         <div class="mb-3"></div>
         <div class="content">
             <div class="text-boxes">
@@ -50,7 +49,7 @@
                 <img src=<?= $image?> alt="KomerceTeam" class="background-containers ">
             </div>
         </div>
-    </div>
+    <!-- </div> -->
     <!-- Komerce Society -->
 
     <!-- Our Teams -->
@@ -94,14 +93,46 @@
     <p > Lorem ipsum dolor sit amet consectetur. Pretium tempus aenean gravida diam non aliquam id 
     ac phasellus. Cras dui velit pretium purus vitae ipsum in. Quisque nisi laoreet imperdiet mi aliquet  </p>
     </div>
-    
-    <!-- Blog -->
 
+    <div class="blog-container">
+    <div class="blog-posts">
+            <div class="blog-post">
+            <?php $image = get_template_directory_uri()."/Images/kerkom.jpeg" ?>
+            <img src=<?= $image?> alt="Blog Post" class="blog-image">
+                <h2 class="post-title">IOS Programming Languages : Advanced Techniques for iOS App Development</h2>
+                <p class="post-description">The tech industry has witnessed an increasing growth pace of innovation and revolution, affecting every segment of the industry. The tech industry has witnessed an increasing growth pace of innovation and revolution.</p>
+                <div class="post-info">
+                    <span class="post-date">28 February 2024</span>
+                    <span class="post-category">Tech Sharing</span>
+                </div>
+            </div>
+            <div class="blog-post">
+            <?php $image = get_template_directory_uri()."/Images/kerkom.jpeg" ?>
+            <img src=<?= $image?> alt="Blog Post" class="blog-image">
+                <h2 class="post-title">IOS Programming Languages : Advanced Techniques for iOS App Development</h2>
+                <p class="post-description">The tech industry has witnessed an increasing growth pace of innovation and revolution, affecting every segment of the industry. The tech industry has witnessed an increasing growth pace of innovation and revolution.</p>
+                <div class="post-info">
+                    <span class="post-date">28 February 2024</span>
+                    <span class="post-category">Tech Sharing</span>
+                </div>
+            </div>
+            <div class="blog-post">
+            <?php $image = get_template_directory_uri()."/Images/kerkom.jpeg" ?>
+            <img src=<?= $image?> alt="Blog Post" class="blog-image">
+                <h2 class="post-title">IOS Programming Languages : Advanced Techniques for iOS App Development</h2>
+                <p class="post-description">The tech industry has witnessed an increasing growth pace of innovation and revolution, affecting every segment of the industry. The tech industry has witnessed an increasing growth pace of innovation and revolution.</p>
+                <div class="post-info">
+                    <span class="post-date">28 February 2024</span>
+                    <span class="post-category">Tech Sharing</span>
+                </div>
+            </div>
+</div>
+</div>
     <!-- Blog -->
 
 
     <!-- Photos -->
-    <div class="background-container2">
+    <div class="background-container2 mt-5">
         <div class="background1">
     <div class="content">
             <div class="text-boxes ms-5">
@@ -113,11 +144,12 @@
                     <p>Is Nursamsi, Lead Front-End Engineer</p>
                 </div>
             </div>
-</div>
+        </div>
             </div>
             </div>
         </div>
+        </div>
     <!-- Photos -->
-</div>
+
 
 <?php get_footer( ); ?>

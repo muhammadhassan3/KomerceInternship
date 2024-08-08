@@ -15,7 +15,7 @@
         </div>
 
         <div class="max-vw-100 row ">
-            <div class="col-sm d-flex flex-column">
+            <div class="col-sm d-flex flex-column me-5">
                 <div class="d-flex flex-row">
                     <img src="https://storage.googleapis.com/komerce/assets/LP-Komcard/location.svg" alt="location"
                          height="24" class="me-2">
@@ -33,8 +33,8 @@
                     <p><a>contact@komerce.id</a></p>
                 </div>
             </div>
-            <div class="col-sm row">
-                <div class="col d-flex flex-column">
+            <div class="col-sm me-5 row">
+                <div class="col d-flex flex-column ms-4 ">
                     <h4>Company</h4>
                     <ul class="list-unstyled">
                         <li><a href="http://google.com" class="nav-link">Event</a></li>
@@ -44,7 +44,7 @@
                         <li><a>Social Impact</a></li>
                     </ul>
                 </div>
-                <div class="col d-flex flex-column">
+                <div class="col d-flex flex-column ms-5">
                     <h4>Product</h4>
                     <ul class="list-unstyled">
                         <li><a>Komtim</a></li>
@@ -59,7 +59,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-sm d-flex flex-column">
+            <div class="col-sm d-flex flex-column ms-5">
                 <p>Find Out Our Latest News</p>
                 <div class="d-flex flex-row mb-2">
                     <?php 

@@ -1,6 +1,7 @@
 <?php get_header( );?>
 
 <!-- hows life at komerce -->
+ <div class="background-container-ring">
 <div class="content-wrapper">
     <h1 class="main-heading">How’s Life at Komerce?</h1>
     <p class="sub-heading">Get an inside look into what working at Komerce is like!</p>
@@ -27,6 +28,7 @@
     <div class="text">Integrated Product</div>
     <div class="number">500K</div>
     <div class="text">Komtim Talent</div>
+</div>
 </div>
 <!-- hows life at komerce -->
 

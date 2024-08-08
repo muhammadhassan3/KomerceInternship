@@ -113,9 +113,9 @@
             <img src=<?= $image?> alt="Blog Post" class="blog-image">
                 <h2 class="post-title">IOS Programming Languages : Advanced Techniques for iOS App Development</h2>
                 <p class="post-description">The tech industry has witnessed an increasing growth pace of innovation and revolution, affecting every segment of the industry. The tech industry has witnessed an increasing growth pace of innovation and revolution.</p>
-                <div class="post-info">
-                    <span class="post-date">28 February 2024</span>
-                    <span class="post-category">Tech Sharing</span>
+                <div class="post-info mt-5">
+                    <span class="post-date border-date">28 February 2024</span>
+                    <span class="post-category ms-3 border-date">Tech Sharing</span>
                 </div>
             </div>
             <div class="blog-post">
@@ -123,9 +123,9 @@
             <img src=<?= $image?> alt="Blog Post" class="blog-image">
                 <h2 class="post-title">IOS Programming Languages : Advanced Techniques for iOS App Development</h2>
                 <p class="post-description">The tech industry has witnessed an increasing growth pace of innovation and revolution, affecting every segment of the industry. The tech industry has witnessed an increasing growth pace of innovation and revolution.</p>
-                <div class="post-info">
-                    <span class="post-date">28 February 2024</span>
-                    <span class="post-category">Tech Sharing</span>
+                <div class="post-info mt-5">
+                    <span class="post-date border-date">28 February 2024</span>
+                    <span class="post-category ms-3 border-date">Tech Sharing</span>
                 </div>
             </div>
             <div class="blog-post">
@@ -133,9 +133,9 @@
             <img src=<?= $image?> alt="Blog Post" class="blog-image">
                 <h2 class="post-title">IOS Programming Languages : Advanced Techniques for iOS App Development</h2>
                 <p class="post-description">The tech industry has witnessed an increasing growth pace of innovation and revolution, affecting every segment of the industry. The tech industry has witnessed an increasing growth pace of innovation and revolution.</p>
-                <div class="post-info">
-                    <span class="post-date">28 February 2024</span>
-                    <span class="post-category">Tech Sharing</span>
+                <div class="post-info mt-5">
+                    <span class="post-date border-date">28 February 2024</span>
+                    <span class="post-category ms-3 border-date">Tech Sharing</span>
                 </div>
             </div>
 </div>

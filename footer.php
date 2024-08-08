@@ -37,25 +37,25 @@
                 <div class="col d-flex flex-column ms-4 ">
                     <h4>Company</h4>
                     <ul class="list-unstyled">
-                        <li><a href="http://google.com" class="nav-link">Event</a></li>
-                        <li><a>Affiliate</a></li>
-                        <li><a>Blog</a></li>
-                        <li><a>Career</a></li>
-                        <li><a>Social Impact</a></li>
+                        <li><a href="https://komclass.id/" class="nav-link">Event</a></li>
+                        <li><a href="https://affiliate.komerce.id/">Affiliate</a></li>
+                        <li><a href="https://komerce.id/blog">Blog</a></li>
+                        <li><a href="https://www.linkedin.com/company/komerceid/jobs/">Career</a></li>
+                        <li><a href="https://komerce.id/impact">Social Impact</a></li>
                     </ul>
                 </div>
                 <div class="col d-flex flex-column ms-5">
                     <h4>Product</h4>
                     <ul class="list-unstyled">
-                        <li><a>Komtim</a></li>
-                        <li><a>Komship</a></li>
-                        <li><a>Kompack</a></li>
-                        <li><a>Komplace</a></li>
-                        <li><a>Komcards</a></li>
-                        <li><a>Product</a></li>
-                        <li><a>Komchat</a></li>
-                        <li><a>Komclass</a></li>
-                        <li><a>Pendamping UMKM</a></li>
+                        <li><a href="https://www.komtim.id/">Komtim</a></li>
+                        <li><a href="https://www.komship.id/">Komship</a></li>
+                        <li><a href="https://www.kompack.id/">Kompack</a></li>
+                        <li><a href="https://www.komplace.id/">Komplace</a></li>
+                        <li><a href="https://www.komcards.id/">Komcards</a></li>
+                        <li><a href="https://www.komform.id/">Komform</a></li>
+                        <li><a href="https://www.komchat.id/">Komchat</a></li>
+                        <li><a href="https://www.komclass.id/">Komclass</a></li>
+                        <li><a href="https://www.pendampingumkm.id/">Pendamping UMKM</a></li>
                     </ul>
                 </div>
             </div>
@@ -69,8 +69,9 @@
                     $linkedin = get_template_directory_uri()."/Images/Linkedln.svg"; 
                     $telegram = get_template_directory_uri()."/Images/Telegram.svg";       
                     ?>
+                    <a href="https://www.instagram.com/komerceid/">
                     <img src=<?= $instagram?> alt="Instagram"
-                    height="24" class="me-2">
+                    height="24" class="me-2"></a>
                     <img src=<?= $facebook?> alt="Facebook"
                     height="24" class="me-2">
                     <img src=<?= $youtube?> alt="Youtube"

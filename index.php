@@ -3,7 +3,7 @@
 <!-- hows life at komerce -->
  <div class="background-container-ring">
 <div class="content-wrapper">
-    <h1 class="main-heading">How’s Life at Komerce?</h1>
+    <h1 class="main-heading pt-5 ">How’s Life at Komerce?</h1>
     <p class="sub-heading">Get an inside look into what working at Komerce is like!</p>
 </div>
 
@@ -20,27 +20,36 @@
 </div>
 
 <div class="flex-container">
-    <div class="number">100</div>
-    <div class="text">Management Employee</div>
-    <div class="number">50K</div>
-    <div class="text">Product User</div>
-    <div class="number">12K</div>
-    <div class="text">Integrated Product</div>
-    <div class="number">500K</div>
-    <div class="text">Komtim Talent</div>
+        <div class="d-flex flex-row align-items-center">
+            <div class="number">100</div>
+            <div class="text ms-2">Management Employee</div>
+        </div>
+        <div class="d-flex flex-row align-items-center">
+            <div class="number">50K</div>
+            <div class="text ms-2">Product User</div>
+        </div>
+        <div class="d-flex flex-row align-items-center">
+            <div class="number">12K</div>
+            <div class="text ms-2">Integrated Product</div>
+        </div>
+        <div class="d-flex flex-row align-items-center">
+            <div class="number">500K</div>
+            <div class="text ms-2">Komtim Talent</div>
+        </div>
+    </div>
 </div>
 </div>
 <!-- hows life at komerce -->
 
 <!-- Komerce Society -->
  <div class="container d-flex flex-column mt-4">
-        <h1 class=" margin1 justify-content-center h1-komerce-society">Komerce Society</h1>
+        <h1 class=" margin1 justify-content-center h1-komerce-society underline-ks">Komerce Society</h1>
         <div class="mb-3"></div>
         <div class="content">
             <div class="text-boxes">
                 <div class="text-box">
                     <h2>Who are we?</h2>
-                    <p>We strongly believe that finding your purpose can be done by helping others achieve theirs.
+                    <p class="paragraph-whoarewe">We strongly believe that finding your purpose can be done by helping others achieve theirs.
                         The impact we made for millions is the reason we come to work every day.</p>
                 </div>
                 <div class="text-box">
@@ -69,19 +78,19 @@
         <div class="card ">
         <?php $image = get_template_directory_uri()."/Images/pic.jpeg" ?>
         <img src=<?= $image?> alt="Team Member 1" class="card-image">
-            <p class="paragraph">Being an Innovator at Telkom, makes me an adaptive person and always</p>
+            <p class="paragraph-whoarewe mt-3">Being an Innovator at Telkom, makes me an adaptive person and always</p>
             <div class="name">CTO Komerce</div>
         </div>
         <div class="card">
         <?php $image = get_template_directory_uri()."/Images/pic.jpeg" ?>
         <img src=<?= $image?> alt="Team Member 2" class="card-image">
-            <p class="paragraph">Being an Innovator at Telkom, makes me an adaptive person and always</p>
+            <p class="paragraph-whoarewe mt-3">Being an Innovator at Telkom, makes me an adaptive person and always</p>
             <div class="name">CTO Komerce</div>
         </div>
         <div class="card">
         <?php $image = get_template_directory_uri()."/Images/pic.jpeg" ?>
             <img src=<?= $image?> alt="Team Member 3" class="card-image">
-            <p class="paragraph">Being an Innovator at Telkom, makes me an adaptive person and always</p>
+            <p class="paragraph-whoarewe mt-3">Being an Innovator at Telkom, makes me an adaptive person and always</p>
             <div class="name">CTO Komerce</div>
         </div>
     </div>
@@ -98,7 +107,7 @@
     </div>
 
     <div class="blog-container">
-    <div class="blog-posts">
+    <div class="blog-posts ">
             <div class="blog-post">
             <?php $image = get_template_directory_uri()."/Images/kerkom.jpeg" ?>
             <img src=<?= $image?> alt="Blog Post" class="blog-image">

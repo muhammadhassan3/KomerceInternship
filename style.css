@@ -24,7 +24,7 @@ body {
 
 .content-wrapper {
     width: 858px;
-    margin: 20px auto; 
+    margin: 0 auto 20px auto;
     text-align: center;
 }
 
@@ -115,7 +115,7 @@ body {
 .flex-container {
     display: flex;
     position: absolute;
-    margin-top: 20px;
+    margin-top: 0px;
     width: 100%;
     padding: 32px 120px;
     justify-content: center;
@@ -303,6 +303,17 @@ ul .nav-item{
     text-align: center;
 }
 
+
+.paragraph-whoarewe {
+    color: var(--Grayscale-Dark-Grey, #626262);
+    font-weight: 400;
+    line-height: 28px;
+    max-width: 800px;
+    margin: 0 auto 32px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+
 .card-container {
     display: flex;
     gap: 16px;
@@ -315,8 +326,8 @@ ul .nav-item{
 .card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 450px; 
+    /* align-items: center; */
+    height: 600px; 
     width: 400px;
     padding: 16px;
     border-radius: 12px;
@@ -344,7 +355,7 @@ ul .nav-item{
 
 .name {
     margin-top: 8px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .h-divider {
@@ -361,6 +372,22 @@ a {
     height: 1px;
 }
 
+.underline-ks {
+    display: inline-block;
+    position: relative;
+ }
+ 
+ .underline-ks::after{
+     content: '';
+     bottom: -4px;
+     left: 50%;
+     position: absolute;
+     height: 2px;
+     width: 26%;
+     background-color: var(--Komerce-Dark);
+     transform: translateX(-50%);
+     
+ }
 
 /* blog */
 
@@ -411,6 +438,16 @@ a {
 .blog-image {
     width: 100%;
     height: auto;
+}
+
+.background-linear-blog
+{
+    background: linear-gradient(178deg, rgba(255, 255, 255, 0.00) -55.31%, #000 104.98%);
+    display: inline-flex;
+    height: 266.664px;
+    padding: 190px 22px 31.664px 15px;
+    align-items: center;
+    flex-shrink: 0;   
 }
 
 .post-title {

@@ -210,7 +210,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
     .content {
         flex-direction: row;
         align-items: flex-start;
@@ -224,7 +224,7 @@ body {
     .image img {
         max-width: 500px;
     }
-} */
+}
 
 
 

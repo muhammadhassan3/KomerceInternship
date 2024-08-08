@@ -38,7 +38,8 @@
             <div class="text-boxes">
                 <div class="text-box">
                     <h2>Who are we?</h2>
-                    <p>We strongly believe that finding your purpose can be done by helping others achieve theirs. The impact we made for millions is the reason we come to work every day.</p>
+                    <p>We strongly believe that finding your purpose can be done by helping others achieve theirs.
+                        The impact we made for millions is the reason we come to work every day.</p>
                 </div>
                 <div class="text-box">
                     <h2>What we do?</h2>
@@ -49,7 +50,7 @@
                 <img src=<?= $image?> alt="KomerceTeam" class="background-containers ">
             </div>
         </div>
-    <!-- </div> -->
+    </div>
     <!-- Komerce Society -->
 
     <!-- Our Teams -->

@@ -109,7 +109,7 @@
 </div>
 
 <div class="blog-container">
-        <div class="blog-posts">
+        <div class="blog-posts ">
             <?php if (!empty($custom_posts)) : ?>
                 <?php foreach ($custom_posts as $post) : setup_postdata($post); ?>
                     <div class="blog-post">
@@ -136,7 +136,7 @@
                         </p>
                         <div class="post-info mt-5">
                             <span class="post-date border-date"><?php echo get_the_date('d F Y', $post->ID); ?></span>
-                            <span class="post-category ms-3 border-date"><?php echo get_the_category_list(', ', '', $post->ID); ?></span>
+                            <span class="post-category ms-3 border-date"><?php echo get_the_category_by_ID($post->ID); ?></span>
                         </div>
                     </div>
                 <?php endforeach; wp_reset_postdata(); ?>

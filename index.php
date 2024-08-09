@@ -115,10 +115,10 @@
             <div style="position: relative;"> <!-- Container untuk memposisikan label di atas gambar -->
                 <img src=<?= $image?> alt="Blog Post" class="blog-image">
                 <div class="label-red">
-                    <span class="label-text">Advanced Techniques</span>
+                    <span class="label-text">IOS Programming Languages</span>
                 </div>
                 <div>
-                    <span class="sub-label-text">iOS App Development</span>
+                    <span class="sub-label-text">Advanced Techniques for iOS App Development</span>
                 </div>
             </div>
             <h2 class="post-title">IOS Programming Languages : Advanced Techniques for iOS App Development</h2>
@@ -134,10 +134,10 @@
             <div style="position: relative;"> <!-- Container untuk memposisikan label di atas gambar -->
                 <img src=<?= $image?> alt="Blog Post" class="blog-image">
                 <div class="label-red">
-                    <span class="label-text">Advanced Techniques</span>
+                    <span class="label-text">IOS Programming Languages</span>
                 </div>
                 <div>
-                    <span class="sub-label-text">iOS App Development</span>
+                    <span class="sub-label-text">Advanced Techniques for iOS App Development</span>
                 </div>
             </div>
             <h2 class="post-title">IOS Programming Languages : Advanced Techniques for iOS App Development</h2>
@@ -153,10 +153,10 @@
             <div style="position: relative;"> <!-- Container untuk memposisikan label di atas gambar -->
                 <img src=<?= $image?> alt="Blog Post" class="blog-image">
                 <div class="label-red">
-                    <span class="label-text">Advanced Techniques</span>
+                    <span class="label-text">IOS Programming Languages</span>
                 </div>
                 <div>
-                    <span class="sub-label-text">iOS App Development</span>
+                    <span class="sub-label-text">Advanced Techniques for iOS App Development</span>
                 </div>
             </div>
             <h2 class="post-title">IOS Programming Languages : Advanced Techniques for iOS App Development</h2>

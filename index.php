@@ -109,65 +109,42 @@
 </div>
 
 <div class="blog-container">
-    <div class="blog-posts">
-        <div class="blog-post">
-            <?php $image = get_template_directory_uri()."/Images/kerkom.jpeg" ?>
-            <div style="position: relative;"> <!-- Container untuk memposisikan label di atas gambar -->
-                <img src=<?= $image?> alt="Blog Post" class="blog-image">
-                <div class="label-red">
-                    <span class="label-text">IOS Programming Languages</span>
-                </div>
-                <div>
-                    <span class="sub-label-text">Advanced Techniques for iOS App Development</span>
-                </div>
-            </div>
-            <h2 class="post-title">IOS Programming Languages : Advanced Techniques for iOS App Development</h2>
-            <p class="post-description">The tech industry has witnessed an increasing growth pace of innovation and revolution, affecting every segment of the industry. The tech industry has witnessed an increasing growth pace of innovation and revolution.</p>
-            <div class="post-info mt-5">
-                <span class="post-date border-date">28 February 2024</span>
-                <span class="post-category ms-3 border-date">Tech Sharing</span>
-            </div>
-        </div>
-        
-        <div class="blog-post">
-            <?php $image = get_template_directory_uri()."/Images/kerkom.jpeg" ?>
-            <div style="position: relative;"> <!-- Container untuk memposisikan label di atas gambar -->
-                <img src=<?= $image?> alt="Blog Post" class="blog-image">
-                <div class="label-red">
-                    <span class="label-text">IOS Programming Languages</span>
-                </div>
-                <div>
-                    <span class="sub-label-text">Advanced Techniques for iOS App Development</span>
-                </div>
-            </div>
-            <h2 class="post-title">IOS Programming Languages : Advanced Techniques for iOS App Development</h2>
-            <p class="post-description">The tech industry has witnessed an increasing growth pace of innovation and revolution, affecting every segment of the industry. The tech industry has witnessed an increasing growth pace of innovation and revolution.</p>
-            <div class="post-info mt-5">
-                <span class="post-date border-date">28 February 2024</span>
-                <span class="post-category ms-3 border-date">Tech Sharing</span>
-            </div>
-        </div>
-        
-        <div class="blog-post">
-            <?php $image = get_template_directory_uri()."/Images/kerkom.jpeg" ?>
-            <div style="position: relative;"> <!-- Container untuk memposisikan label di atas gambar -->
-                <img src=<?= $image?> alt="Blog Post" class="blog-image">
-                <div class="label-red">
-                    <span class="label-text">IOS Programming Languages</span>
-                </div>
-                <div>
-                    <span class="sub-label-text">Advanced Techniques for iOS App Development</span>
-                </div>
-            </div>
-            <h2 class="post-title">IOS Programming Languages : Advanced Techniques for iOS App Development</h2>
-            <p class="post-description">The tech industry has witnessed an increasing growth pace of innovation and revolution, affecting every segment of the industry. The tech industry has witnessed an increasing growth pace of innovation and revolution.</p>
-            <div class="post-info mt-5">
-                <span class="post-date border-date">28 February 2024</span>
-                <span class="post-category ms-3 border-date">Tech Sharing</span>
-            </div>
+        <div class="blog-posts">
+            <?php if (!empty($custom_posts)) : ?>
+                <?php foreach ($custom_posts as $post) : setup_postdata($post); ?>
+                    <div class="blog-post">
+                        <div style="position: relative;">
+                            <?php
+                            if (has_post_thumbnail($post->ID)) {
+                                $image_url = get_the_post_thumbnail_url($post->ID, 'full');
+                            } else {
+                                $image_url = get_template_directory_uri() . "/Images/kerkom.jpeg";
+                            }
+                            ?>
+                            <img src="<?= esc_url($image_url); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" class="blog-image">
+                            
+                            <div class="label-red">
+                                <span class="label-text"><?php the_title(); ?></span> 
+                            </div>
+                            <div>
+                                <span class="sub-label-text"><?php echo substr(strip_tags(get_the_content()), 0, 15)."..." ?></span>
+                            </div>
+                        </div>
+                        <h2 class="post-title mt-3"><?php the_title(); ?></h2>
+                        <p class="post-description">
+                            <?php echo wp_trim_words(get_the_content(), 20, '...'); ?>
+                        </p>
+                        <div class="post-info mt-5">
+                            <span class="post-date border-date"><?php echo get_the_date('d F Y', $post->ID); ?></span>
+                            <span class="post-category ms-3 border-date"><?php echo get_the_category_list(', ', '', $post->ID); ?></span>
+                        </div>
+                    </div>
+                <?php endforeach; wp_reset_postdata(); ?>
+            <?php else : ?>
+                <strong>Sorry. No posts matching your criteria!</strong>
+            <?php endif; ?>
         </div>
     </div>
-</div>
 <!-- Blog -->
 
 

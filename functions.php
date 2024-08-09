@@ -29,6 +29,13 @@ function initStyle(){
     wp_enqueue_style("custom-css", get_template_directory_uri().'/style.css', array(), $version, "all");
 }
 
+$args = array(
+    'numberposts' => 3, 
+    'post_type'   => 'post', 
+    'post_status' => 'publish'
+);
+$custom_posts = get_posts($args);
+
 add_action( 'init', 'lintang_menus' );
 add_action("wp_enqueue_scripts", 'initStyle');
 add_action('wp_enqueue_scripts', 'theme_initScript');

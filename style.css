@@ -574,12 +574,12 @@ a {
     border-radius: 2px;
     background: var(--Komerce-Dark, #AB2900);
     position: absolute;  /* Memastikan label diposisikan di atas gambar */
-    top: 10px;  /* Menyesuaikan posisi dari atas */
+    top: 150px;  /* Menyesuaikan posisi dari atas */
     left: 10px;  /* Menyesuaikan posisi dari kiri */
     z-index: 2;  /* Memastikan label tetap di atas elemen lainnya */
 }
 
-.label-red .label-text {
+ .label-text {
     color: var(--Grayscale-Off-White, #FFF);
     font-family: "Plus Jakarta Sans";
     font-size: 12px;
@@ -588,12 +588,14 @@ a {
     line-height: normal;
 }
 
-.label-red .sub-label-text {
+ .sub-label-text {
     color: var(--Grayscale-Off-White, #FFF);
     font-family: "Plus Jakarta Sans";
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin-top: 4px;
+    top: 180px;
+    left: 10px;
+    position: absolute;
 }

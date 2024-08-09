@@ -5,6 +5,7 @@ function themelintang_theme_support()
     add_theme_support('custom-logo', array(
         "height" => 50
     ));
+    add_theme_support('post-thumbnails', array('post', 'page'));
 }
 add_action('after_setup_theme','themelintang_theme_support');
 

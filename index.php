@@ -14,9 +14,12 @@
     </a>
 </div>
 
-<div class="background-container">
-    <?php $image = get_template_directory_uri()."/Images/komerce.jpeg" ?>
-    <img src=<?= $image?> alt="Komerce" class="background-image1">
+<div class="background-video ">
+    <?php $video = get_template_directory_uri()."/Images/komship-yt.mp4" ?>
+    <div class="video-wrapper">
+            <video src=<?= $video?> alt="Komerce" class="background-image1" controls width="1200px"></video>
+    </div>
+    
 </div>
 
 <div class="flex-container">
@@ -97,50 +100,76 @@
     <!-- Our Teams -->
 
     <!-- Blog -->
-    <div class="title margin2">
-        <h1>Blog</h1>
-    </div>
-
-    <div class="paragraph">
-    <p > Lorem ipsum dolor sit amet consectetur. Pretium tempus aenean gravida diam non aliquam id 
-    ac phasellus. Cras dui velit pretium purus vitae ipsum in. Quisque nisi laoreet imperdiet mi aliquet  </p>
-    </div>
-
-    <div class="blog-container">
-    <div class="blog-posts ">
-            <div class="blog-post">
-            <?php $image = get_template_directory_uri()."/Images/kerkom.jpeg" ?>
-            <img src=<?= $image?> alt="Blog Post" class="blog-image">
-                <h2 class="post-title">IOS Programming Languages : Advanced Techniques for iOS App Development</h2>
-                <p class="post-description">The tech industry has witnessed an increasing growth pace of innovation and revolution, affecting every segment of the industry. The tech industry has witnessed an increasing growth pace of innovation and revolution.</p>
-                <div class="post-info mt-5">
-                    <span class="post-date border-date">28 February 2024</span>
-                    <span class="post-category ms-3 border-date">Tech Sharing</span>
-                </div>
-            </div>
-            <div class="blog-post">
-            <?php $image = get_template_directory_uri()."/Images/kerkom.jpeg" ?>
-            <img src=<?= $image?> alt="Blog Post" class="blog-image">
-                <h2 class="post-title">IOS Programming Languages : Advanced Techniques for iOS App Development</h2>
-                <p class="post-description">The tech industry has witnessed an increasing growth pace of innovation and revolution, affecting every segment of the industry. The tech industry has witnessed an increasing growth pace of innovation and revolution.</p>
-                <div class="post-info mt-5">
-                    <span class="post-date border-date">28 February 2024</span>
-                    <span class="post-category ms-3 border-date">Tech Sharing</span>
-                </div>
-            </div>
-            <div class="blog-post">
-            <?php $image = get_template_directory_uri()."/Images/kerkom.jpeg" ?>
-            <img src=<?= $image?> alt="Blog Post" class="blog-image">
-                <h2 class="post-title">IOS Programming Languages : Advanced Techniques for iOS App Development</h2>
-                <p class="post-description">The tech industry has witnessed an increasing growth pace of innovation and revolution, affecting every segment of the industry. The tech industry has witnessed an increasing growth pace of innovation and revolution.</p>
-                <div class="post-info mt-5">
-                    <span class="post-date border-date">28 February 2024</span>
-                    <span class="post-category ms-3 border-date">Tech Sharing</span>
-                </div>
-            </div>
+<div class="title margin2">
+    <h1>Blog</h1>
 </div>
+
+<div class="paragraph">
+    <p>Lorem ipsum dolor sit amet consectetur. Pretium tempus aenean gravida diam non aliquam id ac phasellus. Cras dui velit pretium purus vitae ipsum in. Quisque nisi laoreet imperdiet mi aliquet</p>
 </div>
-    <!-- Blog -->
+
+<div class="blog-container">
+    <div class="blog-posts">
+        <div class="blog-post">
+            <?php $image = get_template_directory_uri()."/Images/kerkom.jpeg" ?>
+            <div style="position: relative;"> <!-- Container untuk memposisikan label di atas gambar -->
+                <img src=<?= $image?> alt="Blog Post" class="blog-image">
+                <div class="label-red">
+                    <span class="label-text">Advanced Techniques</span>
+                </div>
+                <div>
+                    <span class="sub-label-text">iOS App Development</span>
+                </div>
+            </div>
+            <h2 class="post-title">IOS Programming Languages : Advanced Techniques for iOS App Development</h2>
+            <p class="post-description">The tech industry has witnessed an increasing growth pace of innovation and revolution, affecting every segment of the industry. The tech industry has witnessed an increasing growth pace of innovation and revolution.</p>
+            <div class="post-info mt-5">
+                <span class="post-date border-date">28 February 2024</span>
+                <span class="post-category ms-3 border-date">Tech Sharing</span>
+            </div>
+        </div>
+        
+        <div class="blog-post">
+            <?php $image = get_template_directory_uri()."/Images/kerkom.jpeg" ?>
+            <div style="position: relative;"> <!-- Container untuk memposisikan label di atas gambar -->
+                <img src=<?= $image?> alt="Blog Post" class="blog-image">
+                <div class="label-red">
+                    <span class="label-text">Advanced Techniques</span>
+                </div>
+                <div>
+                    <span class="sub-label-text">iOS App Development</span>
+                </div>
+            </div>
+            <h2 class="post-title">IOS Programming Languages : Advanced Techniques for iOS App Development</h2>
+            <p class="post-description">The tech industry has witnessed an increasing growth pace of innovation and revolution, affecting every segment of the industry. The tech industry has witnessed an increasing growth pace of innovation and revolution.</p>
+            <div class="post-info mt-5">
+                <span class="post-date border-date">28 February 2024</span>
+                <span class="post-category ms-3 border-date">Tech Sharing</span>
+            </div>
+        </div>
+        
+        <div class="blog-post">
+            <?php $image = get_template_directory_uri()."/Images/kerkom.jpeg" ?>
+            <div style="position: relative;"> <!-- Container untuk memposisikan label di atas gambar -->
+                <img src=<?= $image?> alt="Blog Post" class="blog-image">
+                <div class="label-red">
+                    <span class="label-text">Advanced Techniques</span>
+                </div>
+                <div>
+                    <span class="sub-label-text">iOS App Development</span>
+                </div>
+            </div>
+            <h2 class="post-title">IOS Programming Languages : Advanced Techniques for iOS App Development</h2>
+            <p class="post-description">The tech industry has witnessed an increasing growth pace of innovation and revolution, affecting every segment of the industry. The tech industry has witnessed an increasing growth pace of innovation and revolution.</p>
+            <div class="post-info mt-5">
+                <span class="post-date border-date">28 February 2024</span>
+                <span class="post-category ms-3 border-date">Tech Sharing</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Blog -->
+
 
 
     <!-- Photos -->
@@ -150,17 +179,24 @@
             <div class="text-boxes ms-5">
                 <div class="ms-5 mt-5">
                     <div class="mt-5">
-                <div class="text-box2 text-white">
+                    <div class="text-box2 text-white">
                     <h2>“We have the resources to go as far as we want with ideas. And no idea is too crazy.”</h2>
-                    <br>
-                    <p>Is Nursamsi, Lead Front-End Engineer</p>
+                            <br></br>
+                            <p>Is Nursamsi, Lead Front-End Engineer</p>
+                            <br></br>
+                            <?php $image = get_template_directory_uri() . "/Images/play-circle.svg"; ?>
+                            <div class="video-container-circle">
+                                <a href="https://www.youtube.com/watch?v=SeHz-w4arGY" target="_blank">
+                                    <img src="<?= $image ?>" alt="Play" class="play-circle">
+                                </a>
+                                <p class="watch-text-circle">Watch the film</p>
+                            </div>
+                    </div>
+                    </div>
                 </div>
             </div>
-        </div>
-            </div>
-            </div>
-        </div>
-        </div>
+    </div>
+    </div>
     <!-- Photos -->
 
 

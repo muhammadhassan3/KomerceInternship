@@ -38,24 +38,24 @@
                     <h4>Company</h4>
                     <ul class="list-unstyled">
                         <li><a href="https://komclass.id/" class="nav-link">Event</a></li>
-                        <li><a href="https://affiliate.komerce.id/">Affiliate</a></li>
-                        <li><a href="https://komerce.id/blog">Blog</a></li>
-                        <li><a href="https://www.linkedin.com/company/komerceid/jobs/">Career</a></li>
-                        <li><a href="https://komerce.id/impact">Social Impact</a></li>
+                        <li><a href="https://affiliate.komerce.id/" class="nav-link">Affiliate</a></li>
+                        <li><a href="https://komerce.id/blog" class="nav-link">Blog</a></li>
+                        <li><a href="https://www.linkedin.com/company/komerceid/jobs/" class="nav-link">Career</a></li>
+                        <li><a href="https://komerce.id/impact" class="nav-link">Social Impact</a></li>
                     </ul>
                 </div>
                 <div class="col d-flex flex-column ms-5">
                     <h4>Product</h4>
                     <ul class="list-unstyled">
-                        <li><a href="https://www.komtim.id/">Komtim</a></li>
-                        <li><a href="https://www.komship.id/">Komship</a></li>
-                        <li><a href="https://www.kompack.id/">Kompack</a></li>
-                        <li><a href="https://www.komplace.id/">Komplace</a></li>
-                        <li><a href="https://www.komcards.id/">Komcards</a></li>
-                        <li><a href="https://www.komform.id/">Komform</a></li>
-                        <li><a href="https://www.komchat.id/">Komchat</a></li>
-                        <li><a href="https://www.komclass.id/">Komclass</a></li>
-                        <li><a href="https://www.pendampingumkm.id/">Pendamping UMKM</a></li>
+                        <li><a href="https://www.komtim.id/" class="nav-link">Komtim</a></li>
+                        <li><a href="https://www.komship.id/" class="nav-link">Komship</a></li>
+                        <li><a href="https://www.kompack.id/" class="nav-link">Kompack</a></li>
+                        <li><a href="https://www.komplace.id/" class="nav-link">Komplace</a></li>
+                        <li><a href="https://www.komcards.id/" class="nav-link">Komcards</a></li>
+                        <li><a href="https://www.komform.id/" class="nav-link">Komform</a></li>
+                        <li><a href="https://www.komchat.id/" class="nav-link">Komchat</a></li>
+                        <li><a href="https://www.komclass.id/" class="nav-link">Komclass</a></li>
+                        <li><a href="https://www.pendampingumkm.id/" class="nav-link">Pendamping UMKM</a></li>
                     </ul>
                 </div>
             </div>

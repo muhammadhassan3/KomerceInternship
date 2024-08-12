@@ -74,8 +74,8 @@
 
 
     <!-- Komerce Society -->
-    <div class="container d-flex flex-column mt-4">
-        <h1 class=" margin1 justify-content-center h1-komerce-society underline-ks">Komerce Society</h1>
+    <div class="container d-flex flex-column">
+        <h1 class="margin2 justify-content-center h1-komerce-society underline-ks">Komerce Society</h1>
         <div class="mb-3"></div>
         <div class="content">
             <div class="text-boxes">

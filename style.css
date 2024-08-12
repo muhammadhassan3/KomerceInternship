@@ -118,6 +118,7 @@ body {
 
 }
 
+
 .flex-container {
     display: flex;
     position: absolute;
@@ -128,6 +129,30 @@ body {
     align-items: center;
     background: var(--Komerce-Dark);
     overflow: hidden; /* Hide the overflowing content */
+}
+
+.play-indicator{
+    padding: 0 120px;
+    top: 42%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.play-icon{
+    background-color: var(--Komerce-Dark);
+    border-radius: 100%;
+    padding: 0;
+    width: 75px;
+    height: 75px;
+    transition: transform .2s;
+}
+
+.play-icon:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .marquee {
@@ -626,3 +651,6 @@ a {
 
 /* -------------------Label Blog-------------------- */
 
+
+
+/* css underline untuk menu */

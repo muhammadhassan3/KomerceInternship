@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="play-indicator">
-		        <?php $play = get_template_directory_uri()."/Images/play-circle.svg"?>
+		        <?php $play = get_template_directory_uri()."/Images/play-circle.png"?>
                 <img src="<?= $play?>" alt="Play icon" class="play-icon">
             </div>
         </div>
@@ -68,45 +68,6 @@
         </div>
     </div>
 
-        <div class="flex-container">
-            <div class="marquee">
-                <div class="marquee-content">
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="number">100</div>
-                        <div class="text ms-2">Management Employee</div>
-                    </div>
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="number">50K</div>
-                        <div class="text ms-2">Product User</div>
-                    </div>
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="number">12K</div>
-                        <div class="text ms-2">Integrated Product</div>
-                    </div>
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="number">500K</div>
-                        <div class="text ms-2">Komtim Talent</div>
-                    </div>
-                    <!-- Repeat the content for smooth looping -->
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="number">100</div>
-                        <div class="text ms-2">Management Employee</div>
-                    </div>
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="number">50K</div>
-                        <div class="text ms-2">Product User</div>
-                    </div>
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="number">12K</div>
-                        <div class="text ms-2">Integrated Product</div>
-                    </div>
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="number">500K</div>
-                        <div class="text ms-2">Komtim Talent</div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!-- hows life at komerce -->

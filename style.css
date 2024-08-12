@@ -121,13 +121,26 @@ body {
 .flex-container {
     display: flex;
     position: absolute;
-    margin-top: 0px;
+    top: 1000px;
     width: 100%;
     padding: 32px 120px;
     justify-content: center;
     align-items: center;
+    background: var(--Komerce-Dark);
+    overflow: hidden; /* Hide the overflowing content */
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee-content {
+    display: flex;
     gap: 64px;
-    background: var(--Komerce-Dark); 
+    width: calc(200% + 64px);
+    animation: marquee 20s linear infinite;
 }
 
 .number {
@@ -142,6 +155,15 @@ body {
     font-size: 20px;
     font-weight: 400;
     line-height: normal;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 /* hows life */
 
@@ -603,3 +625,4 @@ a {
 }
 
 /* -------------------Label Blog-------------------- */
+

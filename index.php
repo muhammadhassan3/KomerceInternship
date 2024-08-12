@@ -8,7 +8,7 @@
 </div>
 
 <div class="button-container">
-    <a class="styled-button" href="https://komerce.id/">
+    <a class="styled-button" href="https://komerce.id/blog/">
         <span class="text">Lets Go</span>
         <div class="arrow-icon">→</div>
     </a>
@@ -19,30 +19,49 @@
     <div class="video-wrapper">
             <video src=<?= $video?> alt="Komerce" class="background-image1" controls width="1200px"></video>
     </div>
-    
 </div>
 
 <div class="flex-container">
-        <div class="d-flex flex-row align-items-center">
-            <div class="number">100</div>
-            <div class="text ms-2">Management Employee</div>
-        </div>
-        <div class="d-flex flex-row align-items-center">
-            <div class="number">50K</div>
-            <div class="text ms-2">Product User</div>
-        </div>
-        <div class="d-flex flex-row align-items-center">
-            <div class="number">12K</div>
-            <div class="text ms-2">Integrated Product</div>
-        </div>
-        <div class="d-flex flex-row align-items-center">
-            <div class="number">500K</div>
-            <div class="text ms-2">Komtim Talent</div>
+    <div class="marquee">
+        <div class="marquee-content">
+            <div class="d-flex flex-row align-items-center">
+                <div class="number">100</div>
+                <div class="text ms-2">Management Employee</div>
+            </div>
+            <div class="d-flex flex-row align-items-center">
+                <div class="number">50K</div>
+                <div class="text ms-2">Product User</div>
+            </div>
+            <div class="d-flex flex-row align-items-center">
+                <div class="number">12K</div>
+                <div class="text ms-2">Integrated Product</div>
+            </div>
+            <div class="d-flex flex-row align-items-center">
+                <div class="number">500K</div>
+                <div class="text ms-2">Komtim Talent</div>
+            </div>
+            <!-- Repeat the content for smooth looping -->
+            <div class="d-flex flex-row align-items-center">
+                <div class="number">100</div>
+                <div class="text ms-2">Management Employee</div>
+            </div>
+            <div class="d-flex flex-row align-items-center">
+                <div class="number">50K</div>
+                <div class="text ms-2">Product User</div>
+            </div>
+            <div class="d-flex flex-row align-items-center">
+                <div class="number">12K</div>
+                <div class="text ms-2">Integrated Product</div>
+            </div>
+            <div class="d-flex flex-row align-items-center">
+                <div class="number">500K</div>
+                <div class="text ms-2">Komtim Talent</div>
+            </div>
         </div>
     </div>
 </div>
-</div>
 <!-- hows life at komerce -->
+
 
 <!-- Komerce Society -->
  <div class="container d-flex flex-column mt-4">
@@ -99,6 +118,7 @@
     </div>
     <!-- Our Teams -->
 
+
     <!-- Blog -->
 <div class="title margin2">
     <h1>Blog</h1>
@@ -141,7 +161,6 @@
                                 echo "<span class='post-category ms-3 border-date'>".$category->name."</span>";
                              }
                             ?>
-                            
                         </div>
                     </div>
                 <?php endforeach; wp_reset_postdata(); ?>

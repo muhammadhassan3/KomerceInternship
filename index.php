@@ -10,7 +10,9 @@
     <div class="button-container">
         <a class="styled-button" href="https://komerce.id/blog/">
             <span class="text">Lets Go</span>
-            <div class="arrow-icon">→</div>
+            <?php $image = get_template_directory_uri() . "/Images/arrow-right.png" ?>
+                <img src=<?= $image ?> alt="KomerceTeam" class="arrow-icon ">
+            <!-- <div class="arrow-icon">→</div> -->
         </a>
     </div>
 

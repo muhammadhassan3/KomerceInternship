@@ -38,16 +38,22 @@
       </a>
       <div class="collapse navbar-collapse justify-content-center mt-2">
         <ul class="navbar-nav">
-          <li class="nav-item menu-item"><a class='nav-link activate text-dark' aria-current='page' href='/'> Home</a></li>
-          <?php
-          $menuLocation = get_nav_menu_locations();
-          $menuId = $menuLocation['primary'];
-          $menu = wp_get_nav_menu_items($menuId);
+            <li class="nav-item navbar-item">
+                <a class='nav-link navbar-link navbar-link-active' aria-current='page' href='/'>Home</a>
+            </li>
+            <?php
+            $menuLocation = get_nav_menu_locations();
+            $menuId = $menuLocation['primary'];
+            $menu = wp_get_nav_menu_items($menuId);
+            $currentUrl = trailingslashit(home_url($wp->request));
 
-          foreach ($menu as $item) {
-            echo "<li class='nav-item menu-item'><a class='nav-link activate text-dark' aria-current='page' href='" . $item->url . "'> " . $item->title . "</a></li>";
-          }
-          ?>
+            foreach ($menu as $item) {
+                // Ensure trailing slash consistency
+                $itemUrl = trailingslashit($item->url);
+                $activeClass = ($itemUrl == $currentUrl) ? 'navbar-link-active' : '';
+                echo "<li class='nav-item navbar-item'><a class='nav-link navbar-link " . $activeClass . "' aria-current='page' href='" . $item->url . "'> " . $item->title . "</a></li>";
+            }
+            ?>
           <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="true">Produk</a>
             <ul class="dropdown-menu">

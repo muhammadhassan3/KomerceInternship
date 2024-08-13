@@ -71,7 +71,6 @@
             </div>
         </div>
     </div>
-
     </div>
 
     <!-- hows life at komerce -->
@@ -84,13 +83,16 @@
         <div class="content">
             <div class="text-boxes">
                 <div class="text-box">
-                    <h2>Who are we?</h2>
+                    <h2>Who are we? <?php $image = get_template_directory_uri() . "/Images/arrow-right.svg" ?>
+            <img src=<?= $image ?> alt="Team Member 1" class="ms-3"></h2>
+                   
                     <p class="paragraph-whoarewe">We strongly believe that finding your purpose can be done by helping
                         others achieve theirs.
                         The impact we made for millions is the reason we come to work every day.</p>
                 </div>
                 <div class="text-box">
-                    <h2>What we do?</h2>
+                    <h2>What we do?  <?php $image = get_template_directory_uri() . "/Images/arrow-right.svg" ?>
+            <img src=<?= $image ?> alt="Team Member 1" class="ms-3"></h2>
                 </div>
             </div>
             <div class="background-containers ">
@@ -169,7 +171,7 @@
                         </div>
                         <h2 class="post-title mt-3"><?php the_title(); ?></h2>
                         <p class="post-description">
-							<?php echo wp_trim_words( get_the_content(), 20, '...' ); ?>
+							<?php echo wp_trim_words( get_the_content(), 12, '...' ); ?>
                         </p>
                         <div class="post-info mt-5">
                             <span class="post-date border-date"><?php echo get_the_date( 'd F Y', $post->ID ); ?></span>
@@ -187,8 +189,6 @@
 			<?php endif; ?>
         </div>
     </div>
-
-
     <!-- Blog -->
 
 

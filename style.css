@@ -89,6 +89,13 @@ body {
     font-size: 16px;
 }
 
+.arrow-icon2 {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+}
+
 .background-container {
     width: 1240px; 
     height: 500px; 

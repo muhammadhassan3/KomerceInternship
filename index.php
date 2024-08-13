@@ -19,12 +19,14 @@
             <div class="background-video ">
 		        <?php $video = get_template_directory_uri() . "/Images/komship-yt.mp4" ?>
                 <div class="video-wrapper">
-                    <video src=<?= $video ?> alt="Komerce" class="background-image1" controls width="1200px"></video>
+                    <video id="background-video" src=<?= $video ?> alt="Komerce" class="background-image1"  width="1200px"></video>
                 </div>
             </div>
             <div class="play-indicator">
 		        <?php $play = get_template_directory_uri()."/Images/play-circle.png"?>
-                <img src="<?= $play?>" alt="Play icon" class="play-icon">
+                <img id="play-icon" src="<?= $play?>" alt="Play icon" class="play-icon">   
+                <?php $pause = get_template_directory_uri()."/Images/pause-circle.png"?>
+                <img id="pause-icon" src="<?= $pause?>" alt="Pause icon" class="pause-icon" style="display: none;">
             </div>
         </div>
         <div class="flex-container">
@@ -154,7 +156,7 @@
 							}
 							?>
                             <img src="<?= esc_url( $image_url ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>"
-                                 class="blog-image">
+                                 class="blog-image filter">
 
                             <div class="label-red">
                                 <span class="label-text"><?php the_title(); ?></span>
@@ -183,6 +185,8 @@
 			<?php endif; ?>
         </div>
     </div>
+
+
     <!-- Blog -->
 
 

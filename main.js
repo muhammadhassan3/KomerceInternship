@@ -60,6 +60,52 @@
 
         //script underline menu
 
+//script untuk mempay video
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var pauseIcon = document.getElementById("pause-icon");
+        var playIcon = document.getElementById("play-icon");
+        var video = document.getElementById("background-video");
+
+        playIcon.addEventListener("click", function() {
+        video.play();
+        playIcon.style.display = "none";
+        pauseIcon.style.display = "block";
+    });
+
+    pauseIcon.addEventListener("click", function() {
+        video.pause();
+        playIcon.style.display = "block";
+        pauseIcon.style.display = "none";
+    });
+
+    video.addEventListener("pause", function() {
+        playIcon.style.display = "block";
+        pauseIcon.style.display = "none";
+    });
+
+    video.addEventListener("play", function() {
+        playIcon.style.display = "none";
+        pauseIcon.style.display = "block";
+    });
+
+    // Tampilkan pause-icon saat kursor diarahkan ke video
+    video.addEventListener("mouseover", function() {
+        if (video.paused) {
+            pauseIcon.style.display = "none";
+        } else {
+            pauseIcon.style.display = "block";
+        }
+    });
+
+    // Sembunyikan pause-icon saat kursor keluar dari video
+    video.addEventListener("mouseout", function() {
+        if (!video.paused) {
+            pauseIcon.style.display = "none";
+        }
+    });
+        });
+
 
 
         

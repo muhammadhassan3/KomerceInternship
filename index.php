@@ -23,11 +23,11 @@
                 </div>
             </div>
             <div class="play-indicator">
-		        <?php $play = get_template_directory_uri()."/Images/play-circle.png"?>
-                <img id="play-icon" src="<?= $play?>" alt="Play icon" class="play-icon">   
+                <?php $play = get_template_directory_uri()."/Images/play-circle.png"?>
+                <img id="play-icon" src="<?= $play?>" alt="Play icon" class="play-icon">
                 <?php $pause = get_template_directory_uri()."/Images/pause-circle.png"?>
                 <img id="pause-icon" src="<?= $pause?>" alt="Pause icon" class="pause-icon" style="display: none;">
-            </div>
+    </div>
         </div>
         <div class="flex-container">
             <div class="marquee">
@@ -111,19 +111,19 @@
 
     <div class="card-container mt-5">
         <div class="card ">
-			<?php $image = get_template_directory_uri() . "/Images/pic.jpeg" ?>
+			<?php $image = get_template_directory_uri() . "/Images/Poto.png" ?>
             <img src=<?= $image ?> alt="Team Member 1" class="card-image">
             <p class="paragraph-whoarewe mt-3">Being an Innovator at Telkom, makes me an adaptive person and always</p>
             <div class="name">- Is Nur - Lead Front End</div>
         </div>
         <div class="card">
-			<?php $image = get_template_directory_uri() . "/Images/pic.jpeg" ?>
+			<?php $image = get_template_directory_uri() . "/Images/Poto.png" ?>
             <img src=<?= $image ?> alt="Team Member 2" class="card-image">
             <p class="paragraph-whoarewe mt-3">Being an Innovator at Telkom, makes me an adaptive person and always</p>
             <div class="name">- Satrio - CTO Komerce</div>
         </div>
         <div class="card">
-			<?php $image = get_template_directory_uri() . "/Images/pic.jpeg" ?>
+			<?php $image = get_template_directory_uri() . "/Images/Poto.png" ?>
             <img src=<?= $image ?> alt="Team Member 3" class="card-image">
             <p class="paragraph-whoarewe mt-3">Being an Innovator at Telkom, makes me an adaptive person and always</p>
             <div class="name">- Ragil - Lead Backend</div>

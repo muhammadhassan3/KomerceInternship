@@ -67,7 +67,7 @@
         var playIcon = document.getElementById("play-icon");
         var video = document.getElementById("background-video");
 
-        playIcon.addEventListener("click", function() {
+       playIcon.addEventListener("click", function() {
         video.play();
         playIcon.style.display = "none";
         pauseIcon.style.display = "block";
@@ -91,16 +91,14 @@
 
     // Tampilkan pause-icon saat kursor diarahkan ke video
     video.addEventListener("mouseover", function() {
-        if (video.paused) {
-            pauseIcon.style.display = "none";
-        } else {
+        if (!video.paused) {
             pauseIcon.style.display = "block";
         }
     });
 
     // Sembunyikan pause-icon saat kursor keluar dari video
     video.addEventListener("mouseout", function() {
-        if (!video.paused) {
+         if (!video.paused && !pauseIcon.contains(event.relatedTarget) && !video.contains(event.relatedTarget)) {
             pauseIcon.style.display = "none";
         }
     });

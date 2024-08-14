@@ -151,7 +151,6 @@
 			<?php if ( ! empty( $custom_posts ) ) : ?>
 				<?php foreach ( $custom_posts as $post ) : setup_postdata( $post ); ?>
                     <div class="blog-post">
-                        <div style="position: relative;">
 							<?php
 							if ( has_post_thumbnail( $post->ID ) ) {
 								$image_url = get_the_post_thumbnail_url( $post->ID, 'full' );
@@ -161,15 +160,14 @@
 							?>
                             <img src="<?= esc_url( $image_url ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>"
                                  class="blog-image filter">
-
                             <div class="label-red">
-                                <span class="label-text"><?php the_title(); ?></span>
+                                <span class="label-text"><?php echo substr( strip_tags( get_the_title() ), 0, 40 ). "..." ?></span>
                             </div>
                             <div>
                                 <span class="sub-label-text"><?php echo substr( strip_tags( get_the_content() ), 0, 15 ) . "..." ?></span>
                             </div>
-                        </div>
-                        <h2 class="post-title mt-3"><?php the_title(); ?></h2>
+                       
+                        <h2 class="post-title mt-3"><?php echo substr( strip_tags( get_the_title() ), 0, 20 ). "..." ?></h2>
                         <p class="post-description">
 							<?php echo wp_trim_words( get_the_content(), 12, '...' ); ?>
                         </p>

@@ -116,14 +116,14 @@
     <div class="card-container mt-5">
         <div class="card ">
 			<?php $image = get_template_directory_uri() . "/Images/Poto.png" ?>
-            <img src=<?= $image ?> alt="Team Member 1" class="card-image">
+            <img src=<?= $image ?> alt="Team Member 1" class="card-image ">
             <p class="paragraph-whoarewe mt-3">Being an Innovator at Telkom, makes me an adaptive person and always</p>
             <div class="name">- Is Nur - Lead Front End</div>
         </div>
         <div class="card">
 			<?php $image = get_template_directory_uri() . "/Images/Poto.png" ?>
-            <img src=<?= $image ?> alt="Team Member 2" class="card-image">
-            <p class="paragraph-whoarewe mt-3">Being an Innovator at Telkom, makes me an adaptive person and always</p>
+            <img src=<?= $image ?> alt="Team Member 2" class="card-image ">
+            <p class="paragraph-whoarewe mt-3">Being an Innovator at Telkom, makes me an adaptive person and always </p>
             <div class="name">- Satrio - CTO Komerce</div>
         </div>
         <div class="card">

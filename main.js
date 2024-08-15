@@ -104,6 +104,49 @@
     });
         });
 
+// Crud wordpress divisi dan jabatan
+
+jQuery(document).ready(function ($) {
+    $('.delete-divisi-link').on('click', function (e) {
+        e.preventDefault();
+        if (!confirm('Are you sure you want to delete this divisi?')) {
+            return;
+        }
+
+        var id = $(this).data('id');
+        $.post(divisiData.ajaxurl, {
+            action: 'delete_divisi',
+            nonce: divisiData.delete_nonce,
+            id: id
+        }, function (response) {
+            if (response.success) {
+                location.reload();
+            } else {
+                alert(response.data);
+            }
+        });
+    });
+
+    $('.delete-jabatan-link').on('click', function (e) {
+        e.preventDefault();
+        if (!confirm('Are you sure you want to delete this jabatan?')) {
+            return;
+        }
+
+        var id = $(this).data('id');
+        $.post(jabatanData.ajaxurl, {
+            action: 'delete_jabatan',
+            nonce: jabatanData.delete_nonce,
+            id: id
+        }, function (response) {
+            if (response.success) {
+                location.reload();
+            } else {
+                alert(response.data);
+            }
+        });
+    });
+});
 
 
         

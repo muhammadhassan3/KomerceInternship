@@ -604,6 +604,7 @@ a {
 .post-date, .post-category {
     display: inline-block;
      color: rgb(46, 43, 43);
+     height: auto;
 }
 
 .border-date {

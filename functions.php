@@ -98,18 +98,19 @@ function custom_data_menu() {
 add_action( 'admin_menu', 'custom_data_menu' );
 
 function custom_data_menu_jabatan() {
-	$page_title = 'Jabatan Management';
-	$menu_title = 'Jabatan Management';
+	$page_title = 'List Jabatan';
+	$menu_title = 'List Jabatan';
 	$capability = 'manage_options';
-	$menu_slug  = 'jabatan-management';
+	$menu_slug  = 'users.php';
 	$function   = 'custom_data_page_jabatan';
 	$icon_url   = 'dashicons-admin-generic';
 	$position   = 25;
 
-	add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
+//	add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
 
-	add_submenu_page( $menu_slug, 'Add New Jabatan', 'Add New', $capability, 'jabatan-add', 'custom_data_add_page_jabatan' );
-	add_submenu_page( $menu_slug, 'Edit Jabatan', 'Edit', $capability, 'jabatan-edit', 'custom_data_edit_page_jabatan' );
+	add_submenu_page( $menu_slug, $page_title, $menu_title, $capability, $menu_slug, $function );
+	add_submenu_page( $menu_slug, 'Add New Jabatan', 'Add New Jabatan', $capability, 'jabatan-add', 'custom_data_add_page_jabatan' );
+//	add_submenu_page( $menu_slug, 'Edit Jabatan', 'Edit', $capability, 'jabatan-edit', 'custom_data_edit_page_jabatan' );
 }
 
 add_action( 'admin_menu', 'custom_data_menu_jabatan' );
@@ -431,4 +432,22 @@ function add_jabatan_field_to_user_form( $form_type ) {
 add_action( 'user_new_form', 'add_jabatan_field_to_user_form' );
 add_action( 'show_user_profile', 'add_jabatan_field_to_user_form' );
 add_action( 'edit_user_profile_update', 'add_jabatan_field_to_user_form' );
+
+//Create table
+function createTables() {
+	global $wpdb;
+	$prefix       = $wpdb->prefix;
+	$jabatan_name = $prefix . "jabatan";
+	$divisi_name  = $prefix . "divisi";
+
+	maybe_create_table( $jabatan_name,
+		"CREATE TABLE " . $jabatan_name . " (id int NOT NULL AUTO_INCREMENT, nama_jabatan varchar(255) not null)"
+	);
+	maybe_create_table( $divisi_name,
+		"CREATE TABLE " . $divisi_name . " (id int NOT NULL AUTO_INCREMENT, nama_divisi varchar(255) not null)"
+	);
+}
+
+add_action("after_switch_theme", "createTables");
+
 ?>

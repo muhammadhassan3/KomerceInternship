@@ -452,7 +452,8 @@ function custom_user_menu_admin()
     $capability = 'manage_options';
     $menu_slug = 'users.php';
     $function = 'custom_user_page_admin';
-    add_submenu_page($menu_slug, $page_title, $menu_title, $capability, $menu_slug, $function);
+	remove_submenu_page($menu_slug, $menu_slug);
+    add_submenu_page($menu_slug, $page_title, $menu_title, $capability, $menu_slug, $function,0);
     // add_submenu_page($menu_slug, 'Add New Admin', 'Add New Admin', $capability, 'admin-add', 'custom_data_add_page_admin');
     // add_submenu_page($menu_slug, 'Edit Admin', 'Edit', $capability, 'admin-edit', 'custom_data_edit_page_admin');
 }

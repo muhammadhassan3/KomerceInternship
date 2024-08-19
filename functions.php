@@ -41,55 +41,18 @@ add_action( 'wp_enqueue_scripts', 'theme_initScript' );
 
 // CRUD WORDPRESS TANPA PLUGIN
 // tabel divisi dan jabatan
-function create_custom_table() {
-	global $wpdb;
-	$table_name      = $wpdb->prefix . 'divisi';
-	$charset_collate = $wpdb->get_charset_collate();
-
-	$sql = "CREATE TABLE $table_name (
-        id mediumint(9) NOT NULL AUTO_INCREMENT,
-        nama_divisi varchar(255) NOT NULL,
-        created_at datetime NOT NULL,
-        updated_at datetime NOT NULL,
-        PRIMARY KEY  (id)
-    ) $charset_collate;";
-
-	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-	dbDelta( $sql );
-}
-
-add_action( 'after_switch_theme', 'create_custom_table' );
-
-function create_custom_table_jabatan() {
-	global $wpdb;
-	$table_name      = $wpdb->prefix . 'jabatan';
-	$charset_collate = $wpdb->get_charset_collate();
-
-	$sql = "CREATE TABLE $table_name (
-        id mediumint(9) NOT NULL AUTO_INCREMENT,
-        nama_jabatan varchar(255) NOT NULL,
-        created_at datetime NOT NULL,
-        updated_at datetime NOT NULL,
-        PRIMARY KEY  (id)
-    ) $charset_collate;";
-
-	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-	dbDelta( $sql );
-}
-
-add_action( 'after_switch_theme', 'create_custom_table_jabatan' );
 
 // menu dan submenu divisi & jabatan
 function custom_data_menu() {
 	$page_title = 'Divisi Management';
 	$menu_title = 'Divisi Management';
 	$capability = 'manage_options';
-	$menu_slug  = 'divisi-management';
+	$menu_slug  = 'users.php';
 	$function   = 'custom_data_page';
 	$icon_url   = 'dashicons-admin-generic';
 	$position   = 25;
 
-	add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
+	add_submenu_page( $menu_slug, $page_title, $menu_title, $capability, "divisi-management", $function	);
 
 	add_submenu_page( $menu_slug, 'Add New Divisi', 'Add New', $capability, 'divisi-add', 'custom_data_add_page' );
 	add_submenu_page( $menu_slug, 'Edit Divisi', 'Edit', $capability, 'divisi-edit', 'custom_data_edit_page' );
@@ -103,14 +66,10 @@ function custom_data_menu_jabatan() {
 	$capability = 'manage_options';
 	$menu_slug  = 'users.php';
 	$function   = 'custom_data_page_jabatan';
-	$icon_url   = 'dashicons-admin-generic';
-	$position   = 25;
 
-//	add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
 
-	add_submenu_page( $menu_slug, $page_title, $menu_title, $capability, $menu_slug, $function );
+	add_submenu_page( $menu_slug, $page_title, $menu_title, $capability, "jabatan-management", $function );
 	add_submenu_page( $menu_slug, 'Add New Jabatan', 'Add New Jabatan', $capability, 'jabatan-add', 'custom_data_add_page_jabatan' );
-//	add_submenu_page( $menu_slug, 'Edit Jabatan', 'Edit', $capability, 'jabatan-edit', 'custom_data_edit_page_jabatan' );
 }
 
 add_action( 'admin_menu', 'custom_data_menu_jabatan' );
@@ -375,14 +334,32 @@ function delete_jabatan() {
 
 add_action( 'wp_ajax_delete_jabatan', 'delete_jabatan' );
 
-// fied divisi dan jabatan di users
+//Create table
+function createTables() {
+	global $wpdb;
+	$prefix       = $wpdb->prefix;
+	$jabatan_name = $prefix . "jabatan";
+	$divisi_name  = $prefix . "divisi";
+	require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+	maybe_create_table( $jabatan_name,
+		"CREATE TABLE " . $jabatan_name . " (id int NOT NULL AUTO_INCREMENT primary key, nama_jabatan varchar(255) not null, created_at datetime not null, updated_at datetime not null)"
+	);
+	maybe_create_table( $divisi_name,
+		"CREATE TABLE " . $divisi_name . " (id int NOT NULL AUTO_INCREMENT primary key, nama_divisi varchar(255) not null, created_at datetime not null, updated_at datetime not null)"
+	);
+}
+
+add_action("after_switch_theme", "createTables");
+
+//Add divisi and jabatan field
+
+// field divisi dan jabatan di users
 function add_divisi_field_to_user_form( $form_type ) {
 	if ( 'add-new-user' === $form_type ) {
 		global $wpdb;
 		$table_name  = $wpdb->prefix . 'divisi';
 		$divisi_list = $wpdb->get_results( "SELECT id, nama_divisi FROM $table_name ORDER BY nama_divisi ASC" );
 
-		// echo '<h3>Divisi</h3>';
 		echo '<table class="form-table">';
 		echo '<tr>';
 		echo '<th><label for="divisi">Divisi</label></th>';
@@ -433,21 +410,32 @@ add_action( 'user_new_form', 'add_jabatan_field_to_user_form' );
 add_action( 'show_user_profile', 'add_jabatan_field_to_user_form' );
 add_action( 'edit_user_profile_update', 'add_jabatan_field_to_user_form' );
 
-//Create table
-function createTables() {
-	global $wpdb;
-	$prefix       = $wpdb->prefix;
-	$jabatan_name = $prefix . "jabatan";
-	$divisi_name  = $prefix . "divisi";
+//Save custom fields
+//Save custom fields
+function theme_save_custom_field( $user_id ) {
 
-	maybe_create_table( $jabatan_name,
-		"CREATE TABLE " . $jabatan_name . " (id int NOT NULL AUTO_INCREMENT, nama_jabatan varchar(255) not null)"
-	);
-	maybe_create_table( $divisi_name,
-		"CREATE TABLE " . $divisi_name . " (id int NOT NULL AUTO_INCREMENT, nama_divisi varchar(255) not null)"
-	);
-}
-
-add_action("after_switch_theme", "createTables");
-
+	//	if ( ! isset( $_POST['_wpnonce'] ) || ! wp_verify_nonce( $_POST['_wpnonce'], 'create-user_' . $user_id ) ) {
+	//		return;
+	//	}
+	//	throw new Exception( "Error Processing Request", 1 );
+		if ( ! current_user_can( 'edit_user', $user_id ) ) {
+			return;
+		}
+		$check = get_user_meta( $user_id, 'divisi' );
+		if ( ! empty( $check ) ) {
+			update_user_meta( $user_id, 'divisi', sanitize_text_field( $_POST['divisi'] ) );
+		} else {
+			add_user_meta( $user_id, 'divisi', sanitize_text_field( $_POST['divisi'] ) );
+		}
+		$check = get_user_meta( $user_id, 'jabatan' );
+		if ( ! empty( $check ) ) {
+			update_user_meta( $user_id, 'jabatan', sanitize_text_field( $_POST['jabatan'] ) );
+		} else {
+			add_user_meta( $user_id, 'jabatan', sanitize_text_field( $_POST['jabatan'] ) );
+		}
+	}
+	
+	add_action( 'personal_options_update', 'theme_save_custom_field' );
+	add_action( 'user_register', 'theme_save_custom_field' );
+	add_action( 'edit_user_profile_update', 'theme_save_custom_field' );
 ?>

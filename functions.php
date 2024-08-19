@@ -44,8 +44,8 @@ add_action( 'wp_enqueue_scripts', 'theme_initScript' );
 
 // menu dan submenu divisi & jabatan
 function custom_data_menu() {
-	$page_title = 'Divisi Management';
-	$menu_title = 'Divisi Management';
+	$page_title = 'List Divisi';
+	$menu_title = 'Daftar Divisi';
 	$capability = 'manage_options';
 	$menu_slug  = 'users.php';
 	$function   = 'custom_data_page';
@@ -354,88 +354,84 @@ add_action("after_switch_theme", "createTables");
 //Add divisi and jabatan field
 
 // field divisi dan jabatan di users
-function add_divisi_field_to_user_form( $form_type ) {
-	if ( 'add-new-user' === $form_type ) {
-		global $wpdb;
-		$table_name  = $wpdb->prefix . 'divisi';
-		$divisi_list = $wpdb->get_results( "SELECT id, nama_divisi FROM $table_name ORDER BY nama_divisi ASC" );
+function add_divisi_field_to_user_form( $user_id ) {
+	global $wpdb;
+	$table_name  = $wpdb->prefix . 'divisi';
+	$divisi_list = $wpdb->get_results( "SELECT id, nama_divisi FROM $table_name ORDER BY nama_divisi ASC" );
+	$current_divisi = get_user_meta($user_id->ID, 'divisi', true);
 
-		echo '<table class="form-table">';
-		echo '<tr>';
-		echo '<th><label for="divisi">Divisi</label></th>';
-		echo '<td>';
-		echo '<select name="divisi" id="divisi">';
-		echo '<option value="">Pilih Divisi</option>';
+	echo '<table class="form-table">';
+	echo '<tr>';
+	echo '<th><label for="divisi">Divisi</label></th>';
+	echo '<td>';
+	echo '<select name="divisi" id="divisi">';
+	echo '<option value="">Pilih Divisi</option>';
 
-		foreach ( $divisi_list as $divisi ) {
-			echo '<option value="' . esc_attr( $divisi->id ) . '">' . esc_html( $divisi->nama_divisi ) . '</option>';
-		}
-
-		echo '</select>';
-		echo '</td>';
-		echo '</tr>';
-		echo '</table>';
+	foreach ( $divisi_list as $divisi ) {
+		echo '<option value="' . esc_attr( $divisi->id ) . '">' . esc_html( $divisi->nama_divisi ) . '</option>';
 	}
+
+	echo '</select>';
+	echo '</td>';
+	echo '</tr>';
+	echo '</table>';
 }
 
 add_action( 'user_new_form', 'add_divisi_field_to_user_form' );
 add_action( 'show_user_profile', 'add_divisi_field_to_user_form' );
 add_action( 'edit_user_profile', 'add_divisi_field_to_user_form' );
 
-function add_jabatan_field_to_user_form( $form_type ) {
-	if ( 'add-new-user' === $form_type ) {
-		global $wpdb;
-		$table_name   = $wpdb->prefix . 'jabatan';
-		$jabatan_list = $wpdb->get_results( "SELECT id, nama_jabatan FROM $table_name ORDER BY nama_jabatan ASC" );
+function add_jabatan_field_to_user_form( $user_id ) {
+	global $wpdb;
+	$table_name   = $wpdb->prefix . 'jabatan';
+	$jabatan_list = $wpdb->get_results( "SELECT id, nama_jabatan FROM $table_name ORDER BY nama_jabatan ASC" );
+	$current_jabatan = get_user_meta( $user_id->id, 'jabatan', true);
 
-		echo '<table class="form-table">';
-		echo '<tr>';
-		echo '<th><label for="jabatan">Jabatan</label></th>';
-		echo '<td>';
-		echo '<select name="jabatan" id="jabatan">';
-		echo '<option value="">Pilih Jabatan</option>';
+	echo '<table class="form-table">';
+	echo '<tr>';
+	echo '<th><label for="jabatan">Jabatan</label></th>';
+	echo '<td>';
+	echo '<select value="'.$current_jabatan.'" name="jabatan" id="jabatan">';
+	echo '<option value="">Pilih Jabatan</option>';
 
-		foreach ( $jabatan_list as $jabatan ) {
-			echo '<option value="' . esc_attr( $jabatan->id ) . '">' . esc_html( $jabatan->nama_jabatan ) . '</option>';
-		}
-
-		echo '</select>';
-		echo '</td>';
-		echo '</tr>';
-		echo '</table>';
+	foreach ( $jabatan_list as $jabatan ) {
+		echo '<option value="' . esc_attr($jabatan->id ) . '">' . esc_html( $jabatan->nama_jabatan ) . '</option>';
 	}
+
+	echo '</select>';
+	echo '</td>';
+	echo '</tr>';
+	echo '</table>';
 }
 
 add_action( 'user_new_form', 'add_jabatan_field_to_user_form' );
 add_action( 'show_user_profile', 'add_jabatan_field_to_user_form' );
-add_action( 'edit_user_profile_update', 'add_jabatan_field_to_user_form' );
+add_action( 'edit_user_profile', 'add_jabatan_field_to_user_form' );
 
-//Save custom fields
 //Save custom fields
 function theme_save_custom_field( $user_id ) {
 
-	//	if ( ! isset( $_POST['_wpnonce'] ) || ! wp_verify_nonce( $_POST['_wpnonce'], 'create-user_' . $user_id ) ) {
-	//		return;
-	//	}
-	//	throw new Exception( "Error Processing Request", 1 );
-		if ( ! current_user_can( 'edit_user', $user_id ) ) {
-			return;
-		}
-		$check = get_user_meta( $user_id, 'divisi' );
-		if ( ! empty( $check ) ) {
-			update_user_meta( $user_id, 'divisi', sanitize_text_field( $_POST['divisi'] ) );
-		} else {
-			add_user_meta( $user_id, 'divisi', sanitize_text_field( $_POST['divisi'] ) );
-		}
-		$check = get_user_meta( $user_id, 'jabatan' );
-		if ( ! empty( $check ) ) {
-			update_user_meta( $user_id, 'jabatan', sanitize_text_field( $_POST['jabatan'] ) );
-		} else {
-			add_user_meta( $user_id, 'jabatan', sanitize_text_field( $_POST['jabatan'] ) );
-		}
+//	if ( ! isset( $_POST['_wpnonce'] ) || ! wp_verify_nonce( $_POST['_wpnonce'], 'create-user_' . $user_id ) ) {
+//		return;
+//	}
+	if ( ! current_user_can( 'edit_user', $user_id ) ) {
+		return;
 	}
-	
-	add_action( 'personal_options_update', 'theme_save_custom_field' );
-	add_action( 'user_register', 'theme_save_custom_field' );
-	add_action( 'edit_user_profile_update', 'theme_save_custom_field' );
+	$check = get_user_meta( $user_id, 'divisi' );
+	if ( ! empty( $check ) ) {
+		update_user_meta( $user_id, 'divisi', sanitize_text_field( $_POST['divisi'] ) );
+	} else {
+		add_user_meta( $user_id, 'divisi', sanitize_text_field( $_POST['divisi'] ) );
+	}
+	$check = get_user_meta( $user_id, 'jabatan' );
+	if ( ! empty( $check ) ) {
+		update_user_meta( $user_id, 'jabatan', sanitize_text_field( $_POST['jabatan'] ) );
+	} else {
+		add_user_meta( $user_id, 'jabatan', sanitize_text_field( $_POST['jabatan'] ) );
+	}
+}
+
+add_action( 'personal_options_update', 'theme_save_custom_field' );
+add_action( 'user_register', 'theme_save_custom_field' );
+add_action( 'edit_user_profile_update', 'theme_save_custom_field' );
 ?>

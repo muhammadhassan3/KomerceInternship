@@ -70,6 +70,7 @@ function custom_data_menu_jabatan() {
 
 	add_submenu_page( $menu_slug, $page_title, $menu_title, $capability, "jabatan-management", $function );
 	add_submenu_page( $menu_slug, 'Add New Jabatan', 'Add New Jabatan', $capability, 'jabatan-add', 'custom_data_add_page_jabatan' );
+	add_submenu_page( $menu_slug, 'Edit Jabatan', 'Edit', $capability, 'jabatan-edit', 'custom_data_edit_page_jabatan' );
 }
 
 add_action( 'admin_menu', 'custom_data_menu_jabatan' );
@@ -351,14 +352,14 @@ function createTables() {
 
 add_action("after_switch_theme", "createTables");
 
-//Add divisi and jabatan field
-
 // field divisi dan jabatan di users
 function add_divisi_field_to_user_form( $user_id ) {
 	global $wpdb;
-	$table_name  = $wpdb->prefix . 'divisi';
-	$divisi_list = $wpdb->get_results( "SELECT id, nama_divisi FROM $table_name ORDER BY nama_divisi ASC" );
-	$current_divisi = get_user_meta($user_id->ID, 'divisi', true);
+	$table_name     = $wpdb->prefix . 'divisi';
+	$divisi_list    = $wpdb->get_results( "SELECT id, nama_divisi FROM $table_name ORDER BY nama_divisi ASC" );
+	if(isset($user_id->id)){
+		$current_divisi = get_user_meta( $user_id->id, 'divisi', true );
+	}
 
 	echo '<table class="form-table">';
 	echo '<tr>';
@@ -366,9 +367,12 @@ function add_divisi_field_to_user_form( $user_id ) {
 	echo '<td>';
 	echo '<select name="divisi" id="divisi">';
 	echo '<option value="">Pilih Divisi</option>';
-
 	foreach ( $divisi_list as $divisi ) {
-		echo '<option value="' . esc_attr( $divisi->id ) . '">' . esc_html( $divisi->nama_divisi ) . '</option>';
+		$selected = '';
+		if ( $current_divisi == $divisi->id ) {
+			$selected = ' selected ';
+		}
+		echo '<option value="' . esc_attr( $divisi->id ) . '"' . $selected . '>' . esc_html( $divisi->nama_divisi ) . '</option>';
 	}
 
 	echo '</select>';
@@ -383,19 +387,25 @@ add_action( 'edit_user_profile', 'add_divisi_field_to_user_form' );
 
 function add_jabatan_field_to_user_form( $user_id ) {
 	global $wpdb;
-	$table_name   = $wpdb->prefix . 'jabatan';
-	$jabatan_list = $wpdb->get_results( "SELECT id, nama_jabatan FROM $table_name ORDER BY nama_jabatan ASC" );
-	$current_jabatan = get_user_meta( $user_id->id, 'jabatan', true);
+	$table_name      = $wpdb->prefix . 'jabatan';
+	$jabatan_list    = $wpdb->get_results( "SELECT id, nama_jabatan FROM $table_name ORDER BY nama_jabatan ASC" );
+	if(isset($user_id->id)){
+		$current_jabatan = get_user_meta( $user_id->id, 'jabatan', true );
+	}
 
 	echo '<table class="form-table">';
 	echo '<tr>';
 	echo '<th><label for="jabatan">Jabatan</label></th>';
 	echo '<td>';
-	echo '<select value="'.$current_jabatan.'" name="jabatan" id="jabatan">';
+	echo '<select name="jabatan" id="jabatan">';
 	echo '<option value="">Pilih Jabatan</option>';
 
 	foreach ( $jabatan_list as $jabatan ) {
-		echo '<option value="' . esc_attr($jabatan->id ) . '">' . esc_html( $jabatan->nama_jabatan ) . '</option>';
+		$selected = '';
+		if ( $current_jabatan == $jabatan->id ) {
+			$selected = ' selected ';
+		}
+		echo '<option value="' . esc_attr( $jabatan->id ) . '"'.$selected.' >' . esc_html( $jabatan->nama_jabatan ) . '</option>';
 	}
 
 	echo '</select>';
@@ -434,4 +444,52 @@ function theme_save_custom_field( $user_id ) {
 add_action( 'personal_options_update', 'theme_save_custom_field' );
 add_action( 'user_register', 'theme_save_custom_field' );
 add_action( 'edit_user_profile_update', 'theme_save_custom_field' );
+
+function custom_user_menu_admin()
+{
+    $page_title = "Manajemen User";
+    $menu_title = "Manajemen User";
+    $capability = 'manage_options';
+    $menu_slug = 'users.php';
+    $function = 'custom_user_page_admin';
+    add_submenu_page($menu_slug, $page_title, $menu_title, $capability, $menu_slug, $function);
+    // add_submenu_page($menu_slug, 'Add New Admin', 'Add New Admin', $capability, 'admin-add', 'custom_data_add_page_admin');
+    // add_submenu_page($menu_slug, 'Edit Admin', 'Edit', $capability, 'admin-edit', 'custom_data_edit_page_admin');
+}
+add_action('admin_menu', 'custom_user_menu_admin');
+
+function custom_user_page_admin()
+{
+    global $wpdb;
+    $users_table = $wpdb->prefix . 'users';
+    $users_meta  = $wpdb->prefix . 'usermeta';
+    $divisi_table = $wpdb->prefix . "divisi";
+    $jabatan_table = $wpdb->prefix . 'jabatan';
+    $results = $wpdb->get_results("SELECT distinct(u.id), u.user_login, u.user_nicename, u.user_email FROM $users_table u join $users_meta m on u.id = m.user_id ");
+    // $results = $wpdb->get_results(" SELECT u.user_login, u.user_nicename, u.user_email, d.nama_divisi, d.nama_jabatan FROM $users_table u LEFT JOIN $users_meta d ON u.ID = d.user_id ORDER BY u.user_login ASC ");
+    echo '<div class="wrap">';
+    echo '<h1 class="wp-heading-inline">Manajemen User</h1>';
+    echo '<a href="' . admin_url('admin.php?page=admin-add') . '" class="page-title-action">Add New</a>';
+    echo '<hr class="wp-header-end">';
+
+    echo '<table class="wp-list-table widefat fixed striped">';
+    echo '<thead><tr><th>Username</th><th>Name</th><th>Email</th><th>Divisi</th><th>Jabatan</th><th>Actions</th></tr></thead>';
+    echo '<tbody>';
+
+    foreach ($results as $row) {
+        echo '<tr>';
+        echo '<td>' . esc_html($row->user_login) . '</td>';
+        echo '<td>' . esc_html($row->user_nicename) . '</td>';
+        echo '<td>' . esc_html($row->user_email) . '</td>';
+        $divisi = $wpdb->get_results("select d.nama_divisi from $divisi_table d, $users_meta m where m.meta_key='divisi' and m.meta_value = d.id");
+        $jabatan = $wpdb->get_results("select j.nama_jabatan from $jabatan_table j, $users_meta m where m.meta_key='jabatan' and m.meta_value = j.id");
+        echo '<td>' . esc_html($divisi[0]->nama_divisi) . '</td>';
+        echo '<td>' . esc_html($jabatan[0]->nama_jabatan) . '</td>';
+        echo '<td><a href="' . admin_url('admin.php?page=divisi-edit&id=' . $row->id) . '">Edit</a> | <a href="#" class="delete-divisi-link" data-id="' . $row->id . '">Delete</a></td>';
+        echo '</tr>';
+    }
+    echo '</tbody>';
+    echo '</table>';
+    echo '</div>';
+}
 ?>

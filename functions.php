@@ -470,25 +470,48 @@ function custom_user_page_admin()
     // $results = $wpdb->get_results(" SELECT u.user_login, u.user_nicename, u.user_email, d.nama_divisi, d.nama_jabatan FROM $users_table u LEFT JOIN $users_meta d ON u.ID = d.user_id ORDER BY u.user_login ASC ");
     echo '<div class="wrap">';
     echo '<h1 class="wp-heading-inline">Manajemen User</h1>';
-    echo '<a href="' . admin_url('admin.php?page=admin-add') . '" class="page-title-action">Add New</a>';
+    echo '<a href="' . admin_url('user-new.php') . '" class="page-title-action">Add New</a>';
     echo '<hr class="wp-header-end">';
 
     echo '<table class="wp-list-table widefat fixed striped">';
     echo '<thead><tr><th>Username</th><th>Name</th><th>Email</th><th>Divisi</th><th>Jabatan</th><th>Actions</th></tr></thead>';
     echo '<tbody>';
-
     foreach ($results as $row) {
         echo '<tr>';
         echo '<td>' . esc_html($row->user_login) . '</td>';
         echo '<td>' . esc_html($row->user_nicename) . '</td>';
         echo '<td>' . esc_html($row->user_email) . '</td>';
-        $divisi = $wpdb->get_results("select d.nama_divisi from $divisi_table d, $users_meta m where m.meta_key='divisi' and m.meta_value = d.id");
-        $jabatan = $wpdb->get_results("select j.nama_jabatan from $jabatan_table j, $users_meta m where m.meta_key='jabatan' and m.meta_value = j.id");
-        echo '<td>' . esc_html($divisi[0]->nama_divisi) . '</td>';
-        echo '<td>' . esc_html($jabatan[0]->nama_jabatan) . '</td>';
-        echo '<td><a href="' . admin_url('admin.php?page=divisi-edit&id=' . $row->id) . '">Edit</a> | <a href="#" class="delete-divisi-link" data-id="' . $row->id . '">Delete</a></td>';
-        echo '</tr>';
-    }
+        $divisi = $wpdb->get_results("select d.nama_divisi from $divisi_table d, $users_meta m where m.meta_key='divisi' and m.meta_value = d.id and m.user_id = $row->id");
+        $jabatan = $wpdb->get_results("select j.nama_jabatan from $jabatan_table j, $users_meta m where m.meta_key='jabatan' and m.meta_value = j.id and m.user_id = $row->id");
+        $divisi_value = '';
+		if(!empty($divisi)){
+			$divisi_value = $divisi[0]->nama_divisi;
+		}
+		$jabatan_value = '';
+		if(!empty($divisi)){
+			$jabatan_value = $jabatan[0]->nama_jabatan;
+		}
+		echo '<td>' . esc_html($divisi_value) . '</td>';
+        echo '<td>' . esc_html($jabatan_value) . '</td>';
+
+		$delete_url = add_query_arg(
+			array(
+				'action' => 'delete',
+				'users[]' => $row->id,
+			),
+			self_admin_url('users.php')
+		);
+
+		$delete_url = wp_nonce_url($delete_url, 'bulk-users');
+			echo '<td><a href="' . esc_url(
+				add_query_arg(
+					'wp_http_referer',
+					urlencode(wp_unslash($_SERVER['REQUEST_URI'])),
+					self_admin_url('user-edit.php?user_id=' . $row->id)
+				)
+			) .  '">Edit</a> | <a href="' . esc_url($delete_url) . '" class="delete-user-link">Delete</a></td>';
+			echo '</tr>';
+		}
     echo '</tbody>';
     echo '</table>';
     echo '</div>';

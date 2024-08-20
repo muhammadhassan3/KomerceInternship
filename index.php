@@ -20,10 +20,10 @@
         <div class="position-relative">
             <div class="background-video ">
 				<?php $video = get_template_directory_uri() . "/Images/komship-yt.mp4" ?>
-                <div class="video-wrapper">
+                <!-- <div class="video-wrapper"> -->
                     <video id="background-video" src=<?= $video ?> alt="Komerce" class="background-image1"
                            width="1200px"></video>
-                </div>
+                <!-- </div> -->
             </div>
             <div class="play-indicator">
 				<?php $play = get_template_directory_uri() . "/Images/play-circle.png" ?>

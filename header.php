@@ -26,6 +26,7 @@
 			?>
             <img src="<?php echo $logo[0] ?>" alt="Logo" height="40" class="mb-3.5 mt-2 mx-auto logo">
         </a>
+
         <div class="collapse navbar-collapse justify-content-center mt-2">
             <ul class="navbar-nav">
                 <li class="nav-item navbar-item">

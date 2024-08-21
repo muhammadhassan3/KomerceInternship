@@ -78,22 +78,22 @@
 
 
 <!-- Komerce Society -->
-<div class="container d-flex flex-column">
+<div class=" d-flex flex-column">
     <h1 class="margin2 justify-content-center h1-komerce-society underline-ks">Komerce Society</h1>
     <div class="mb-3"></div>
-    <div class="content">
+    <div class="bg-content">
         <div class="text-boxes">
             <div class="text-box">
-                <h2>Who are we? <?php $image = get_template_directory_uri() . "/Images/arrow-right.svg" ?>
-                    <img src=<?= $image ?> alt="Team Member 1" class="ms-3"></h2>
+                <h2 class="h2-font">Who are we? <?php $image = get_template_directory_uri() . "/Images/arrow-right.svg" ?>
+                    <img src=<?= $image ?> alt="Team Member 1" class=" bg-arrow"></h2>
 
                 <p class="paragraph-whoarewe">We strongly believe that finding your purpose can be done by helping
                     others achieve theirs.
                     The impact we made for millions is the reason we come to work every day.</p>
             </div>
             <div class="text-box">
-                <h2>What we do? <?php $image = get_template_directory_uri() . "/Images/arrow-right.svg" ?>
-                    <img src=<?= $image ?> alt="Team Member 1" class="ms-3"></h2>
+                <h2 class="h2-font">What we do? <?php $image = get_template_directory_uri() . "/Images/arrow-right.svg"  ?>
+                    <img src=<?= $image ?> alt="Team Member 1" class=" bg-arrow"></h2>
             </div>
         </div>
         <div class="background-containers ">
@@ -105,7 +105,7 @@
 <!-- Komerce Society -->
 
 <!-- Our Teams -->
-<div class="title  margin2">
+<div class="title margin2">
     <h1>Our Teams</h1>
 </div>
 
@@ -115,22 +115,22 @@
 </div>
 
 <div class="card-container mt-5">
-    <div class="card ">
-		<?php $image = get_template_directory_uri() . "/Images/Poto.png" ?>
-        <img src=<?= $image ?> alt="Team Member 1" class="card-image ">
-        <p class="paragraph-whoarewe mt-3">Being an Innovator at Telkom, makes me an adaptive person and always</p>
+    <div class="card">
+        <?php $image = get_template_directory_uri() . "/Images/Poto.png" ?>
+        <img src=<?= $image ?> alt="Team Member 1" class="card-image">
+        <p class="paragraph-desc mt-3">Being an Innovator at Telkom, makes me an adaptive person and always</p>
         <div class="name">- Is Nur - Lead Front End</div>
     </div>
     <div class="card">
-		<?php $image = get_template_directory_uri() . "/Images/Poto.png" ?>
-        <img src=<?= $image ?> alt="Team Member 2" class="card-image ">
-        <p class="paragraph-whoarewe mt-3">Being an Innovator at Telkom, makes me an adaptive person and always </p>
+        <?php $image = get_template_directory_uri() . "/Images/Poto.png" ?>
+        <img src=<?= $image ?> alt="Team Member 2" class="card-image">
+        <p class="paragraph-desc mt-3">Being an Innovator at Telkom, makes me an adaptive person and always</p>
         <div class="name">- Satrio - CTO Komerce</div>
     </div>
     <div class="card">
-		<?php $image = get_template_directory_uri() . "/Images/Poto.png" ?>
+        <?php $image = get_template_directory_uri() . "/Images/Poto.png" ?>
         <img src=<?= $image ?> alt="Team Member 3" class="card-image">
-        <p class="paragraph-whoarewe mt-3">Being an Innovator at Telkom, makes me an adaptive person and always</p>
+        <p class="paragraph-desc mt-3">Being an Innovator at Telkom, makes me an adaptive person and always</p>
         <div class="name">- Ragil - Lead Backend</div>
     </div>
 </div>
@@ -192,14 +192,14 @@
 
 
 <!-- Photos -->
-<div class="background-container2 mt-5">
+<div class="background-container2 ">
     <div class="background1">
         <div class="content">
-            <div class="text-boxes ms-5">
-                <div class="ms-5 mt-5">
-                    <div class="mt-5">
+            <div class="text-boxes ">
+                <!-- <div class="ms-5 mt-5"> -->
+                    <!-- <div class="mt-5"> -->
                         <div class="text-box2 text-white">
-                            <h2>“We have the resources to go as far as we want with ideas. And no idea is too
+                            <h2 class="text-photos">“We have the resources to go as far as we want with ideas. And no idea is too
                                 crazy.”</h2>
                             <br></br>
                             <p>Is Nursamsi, Lead Front-End Engineer</p>
@@ -212,8 +212,8 @@
                                 <p class="watch-text-circle">Watch the film</p>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    <!-- </div> -->
+                <!-- </div> -->
             </div>
         </div>
     </div>

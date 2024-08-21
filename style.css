@@ -318,7 +318,6 @@ body {
 .content {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .text-boxes {
@@ -326,8 +325,23 @@ body {
     flex-direction: column;
     position: absolute;
     margin-top: 125px;
+    margin-left: 40px;
 }
 
+.paragraph-whoarewe {
+    color: var(--Grayscale-Dark-Grey, #626262);
+    font-weight: 200px;
+    line-height: 20px;
+    margin: 0 auto 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    }
+
+.bg-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 .text-box {
     background-color: #f4f4f4;
     padding: 20px;
@@ -335,6 +349,11 @@ body {
     margin: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 400px;
+}
+
+.bg-arrow{
+    width: 50px;
+    height: auto;
 }
 
 /* .text-box h2 {
@@ -350,13 +369,13 @@ body {
     color: #666;
 }
 
-.image img {
+/* .image img {
     max-width: 100%;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+} */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .content {
         flex-direction: row;
         align-items: flex-start;
@@ -370,7 +389,7 @@ body {
     .image img {
         max-width: 500px;
     }
-}
+} */
 
 
 /* style.css */
@@ -404,10 +423,10 @@ ul .nav-item {
 }
 
 .background-containers {
-    width: 100%;
-    /* height: 579.331px; */
+    width: 90%;
+    height: auto;
     background: center / cover no-repeat;
-    margin: 0 auto;
+    margin-left: auto;
 
 }
 
@@ -416,6 +435,8 @@ ul .nav-item {
 }
 
 /* Komerce Society */
+
+/* ============Our Teams============= */
 
 .title {
     color: var(--Grayscale-Main-Black, #333);
@@ -437,17 +458,6 @@ ul .nav-item {
     text-align: center;
 }
 
-
-.paragraph-whoarewe {
-    color: var(--Grayscale-Dark-Grey, #626262);
-    font-weight: 400;
-    line-height: 28px;
-    max-width: 800px;
-    margin: 0 auto 32px;
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-}
-
 .card-container {
     display: flex;
     gap: 16px;
@@ -460,7 +470,6 @@ ul .nav-item {
 .card {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     min-height: 450px;
     width: 400px;
     padding: 16px;
@@ -474,6 +483,7 @@ ul .nav-item {
     letter-spacing: 0.3px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform-origin: bottom center;
+    margin-bottom: 16px; /* Tambahkan margin bawah untuk spasi di antara kartu saat berbaris ke bawah */
 }
 
 .card:hover {
@@ -535,7 +545,6 @@ a {
 
 .blog-container {
     max-width: 1240px;
-    height: 500px;
     margin: 0 auto;
     padding: 30px;
     text-align: center;
@@ -561,13 +570,11 @@ a {
     flex-wrap: wrap;
     gap: 20px;
     max-width: 1240px;
-    height: 400px;
+    margin: 0 auto;
 }
 
 .blog-post {
     background-color: #fff;
-    /* border-radius: 8px; */
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
     overflow: hidden;
     width: 30%;
     margin-bottom: 20px;
@@ -642,14 +649,15 @@ a {
     color: var(--Grayscale-Off-White, #FFF);
     font-family: "Plus Jakarta Sans";
     font-size: 14px;
-    /* font-style: normal; */
     font-weight: 600;
-    /* line-height: normal; */
     top: 180px;
     left: 10px;
     position: absolute;
 }
 
+.h2-font{
+    font-size: 35px;
+}
 /* blog */
 
 /* photos */
@@ -667,7 +675,9 @@ a {
 .text-box2 {
     padding: 20px;
     border-radius: 8px;
-    margin: 10px 0;
+    /* margin: 10px 0; */
+    margin-top: 60px;
+    margin-left: 50px;
     max-width: 500px;
     font-size: 15px;
 }
@@ -680,7 +690,9 @@ a {
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(98deg, rgba(0, 0, 0, 0.50) 0%, rgba(51, 51, 51, 0.00) 94.62%), linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.20) 0.01%, rgba(0, 0, 0, 0.60) 69.5%, #000 100%);
+    background: linear-gradient(98deg, rgba(0, 0, 0, 0.50) 0%, rgba(51, 51, 51, 0.00) 94.62%), 
+                linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.20) 0.01%, 
+                rgba(0, 0, 0, 0.60) 69.5%, #000 100%);
 }
 
 .video-container-circle {
@@ -689,16 +701,13 @@ a {
     gap: 10px;
 }
 
-/* .play-circle {
-    width: 25px; 
-    height: 25px; 
-    cursor: pointer; 
-} */
-
 .watch-text-circle {
     font-size: 16px;
     margin: 0;
 }
+/* photos */
+
+
 
 /* footer */
 .image-brand-container {
@@ -728,5 +737,391 @@ a {
 }
 
 /* -------------------Label Blog-------------------- */
+
+
+/* ==========================================CSS RESPONSIVE========================================== */
+
+@media (max-width:864px) {
+    /*komerce society*/
+    .text-boxes {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 50px;
+        margin-left: 20px;
+    }
+
+    .text-box {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 8px;
+        margin: 5px 0;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        max-width: 200px;
+    }
+
+    .paragraph-whoarewe {
+    color: var(--Grayscale-Dark-Grey, #626262);
+    font-weight: 200px;
+    line-height: 12px;
+    margin: 0 auto 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 7px;
+    }
+
+    .background-containers {
+    width: 90%;
+    height: auto;
+    background: center / cover no-repeat;
+    margin-left: auto;
+
+    }   
+
+    .underline-ks {
+    display: inline-block;
+    position: relative;
+    }
+
+    .underline-ks::after {
+        content: '';
+        bottom: -4px;
+        left: 50%;
+        position: absolute;
+        height: 2px;
+        width: 40%;
+        background-color: var(--Komerce-Dark);
+        transform: translateX(-50%);
+
+    }    
+
+    .h2-font {
+        font-size: 10px;
+    }
+    
+    .bg-arrow{
+    width: 25px;
+    height: auto;
+    }
+    /*komerce society*/
+
+    /* howslife komerce */
+    .background-image1 {
+        width: 90%;
+    }
+
+    .play-icon, .pause-icon {
+        cursor: pointer;
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 13%;
+    }
+    .flex-container {
+        display: flex;
+        position: absolute;
+        bottom: -40px;
+        width: 100%;
+        height: 25%;
+        padding: 32px 20px;
+        justify-content: center;
+        align-items: center;
+        background: var(--Komerce-Dark);
+        overflow: hidden;
+    }
+    .number {
+        color: var(--Grayscale-Off-White);
+        font-size: 50px;
+        line-height: normal;
+    }
+    
+    .text {
+        color: var(--Grayscale-Off-White);
+        font-size: 15px;
+        line-height: normal;
+    }
+    /* howslife komerce */
+
+    /* photos */
+    .background-container2,
+    .background1 {
+        height: 60vh; 
+    }
+
+    .text-box2 {
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 150px;
+        margin-left: 10px;
+        max-width: 400px;
+        font-size: 15px;
+    }
+
+    .video-container-circle {
+        margin-left: 0px;
+    }
+
+    .play-circle {
+        width: 15px;
+    }
+
+    .watch-text-circle {
+        font-size: 15px;
+    }
+    .text-photos {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* card our teams */
+    .card {
+        flex: 1 1 calc(50% - 32px);
+    }
+    
+    .paragraph-desc {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+    /* card our teams */
+
+    /* blog */
+    .blog-post {
+        width: 48%;
+    }
+}
+
+@media (max-width:576px){
+      /*komerce society*/
+        .text-boxes {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 50px;
+    }
+
+    .text-box {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 8px;
+        margin: 5px 0;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        max-width: 150px;
+    }
+
+    .paragraph-whoarewe {
+    color: var(--Grayscale-Dark-Grey, #626262);
+    font-weight: 200px;
+    line-height: 6px;
+    margin: 0 auto 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 4px;
+    }
+
+    .background-containers {
+   width: 90%;
+    height: auto;
+    background: center / cover no-repeat;
+    margin-left: auto;
+
+    }   
+
+    .underline-ks {
+    display: inline-block;
+    position: relative;
+    }
+
+    .underline-ks::after {
+        content: '';
+        bottom: -4px;
+        left: 50%;
+        position: absolute;
+        height: 2px;
+        width: 50%;
+        background-color: var(--Komerce-Dark);
+        transform: translateX(-50%);
+
+    }    
+
+    .h2-font {
+        font-size: 7px;
+    }
+    
+    .bg-arrow{
+    width: 15px;
+    height: auto;
+    }
+      /*komerce society*/
+
+    /* howslife komerce */
+    .background-image1 {
+        width: 90%;
+    }
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .styled-button {
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        border-radius: 8px;
+        border: 1px solid var(--Komerce-Dark);
+        background: var(--Komerce-Dark);
+        color: var(--Grayscale-Off-White);
+        text-align: center;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-style: normal;
+        text-decoration: none;
+    }
+    .arrow-icon {
+        display: flex;
+        width: 15px;
+        height: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+    .text1 {
+        color: var(--Grayscale-Off-White);
+        font-size: 12px;
+        line-height: normal;
+    }
+    .sub-heading {
+        color: var(--Grayscale-Dark-Grey, #626262);
+        text-align: center;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 13px;
+        font-style: normal;
+        line-height: 28px;
+        width: 100%;
+    }
+    .play-icon, .pause-icon {
+        cursor: pointer;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 15%;
+    }
+    
+    .play-icon {
+        display: block;
+    }
+    
+    .pause-icon {
+        display: none;
+    }
+    
+    .play-indicator {
+        position: absolute;
+        display: flex;
+        top: 69px;
+        width: 100%;
+    }
+    .flex-container {
+        display: flex;
+        position: absolute;
+        bottom: -40px;
+        width: 100%;
+        height: 5%;
+        padding: 32px 20px;
+        justify-content: center;
+        align-items: center;
+        background: var(--Komerce-Dark);
+        overflow: hidden;
+    }
+    .marquee {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .marquee-content {
+        display: flex;
+        gap: 64px;
+        width: calc(200% + 64px);
+        animation: marquee 20s linear infinite;
+    }
+
+    .number {
+        color: var(--Grayscale-Off-White);
+        font-size: 35px;
+        line-height: normal;
+    }
+    
+    .text {
+        color: var(--Grayscale-Off-White);
+        font-size: 13px;
+        line-height: normal;
+    }
+    /* howslife komerce */
+
+    /* card our teams */
+    .card {
+        flex: 1 1 calc(100% - 32px);
+    }
+    
+    .paragraph-desc {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+    /* card our teams */
+
+    /* blog */
+    .blog-post {
+        width: 100%;
+    }
+
+    /* photos */
+    .background-container2,
+    .background1 {
+        height: 60vh; 
+    }
+
+    .text-box2 {
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 60px;
+        margin-left: 10px;
+        max-width: 250px;
+        font-size: 10px;
+    }
+
+    .video-container-circle {
+        margin-left: 0px;
+    }
+
+    .play-circle {
+        width: 15px;
+    }
+
+    .watch-text-circle {
+        font-size: 10px;
+    }
+    .text-photos {
+        font-size: 15px;
+    }
+}
+
+
+
+
 
 

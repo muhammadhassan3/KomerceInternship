@@ -73,12 +73,13 @@ body {
 .sub-heading {
     color: var(--Grayscale-Dark-Grey, #626262);
     text-align: center;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    /* font-size: 15px; */
     font-style: normal;
     font-weight: 700;
     line-height: 28px;
     width: 100%;
+    font-weight: 400;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
 }
 
 .background-container-ring {
@@ -431,6 +432,14 @@ ul .nav-item {
     text-align: center;
 }
 
+.paragraph-desc {
+    color: var(--Grayscale-Dark-Grey, #626262);
+    line-height: 20px;
+    font-weight: 1000;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+}
+
 .card-container {
     display: flex;
     gap: 16px;
@@ -456,11 +465,11 @@ ul .nav-item {
     letter-spacing: 0.3px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform-origin: bottom center;
-    margin-bottom: 16px; /* Tambahkan margin bawah untuk spasi di antara kartu saat berbaris ke bawah */
+    margin-bottom: 16px;
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 2px 2px 24px 0px rgba(0, 0, 0, 0.24);
 }
 
@@ -472,7 +481,8 @@ ul .nav-item {
 }
 
 .name {
-    margin-top: -20px;
+    margin-top: 5px;
+    color: rgb(47, 46, 46);
     /* text-align: center; */
 }
 
@@ -522,7 +532,7 @@ a {
     padding: 30px;
     text-align: center;
     background-color: #fff;
-    border-radius: 15px;
+    margin-bottom: 100px;
 }
 
 .blog-title {
@@ -1022,10 +1032,12 @@ a {
     .sub-heading {
         color: var(--Grayscale-Dark-Grey, #626262);
         text-align: center;
-        font-family: "Plus Jakarta Sans", sans-serif;
         font-size: 13px;
         font-style: normal;
         margin: 0;
+        font-weight: 400;
+        line-height: 20px;
+        font-family: 'Inter', sans-serif;
     }
     .play-icon, .pause-icon {
         cursor: pointer;
@@ -1137,12 +1149,14 @@ a {
 
     .name {
     margin-top: 5px;
+    color: rgb(47, 46, 46);
     /* text-align: center; */
-}
+    }
     
     .paragraph-desc {
-        font-size: 12px;
+        font-size: 13px;
         line-height: 20px;
+        color: var(--Grayscale-Dark-Grey, #626262);
     }
     
     .paragraph {

@@ -16,12 +16,6 @@ body {
 
 }
 
-/* header {
-    background-color: #f4f4f4;
-    padding: 10px 20px;
-    text-align: center;
-} */
-
 
 /* css underline untuk menu */
 .navbar-item {
@@ -56,7 +50,6 @@ body {
 }
 
 .content-wrapper {
-    /* width: 858px; */
     margin: 0 auto 0px auto;
     text-align: center;
     width: 100%;
@@ -64,7 +57,6 @@ body {
 }
 
 .main-heading {
-    /* font-size: 40px; */
     font-weight: 700;
     color: #333;
     width: 100%;
@@ -245,7 +237,6 @@ body {
 .h1-komerce-society {
     color: var(--Gray-1, var(--Grayscale-Main-Black, #333));
     text-align: center;
-    /* font-size: 40px; */
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -256,30 +247,9 @@ body {
     text-decoration: none;
 }
 
-/* .margin1 {
-    margin-top: 200px;
-} */
 .margin2 {
     margin-top: 80px;
 }
-
-/* h1::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;background-footer
-    height: 2px;
-    background-color: #ff6600;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease;
-} */
-
-/* h1.hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-} */
 
 .content {
     display: flex;
@@ -330,43 +300,10 @@ body {
     height: auto;
 }
 
-/* .text-box h2 {
-    margin-top: 0;
-    color: #333;
-} */
-
-/* h2.enlarged {
-    font-size: 2em; 
-} */
-
 .text-box p {
     color: #666;
 }
 
-/* .image img {
-    max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-} */
-
-/* @media (min-width: 768px) {
-    .content {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .text-boxes {
-        flex-direction: column;
-        margin-right: 20px;
-    }
-
-    .image img {
-        max-width: 500px;
-    }
-} */
-
-
-/* style.css */
 .fade-in {
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -570,8 +507,6 @@ a {
     height: 210px;
     object-fit: fill;
     object-position: center;
-
-
 }
 
 .filter {
@@ -579,11 +514,11 @@ a {
 }
 
 .post-title {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .post-description {
-    font-size: 1em;
+    font-size: 0.9em;
     color: #666;
     font-family: 'Inter', sans-serif;
 }
@@ -605,7 +540,6 @@ a {
     border: 2px solid black;
     padding: 4px;
     border-radius: 5px;
-
 }
 
 .label-red {
@@ -658,7 +592,6 @@ a {
 .text-box2 {
     padding: 20px;
     border-radius: 8px;
-    /* margin: 10px 0; */
     margin-top: 60px;
     margin-left: 50px;
     max-width: 500px;
@@ -776,7 +709,6 @@ a {
         width: 35%;
         background-color: var(--Komerce-Dark);
         transform: translateX(-50%);
-
     }    
 
     .h2-font {
@@ -829,7 +761,6 @@ a {
     /* howslife komerce */
 
     /* our teams */
-
     .title {
         color: var(--Grayscale-Main-Black, #333);
         font-family: 'Plus Jakarta Sans', sans-serif;
@@ -929,8 +860,8 @@ a {
 }
 
 @media (max-width:576px){
-      /*komerce society*/
-        .text-boxes {
+    /*komerce society*/
+    .text-boxes {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -959,7 +890,7 @@ a {
     }
 
     .background-containers {
-   width: 90%;
+    width: 90%;
     height: auto;
     background: center / cover no-repeat;
     margin-left: auto;
@@ -980,7 +911,6 @@ a {
         width: 50%;
         background-color: var(--Komerce-Dark);
         transform: translateX(-50%);
-
     }    
 
     .h2-font {
@@ -991,7 +921,7 @@ a {
     width: 15px;
     height: auto;
     }
-      /*komerce society*/
+    /*komerce society*/
 
     /* howslife komerce */
     .background-image1 {
@@ -1101,7 +1031,6 @@ a {
     /* howslife komerce */
 
     /* card our teams */
-
     .card-container {
         display: flex;
         gap: 16px;
@@ -1127,9 +1056,7 @@ a {
         letter-spacing: 0.3px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         transform-origin: bottom center;
-        margin-bottom: 5px; /* Tambahkan margin bawah untuk spasi di antara kartu saat berbaris ke bawah */
-        
-        
+        margin-bottom: 5px;    
     }
 
     .card {
@@ -1138,8 +1065,6 @@ a {
     .card {
         flex: 1 1 calc(100% - 32px);
     }
-
-
     .card-image {
         position: relative;
         max-width: 100%;
@@ -1150,7 +1075,6 @@ a {
     .name {
     margin-top: 5px;
     color: rgb(47, 46, 46);
-    /* text-align: center; */
     }
     
     .paragraph-desc {
@@ -1172,8 +1096,6 @@ a {
     /* card our teams */
 
     /* blog */
-
-
     .blog-post {
         width: 100%;
     }
@@ -1220,6 +1142,4 @@ a {
         margin-top: 70px;
         margin-left: 40px;
     }
-
-
 }

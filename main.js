@@ -1,19 +1,3 @@
-// JavaScript code to add the 'visible' class when elements are in viewport
-// document.addEventListener('DOMContentLoaded', function() {
-//     const elements = document.querySelectorAll('.fade-in');
-
-//     function checkVisibility() {
-//         elements.forEach(el => {
-//             const rect = el.getBoundingClientRect();
-//             if (rect.top < window.innerHeight && rect.bottom > 0) {
-//                 el.classList.add('visible');
-//             }
-//         });
-//     }
-
-//     window.addEventListener('scroll', checkVisibility);
-//     checkVisibility(); // Initial check
-// });
 // JavaScript code to add 'enlarged' class on hover for h2 elements
 document.addEventListener('DOMContentLoaded', function () {
     const headings = document.querySelectorAll('h2');

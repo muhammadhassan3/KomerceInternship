@@ -12,7 +12,6 @@
             <span class="text">Lets Go</span>
 			<?php $image = get_template_directory_uri() . "/Images/arrow-right.png" ?>
             <img src=<?= $image ?> alt="KomerceTeam" class="arrow-icon ">
-            <!-- <div class="arrow-icon">→</div> -->
         </a>
     </div>
 
@@ -20,10 +19,8 @@
         <div class="position-relative">
             <div class="background-video ">
 				<?php $video = get_template_directory_uri() . "/Images/komship-yt.mp4" ?>
-                <!-- <div class="video-wrapper"> -->
                     <video id="background-video" src=<?= $video ?> alt="Komerce" class="background-image1"
                            width="1200px"></video>
-                <!-- </div> -->
             </div>
             <div class="play-indicator">
 				<?php $play = get_template_directory_uri() . "/Images/play-circle.png" ?>
@@ -196,8 +193,6 @@
     <div class="background1">
         <div class="content">
             <div class="text-boxes-photos ">
-                <!-- <div class="ms-5 mt-5"> -->
-                    <!-- <div class="mt-5"> -->
                         <div class="text-box2 text-white">
                             <h2 class="text-photos">“We have the resources to go as far as we want with ideas. And no idea is too
                                 crazy.”</h2>
@@ -212,8 +207,6 @@
                                 <p class="watch-text-circle">Watch the film</p>
                             </div>
                         </div>
-                    <!-- </div> -->
-                <!-- </div> -->
             </div>
         </div>
     </div>

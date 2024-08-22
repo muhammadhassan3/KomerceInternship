@@ -3,7 +3,7 @@
 <!-- hows life at komerce -->
 <div class="background-container-ring">
     <div class="content-wrapper">
-        <h1 class="main-heading pt-5 ">How’s Life at Komerce?</h1>
+        <h1 class="main-heading ">How’s Life at Komerce?</h1>
         <p class="sub-heading">Get an inside look into what working at Komerce is like!</p>
     </div>
 
@@ -195,7 +195,7 @@
 <div class="background-container2 ">
     <div class="background1">
         <div class="content">
-            <div class="text-boxes ">
+            <div class="text-boxes-photos ">
                 <!-- <div class="ms-5 mt-5"> -->
                     <!-- <div class="mt-5"> -->
                         <div class="text-box2 text-white">

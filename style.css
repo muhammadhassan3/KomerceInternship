@@ -56,10 +56,11 @@ body {
 }
 
 .content-wrapper {
-    width: 858px;
-    margin: 0 auto 20px auto;
+    /* width: 858px; */
+    margin: 0 auto 0px auto;
     text-align: center;
     width: 100%;
+    padding-top: 20px;
 }
 
 .main-heading {
@@ -173,42 +174,6 @@ body {
     overflow: hidden;
 }
 
-
-/* .play-indicator{
-    padding: 0 120px;
-    top: 42%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-} */
-
-/* .play-icon{
-    background-color: var(--Komerce-Dark);
-    border-radius: 100%;
-    padding: 0;
-    width: 75px;
-    height: 75px;
-    transition: transform .1s;
-    cursor: pointer; 
-} */
-
-/* .pause-icon {
-    border-radius: 100%;
-    padding: 0;
-    width: 75px;
-    height: 75px;
-    transition: transform .0.00001s;
-    cursor: pointer; 
-    display: none;
-} */
-
-/* .play-icon:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-} */
-
 .play-icon, .pause-icon {
     cursor: pointer;
     position: absolute;
@@ -321,6 +286,14 @@ body {
 }
 
 .text-boxes {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 125px;
+    margin-left: 40px;
+}
+
+.text-boxes-photos {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -750,14 +723,16 @@ a {
         margin-top: 50px;
         margin-left: 20px;
     }
-
+    .language-switcher {
+        display: none;
+    }
     .text-box {
         background-color: #f4f4f4;
         padding: 10px;
         border-radius: 8px;
         margin: 5px 0;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-        max-width: 200px;
+        max-width: 250px;
     }
 
     .paragraph-whoarewe {
@@ -766,7 +741,7 @@ a {
     line-height: 12px;
     margin: 0 auto 16px;
     font-family: 'Inter', sans-serif;
-    font-size: 7px;
+    font-size: 10px;
     }
 
     .background-containers {
@@ -788,14 +763,14 @@ a {
         left: 50%;
         position: absolute;
         height: 2px;
-        width: 40%;
+        width: 35%;
         background-color: var(--Komerce-Dark);
         transform: translateX(-50%);
 
     }    
 
     .h2-font {
-        font-size: 10px;
+        font-size: 25px;
     }
     
     .bg-arrow{
@@ -843,6 +818,30 @@ a {
     }
     /* howslife komerce */
 
+    /* our teams */
+
+    .title {
+        color: var(--Grayscale-Main-Black, #333);
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    .paragraph {
+        color: var(--Grayscale-Dark-Grey, #626262);
+        font-weight: 400;
+        line-height: 15px;
+        max-width: 85%;
+        margin: 0 auto 32px;
+        font-family: 'Inter', sans-serif;
+        font-size: 12px;
+        text-align: center;
+    }
+    /* our teams */
+    
     /* photos */
     .background-container2,
     .background1 {
@@ -896,9 +895,27 @@ a {
     /* card our teams */
 
     /* blog */
+
+    .title {
+        color: var(--Grayscale-Main-Black, #333);
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
     .blog-post {
         width: 48%;
     }
+
+    .post-info {
+    display: flex;
+    font-size: 15px;
+    color: #999;
+
+}
 }
 
 @media (max-width:576px){
@@ -907,7 +924,10 @@ a {
         display: flex;
         flex-direction: column;
         position: absolute;
-        margin-top: 50px;
+        margin-top: 10px;
+    }
+    .language-switcher {
+        display: none;
     }
 
     .text-box {
@@ -916,16 +936,16 @@ a {
         border-radius: 8px;
         margin: 5px 0;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-        max-width: 150px;
+        max-width: 200px;
     }
 
     .paragraph-whoarewe {
     color: var(--Grayscale-Dark-Grey, #626262);
     font-weight: 200px;
-    line-height: 6px;
+    line-height: 11px;
     margin: 0 auto 16px;
     font-family: 'Inter', sans-serif;
-    font-size: 4px;
+    font-size: 8px;
     }
 
     .background-containers {
@@ -954,7 +974,7 @@ a {
     }    
 
     .h2-font {
-        font-size: 7px;
+        font-size: 13px;
     }
     
     .bg-arrow{
@@ -1005,8 +1025,7 @@ a {
         font-family: "Plus Jakarta Sans", sans-serif;
         font-size: 13px;
         font-style: normal;
-        line-height: 28px;
-        width: 100%;
+        margin: 0;
     }
     .play-icon, .pause-icon {
         cursor: pointer;
@@ -1070,23 +1089,85 @@ a {
     /* howslife komerce */
 
     /* card our teams */
-    .card {
-        flex: 1 1 calc(100% - 32px);
+
+    .card-container {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1500px;
+        margin: 0 auto;
     }
-    
-    .paragraph-desc {
-        font-size: 12px;
-        line-height: 20px;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        min-height: 350px;
+        width: 330px;
+        padding: 16px;
+        border-radius: 12px;
+        background: var(--Grayscale-Off-White, #FFF);
+        box-shadow: 2px 2px 18px 0px rgba(0, 0, 0, 0.12);
+        color: var(--Gray-2, #4F4F4F);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.3px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transform-origin: bottom center;
+        margin-bottom: 5px; /* Tambahkan margin bawah untuk spasi di antara kartu saat berbaris ke bawah */
+        
+        
     }
 
     .card {
         padding: 12px;
     }
+    .card {
+        flex: 1 1 calc(100% - 32px);
+    }
+
+
+    .card-image {
+        position: relative;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .name {
+    margin-top: 5px;
+    /* text-align: center; */
+}
+    
+    .paragraph-desc {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    
+    .paragraph {
+        color: var(--Grayscale-Dark-Grey, #626262);
+        font-weight: 400;
+        line-height: 15px;
+        max-width: 85%;
+        margin: 0 auto 32px;
+        font-family: 'Inter', sans-serif;
+        font-size: 12px;
+        text-align: center;
+    }
     /* card our teams */
 
     /* blog */
+
+
     .blog-post {
         width: 100%;
+    }
+
+    .post-info {
+    display: flex;
+    font-size: 10px;
+    color: #999;
     }
 
     /* photos */
@@ -1118,10 +1199,13 @@ a {
     .text-photos {
         font-size: 15px;
     }
+    .text-boxes-photos {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 70px;
+        margin-left: 40px;
+    }
+
+
 }
-
-
-
-
-
-

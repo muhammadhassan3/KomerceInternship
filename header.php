@@ -56,7 +56,7 @@
             </ul>
         </div>
 
-        <div class="d-flex align-items-center" style="gap: 15px;">
+        <div class="d-none d-sm-flex align-items-center language-switcher " style="gap: 15px;">
             <a href="#" class="ind_text" style="color: red;">ID</a>
             <div>|</div>
             <a href="#" class="en_text" style="color: #333;">EN</a>

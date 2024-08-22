@@ -363,7 +363,7 @@ ul .nav-item {
     font-weight: 400;
     line-height: 28px;
     max-width: 800px;
-    margin: 0 auto 32px;
+    margin: 0 auto 0;
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     text-align: center;
@@ -384,6 +384,7 @@ ul .nav-item {
     justify-content: center;
     max-width: 1500px;
     margin: 0 auto;
+    margin-top: 50px;
 }
 
 .card {
@@ -470,6 +471,7 @@ a {
     text-align: center;
     background-color: #fff;
     margin-bottom: 100px;
+    margin-top: 50px;
 }
 
 .blog-title {
@@ -776,7 +778,7 @@ a {
         font-weight: 400;
         line-height: 15px;
         max-width: 85%;
-        margin: 0 auto 32px;
+        margin: 0 auto 0;
         font-family: 'Inter', sans-serif;
         font-size: 12px;
         text-align: center;
@@ -1038,6 +1040,7 @@ a {
         justify-content: center;
         max-width: 1500px;
         margin: 0 auto;
+        margin-top: 30px;
     }
 
     .card {
@@ -1088,7 +1091,7 @@ a {
         font-weight: 400;
         line-height: 15px;
         max-width: 85%;
-        margin: 0 auto 32px;
+        margin: 0 auto 0;
         font-family: 'Inter', sans-serif;
         font-size: 12px;
         text-align: center;
@@ -1141,5 +1144,14 @@ a {
         position: absolute;
         margin-top: 70px;
         margin-left: 40px;
+    }
+    .blog-container {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 30px;
+        text-align: center;
+        background-color: #fff;
+        margin-bottom: 100px;
+        margin-top: 30px;
     }
 }

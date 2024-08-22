@@ -111,7 +111,7 @@
     Cras dui velit pretium purus vitae ipsum in. Quisque nisi laoreet imperdiet mi aliquet.
 </div>
 
-<div class="card-container mt-5">
+<div class="card-container">
     <div class="card">
         <?php $image = get_template_directory_uri() . "/Images/Poto.png" ?>
         <img src=<?= $image ?> alt="Team Member 1" class="card-image">

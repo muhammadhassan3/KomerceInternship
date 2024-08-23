@@ -39,6 +39,15 @@ add_action( 'init', 'lintang_menus' );
 add_action( "wp_enqueue_scripts", 'initStyle' );
 add_action( 'wp_enqueue_scripts', 'theme_initScript' );
 
+
+//menambahkan class css dalam fungsi the_content();
+function add_blog_post_paragraph_class($content) {
+    // Menambahkan class 'blog-post-paragraph' ke setiap tag <p> di dalam konten
+    $content = preg_replace('/<p([^>]+)?>/', '<p$1 class="blog-post-paragraph">', $content);
+    return $content;
+}
+add_filter('the_content', 'add_blog_post_paragraph_class');
+
 // CRUD WORDPRESS TANPA PLUGIN
 // tabel divisi dan jabatan
 

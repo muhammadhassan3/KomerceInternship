@@ -53,13 +53,28 @@
                     echo "<li class='nav-item navbar-item'><a class='nav-link navbar-link " . esc_attr($activeClass) . "' aria-current='page' href='" . esc_url($item->url) . "'> " . esc_html($item->title) . "</a></li>";
                 }
                 ?>
+                <li>
+                    <div class="d-flex d-md-none align-items-center" style="gap: 15px;">
+                    <a href="#" class="ind_text" style="color: red;">ID</a>
+                    <div>|</div>
+                    <a href="#" class="en_text" style="color: #333;">EN</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-none d-md-flex d-lg-none align-items-center" style="gap: 15px;">
+                    <a href="#" class="ind_text" style="color: red;">ID</a>
+                    <div>|</div>
+                    <a href="#" class="en_text" style="color: #333;">EN</a>
+                    </div>
+                </li>  
             </ul>
-        </div>
-
-        <div class="d-none d-sm-flex align-items-center language-switcher " style="gap: 15px;">
+            </div>
+        <div class="d-none d-lg-flex align-items-center " style="gap: 15px;">
             <a href="#" class="ind_text" style="color: red;">ID</a>
             <div>|</div>
             <a href="#" class="en_text" style="color: #333;">EN</a>
         </div>
     </div>
 </nav>
+
+

@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="col-sm me-5 row">
-                    <div class="col d-flex flex-column ms-4 ">
+                    <div class="col d-flex flex-column ">
                         <h4>Company</h4>
                         <ul class="list-unstyled">
                             <li><a href="https://komclass.id/" class="nav-link">Event</a></li>
@@ -45,7 +45,7 @@
                             <li><a href="https://komerce.id/impact" class="nav-link">Social Impact</a></li>
                         </ul>
                     </div>
-                    <div class="col d-flex flex-column ms-5">
+                    <div class="col d-flex flex-column ">
                         <h4>Product</h4>
                         <ul class="list-unstyled">
                             <li><a href="https://www.komtim.id/" class="nav-link">Komtim</a></li>
@@ -60,7 +60,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm d-flex flex-column ms-5">
+                <div class="col-sm d-flex flex-column ">
                     <p>Find Out Our Latest News</p>
                     <div class="d-flex flex-row mb-2">
 						<?php
@@ -124,7 +124,7 @@
             <p class=""><a>Copyright © 2023 Komerce. All Rights Reserved</a></p>
             <div class="d-flex flex-row gap-3">
                 <p><a>Term and Conditions</a></p>
-                <p><a>Privacy Policy</a></p>>
+                <p><a>Privacy Policy</a></p>
             </div>
         </div>
     </div>

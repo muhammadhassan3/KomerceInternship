@@ -149,6 +149,9 @@
 		<?php if ( ! empty( $custom_posts ) ) : ?>
 			<?php foreach ( $custom_posts as $post ) : setup_postdata( $post ); ?>
                 <div class="blog-post">
+                <a href="<?php echo the_permalink($post->ID) ?>">
+                    <span class="link"></span>
+                </a>
 					<?php
 					if ( has_post_thumbnail( $post->ID ) ) {
 						$image_url = get_the_post_thumbnail_url( $post->ID, 'full' );

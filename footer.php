@@ -12,7 +12,6 @@
 				?>
                 <img src="<?php echo $logo[0] ?>" alt="Logo" height="40" class="mb-3 logo">
             </div>
-
             <div class="max-vw-100 row ">
                 <div class="col-sm d-flex flex-column me-5">
                     <div class="d-flex flex-row">

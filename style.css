@@ -584,7 +584,7 @@ a {
 }
 
 .h2-font{
-    font-size: 35px;
+    font-size: 15px;
 }
 /* blog */
 
@@ -679,19 +679,25 @@ a {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.blog-post-title {
-    font-size: 1.75rem;
+ .blog-post-paragraph h2{
+    font-size: 24px;
+        /* font-family: 'Inter', sans-serif; */
+        margin-bottom: 15px;
+        color: #333;
+    }
+    .blog-post-paragraph p{
+    font-size: 15px;
+        font-family: 'Inter', sans-serif;
+        margin-bottom: 15px;
+        color: #555;
+    }
+
+    .blog-post-title{
+    font-size: 30px;
     margin-bottom: 15px;
     color: #333;
     text-align: center;
-}
-
-.blog-post-paragraph {
-    font-size: 1rem;
-    font-family: 'Inter', sans-serif;
-    margin-bottom: 15px;
-    color: #555;
-}
+    }
 
 
 
@@ -935,7 +941,7 @@ a {
         display: flex;
         flex-direction: column;
         position: absolute;
-        margin-top: 10px;
+        margin-top: 8px;
     }
     .language-switcher {
         display: none;
@@ -954,9 +960,9 @@ a {
     color: var(--Grayscale-Dark-Grey, #626262);
     font-weight: 200px;
     line-height: 11px;
-    margin: 0 auto 16px;
+    margin: 0 auto 0px;
     font-family: 'Inter', sans-serif;
-    font-size: 8px;
+    font-size: 7px;
     }
 
     .background-containers {
@@ -1222,7 +1228,44 @@ a {
         margin-bottom: 100px;
         margin-top: 30px;
     }
+    /* photos */
+
+    /* content-article */
+    .blog-post-paragraph h2{
+    font-size: 14px;
+    /* font-family: 'Inter', sans-serif; */
+        margin-bottom: 15px;
+        color: #333;
+    }
+    .blog-post-paragraph p{
+    font-size: 12px;
+        font-family: 'Inter', sans-serif;
+        margin-bottom: 15px;
+        color: #555;
+    }
+
+    .blog-post-title{
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+    }
+
+    .blog-post-card {
+    width: 100%;
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
 
     /* ==================FOOTEEEERRRR================== */
     
 }
+
+
+   

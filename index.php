@@ -159,7 +159,7 @@
                     <img src="<?= esc_url( $image_url ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>"
                          class="blog-image filter">
                     <div class="label-red">
-                        <span class="label-text"><?php echo substr( strip_tags( get_the_title() ), 0, 40 ) . "..." ?></span>
+                        <span class="label-text"><?php echo substr( strip_tags( get_the_title() ), 0, 28 ) . "..." ?></span>
                     </div>
                     <div>
                         <span class="sub-label-text"><?php echo substr( strip_tags( get_the_content() ), 0, 15 ) . "..." ?></span>

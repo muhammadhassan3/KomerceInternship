@@ -584,7 +584,7 @@ a {
 }
 
 .h2-font{
-    font-size: 15px;
+    font-size: 30px;
 }
 /* blog */
 
@@ -698,7 +698,12 @@ a {
     color: #333;
     text-align: center;
     }
-
+    
+    .blog-date{
+        font-family: 'Inter', sans-serif;
+        color: #656464;
+        font-size: 14 px;
+    }
 
 
 /* -------------------Label Blog-------------------- */

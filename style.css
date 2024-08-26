@@ -669,10 +669,20 @@ a {
     margin: 20px auto;
     padding: 60px;
     border: 1px solid #e0e0e0;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
+}
+.card-blog-post {
+    width: 83%;
+    margin: 20px auto;
+    padding: 60px;
+    /* border: 1px solid #e0e0e0; */
+    /* border-radius: 10px; */
+    background-color: #fff;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    /* transition: box-shadow 0.3s ease; */
 }
 
 .blog-post-card:hover {
@@ -685,25 +695,80 @@ a {
         margin-bottom: 15px;
         color: #333;
     }
-    .blog-post-paragraph p{
+.blog-post-paragraph p{
     font-size: 15px;
         font-family: 'Inter', sans-serif;
         margin-bottom: 15px;
         color: #555;
-    }
-
-    .blog-post-title{
+}
+.blog-post-title{
     font-size: 30px;
     margin-bottom: 15px;
     color: #333;
     text-align: center;
-    }
-    
-    .blog-date{
+}
+.title-blog-post{
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #333;
+    /* text-align: center; */
+}
+.blog-date{
         font-family: 'Inter', sans-serif;
         color: #656464;
-        font-size: 14 px;
-    }
+        font-size: 14px;
+}
+
+
+/* ===================================================CATEGORY BLOG====================================================== */
+
+.media {
+    display: flex;
+    align-items: flex-start; /* Mengatur agar konten berada di awal vertikal */
+}
+
+.media-left {
+    flex-shrink: 0; /* Membuat gambar tidak mengecil */
+    margin-right: 30px;
+}
+
+.media-left img {
+    width: 250px; /* Mengatur ukuran gambar */
+    height: auto;
+    border-radius: 10px;
+}
+
+.media-body {
+    flex: 1; /* Mengambil sisa ruang */
+}
+
+.title-blog-post {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.meta {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.blog-post-paragraph {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.more-link {
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.more-link:hover {
+    text-decoration: underline;
+}
 
 
 /* -------------------Label Blog-------------------- */
@@ -1268,8 +1333,56 @@ a {
 }
 
 
-    /* ==================FOOTEEEERRRR================== */
-    
+    /* ==================CATEGORY BLOG================== */
+
+    .media {
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .media-left {
+        margin-bottom: 15px; 
+    }
+
+    .media-left img {
+        width: 125%; 
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .media-body {
+        width: 100%; 
+    }
+
+    .title-blog-post {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+    }
+
+    .meta {
+        font-size: 0.9rem;
+        color: #888;
+        margin-bottom: 15px;
+    }
+
+    .blog-post-paragraph {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .more-link {
+        font-weight: bold;
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .more-link:hover {
+        text-decoration: underline;
+    }
+
 }
 
 

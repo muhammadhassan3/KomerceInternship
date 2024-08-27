@@ -23,6 +23,14 @@ function lintang_menus() {
 	register_nav_menus( $location );
 }
 
+function enable_threaded_comments(){
+    if (is_singular() && comments_open() && get_option('thread_comments')){
+        wp_enqueue_script('comment-reply');
+    }
+}
+add_action('wp_enqueue_scripts', 'enable_threaded_comments');
+add_theme_support('html5', array('comment-list', 'comment-form', 'search-form', 'gallery', 'caption'));
+
 function initStyle() {
 	$version = wp_get_theme()->get( "Version" );
 	wp_enqueue_style( "custom-css", get_template_directory_uri() . '/style.css', array(), $version, "all" );

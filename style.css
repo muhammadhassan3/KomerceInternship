@@ -718,6 +718,137 @@ a {
         color: #656464;
         font-size: 14px;
 }
+.tag {
+    display: inline-block; 
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 2px 4px;
+    margin: 0 5px 5px 0; 
+    border-radius: 5px;
+    font-size: 14px;
+    pointer-events: none; /* Membuat teks tidak bisa diklik */
+}
+.author{
+    font-family: 'Inter', sans-serif;
+    color: #656464;
+    font-size: 14px;
+}
+.comment-blogs{
+    display: inline-block; 
+    background-color: #f0f0f0;
+    padding: 2px 4px;
+    margin: 0 5px 5px 0; 
+    border-radius: 5px;
+    font-size: 14px;
+    pointer-events: none; /* Membuat teks tidak bisa diklik */
+}
+
+/*------------------------------------------------------------------ comments -------------------*/
+.comments-wrapper {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comments-header h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.comments-inner {
+    margin-bottom: 20px;
+}
+
+.comment {
+    background-color: #ffffff; 
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0; 
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.comment .avatar {
+    float: left;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+.comment .fn {
+    font-weight: bold;
+    color: #333;
+}
+
+.comment .comment-metadata {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.comment .comment-content {
+    font-size: 14px;
+    color: #555;
+}
+
+.comment .reply {
+    margin-top: 10px;
+}
+
+.comment .reply a {
+    font-size: 12px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.comment .reply a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.comment-respond {
+    background-color: #f2f2f2; 
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.comment-respond h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.comment-respond input[type="text"],
+.comment-respond input[type="email"],
+.comment-respond textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.comment-respond input[type="submit"] {
+    background-color: #007bff; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-respond input[type="submit"]:hover {
+    background-color: #0056b3; 
+}
+
+/* comments */
+
 
 
 /* ===================================================CATEGORY BLOG====================================================== */
@@ -740,30 +871,35 @@ a {
 
 .media-body {
     flex: 1; /* Mengambil sisa ruang */
+    overflow: hidden;
 }
 
 .title-blog-post {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 1.5rem;
+    box-sizing: border-box;
 }
 
 .meta {
     font-size: 0.9rem;
     color: #888;
     margin-bottom: 15px;
+    box-sizing: border-box;
 }
 
 .blog-post-paragraph {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 15px;
+    box-sizing: border-box;
 }
 
 .more-link {
     font-weight: bold;
     color: #007bff;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 .more-link:hover {
@@ -1353,30 +1489,35 @@ a {
 
     .media-body {
         width: 100%; 
+        overflow: hidden;
     }
 
     .title-blog-post {
         margin-top: 0;
         margin-bottom: 10px;
         font-size: 1.3rem;
+        box-sizing: border-box;
     }
 
     .meta {
         font-size: 0.9rem;
         color: #888;
         margin-bottom: 15px;
+        box-sizing: border-box;
     }
 
     .blog-post-paragraph {
         font-size: 1rem;
         line-height: 1.6;
         margin-bottom: 15px;
+        box-sizing: border-box;
     }
 
     .more-link {
         font-weight: bold;
         color: #007bff;
         text-decoration: none;
+        box-sizing: border-box;
     }
 
     .more-link:hover {

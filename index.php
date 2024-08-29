@@ -178,6 +178,18 @@
 						foreach ( get_the_category( $post->ID ) as $category ) {
 							echo "<span class='post-category ms-3 border-date'>" . $category->name . "</span>";
 						}
+                        $tags = get_the_tags( $post->ID );
+                        if ($tags)
+                        {
+                           foreach ( $tags as $tag ) {
+							    echo "<span class='post-category ms-3 border-date'>" . $tag->name . "</span>";
+						    }
+                        }
+						?>
+                    </div>
+                    <div class="post-info mt-5">
+						<?php
+                        
 						?>
                     </div>
                 </div>

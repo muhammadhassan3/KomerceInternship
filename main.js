@@ -1,3 +1,5 @@
+
+
 // JavaScript code to add 'enlarged' class on hover for h2 elements
 document.addEventListener('DOMContentLoaded', function () {
     const headings = document.querySelectorAll('h2');
@@ -132,7 +134,27 @@ jQuery(document).ready(function ($) {
     });
 });
 
+//chained combobox
+jQuery(document).ready(function($) {
+    $('#divisi').change(function() {
+        var divisiID = $(this).val();
+        var nonce = filterData.filter_nonce;
 
-        
+        $.ajax({
+            url: filterData.ajaxurl,
+            type: 'POST',
+            data: {
+                action: 'filter_jabatan_by_divisi',
+                divisi_id: divisiID,
+                nonce: nonce
+            },
+            success: function(response) {
+                $('#jabatan').html(response);
+            }
+        });
+    });
+});
+
+
 
 

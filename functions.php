@@ -62,6 +62,21 @@ function add_blog_post_paragraph_class($content)
 }
 add_filter('the_content', 'add_blog_post_paragraph_class');
 
+//CATEGORY OURTEAMS
+function get_divisi_name_by_id($divisi_id) {
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'divisi';
+    $divisi_name = $wpdb->get_var($wpdb->prepare("SELECT nama_divisi FROM $table_name WHERE id = %d", $divisi_id));
+    return $divisi_name;
+}
+
+function get_jabatan_name_by_id($jabatan_id) {
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'jabatan';
+    $jabatan_name = $wpdb->get_var($wpdb->prepare("SELECT nama_jabatan FROM $table_name WHERE id = %d", $jabatan_id));
+    return $jabatan_name;
+}
+
 // CRUD WORDPRESS TANPA PLUGIN
 // tabel divisi dan jabatan
 

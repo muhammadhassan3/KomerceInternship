@@ -911,9 +911,52 @@ a {
     text-decoration: underline;
 }
 
+/* ============================CATEGORY OURTEAMS============================= */
+.card-ourteams{
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    width: 250px;
+    padding: 16px;
+    border-radius: 12px;
+    background: var(--Grayscale-Off-White, #FFF);
+    box-shadow: 2px 2px 18px 0px rgba(0, 0, 0, 0.12);
+    color: var(--Gray-2, #4F4F4F);
+    font-size: 11px;
+    /* font-weight: 500; */
+    line-height: 15px;
+    letter-spacing: 0.3px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: bottom center;
+    margin-bottom: 16px;
+}
+.card-image-ourteams {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+}
 
-/* -------------------Label Blog-------------------- */
+.card-ourteams:hover {
+    transform: scale(1.02);
+    box-shadow: 2px 2px 24px 0px rgba(0, 0, 0, 0.24);
+}
 
+.h6-font{
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    color: #555;
+}
+
+.div-ourteams {
+    max-width: 200px;
+}
+
+/* ============================CATEGORY OURTEAMS============================= */
 
 /* ==========================================CSS RESPONSIVE========================================== */
 

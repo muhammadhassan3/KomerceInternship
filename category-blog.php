@@ -10,7 +10,7 @@
                     <img class="post-thumb img-fluid" src="<?php the_post_thumbnail_url('thumbnail'); ?>" alt="image">
                 </div>
                 <div class="media-body">
-                    <h3 class="title-blog-post"><?php the_title(); ?></h3>
+                <h3 class="title-blog-post"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                     <div class="meta mb-1"><span class="blog-date"><?php the_date('d F Y'); ?></span>
                         <span class="author"> oleh <?php the_author(); ?></span>
                     </div>
@@ -21,9 +21,13 @@
         </div>
 
     <?php endwhile; ?>
-    <?php the_posts_navigation(); ?>
+    <div class="card-pagination"> 
+        <div class="pagination" > <?php the_posts_pagination(); ?></div>
+    </div>
+    
 <?php else : ?>
     <?php get_template_part('category', 'none'); ?>
 <?php endif; ?>
+
 
 <?php get_footer(); ?>

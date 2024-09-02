@@ -112,26 +112,47 @@
 </div>
 
 <div class="card-container">
-    <div class="card">
-        <?php $image = get_template_directory_uri() . "/Images/Poto.png" ?>
-        <img src=<?= $image ?> alt="Team Member 1" class="card-image">
-        <p class="paragraph-desc mt-3">Being an Innovator at Telkom, makes me an adaptive person and always</p>
-        <div class="name">- Is Nur - Lead Front End</div>
-    </div>
-    <div class="card">
-        <?php $image = get_template_directory_uri() . "/Images/Poto.png" ?>
-        <img src=<?= $image ?> alt="Team Member 2" class="card-image">
-        <p class="paragraph-desc mt-3">Being an Innovator at Telkom, makes me an adaptive person and always</p>
-        <div class="name">- Satrio - CTO Komerce</div>
-    </div>
-    <div class="card">
-        <?php $image = get_template_directory_uri() . "/Images/Poto.png" ?>
-        <img src=<?= $image ?> alt="Team Member 3" class="card-image">
-        <p class="paragraph-desc mt-3">Being an Innovator at Telkom, makes me an adaptive person and always</p>
-        <div class="name">- Ragil - Lead Backend</div>
-    </div>
+    <?php
+    $jabatan_ids = array();
+    $jabatan_names = array('Chief of Technology', 'Chief Operating Officer', 'Chief Executive Officer');
+
+    foreach ($jabatan_names as $jabatan_name) {
+        $jabatan_id = get_jabatan_id_by_name($jabatan_name);
+        if ($jabatan_id) {
+            $jabatan_ids[] = $jabatan_id;
+        }
+    }
+
+    if (!empty($jabatan_ids)) {
+        $args = array(
+            'meta_query' => array(
+                array(
+                    'key' => 'jabatan',
+                    'value' => $jabatan_ids,
+                    'compare' => 'IN',
+                ),
+            ),
+        );
+
+        $users = get_users($args);
+
+        if ($users) :
+            foreach ($users as $user) :
+                $avatars = get_avatar_url($user->ID); ?>
+                <div class="card">
+                    <img class="card-image" src="<?= esc_url($avatars) ?>" alt="User Avatar" />
+                    <p class="paragraph-desc mt-3">Being an Innovator at Telkom, makes me an adaptive person and always</p>
+                    <div class="name"><?php echo esc_html($user->display_name); ?></div>
+                </div>
+            <?php endforeach; ?>
+        <?php else : ?>
+            <p>Tidak ada user yang ditemukan.</p>
+        <?php endif; 
+    }
+    ?>
 </div>
 <!-- Our Teams -->
+
 
 
 <!-- Blog -->

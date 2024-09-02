@@ -52,7 +52,6 @@ add_action('init', 'lintang_menus');
 add_action("wp_enqueue_scripts", 'initStyle');
 add_action('wp_enqueue_scripts', 'theme_initScript');
 
-
 //menambahkan class css dalam fungsi the_content();
 function add_blog_post_paragraph_class($content)
 {
@@ -75,6 +74,19 @@ function get_jabatan_name_by_id($jabatan_id) {
     $table_name = $wpdb->prefix . 'jabatan';
     $jabatan_name = $wpdb->get_var($wpdb->prepare("SELECT nama_jabatan FROM $table_name WHERE id = %d", $jabatan_id));
     return $jabatan_name;
+}
+
+function get_jabatan_id_by_name($jabatan_name) {
+    global $wpdb;
+
+    // Asumsikan bahwa jabatan_name disimpan dalam tabel custom bernama 'jabatan' di dalam database
+    $table_name = $wpdb->prefix . 'jabatan';
+    $jabatan_id = $wpdb->get_var($wpdb->prepare(
+        "SELECT id FROM $table_name WHERE nama_jabatan = %s",
+        $jabatan_name
+    ));
+
+    return $jabatan_id ? $jabatan_id : false;
 }
 
 // CRUD WORDPRESS TANPA PLUGIN

@@ -238,7 +238,6 @@ body {
         transform: translateX(-50%);
     }
 }
-
 /* hows life */
 
 
@@ -356,8 +355,8 @@ ul .nav-item {
 
 /* Komerce Society */
 
-/* ============Our Teams============= */
 
+/* ============Our Teams============= */
 .title {
     color: var(--Grayscale-Main-Black, #333);
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -422,15 +421,14 @@ ul .nav-item {
 
 .card-image {
     position: relative;
-    max-width: 100%;
-    height: auto;
     border-radius: 8px;
+    max-width: 100%;
+    height: 300px;
 }
 
 .name {
     margin-top: 5px;
     color: rgb(47, 46, 46);
-    /* text-align: center; */
 }
 
 .h-divider {
@@ -464,8 +462,8 @@ a {
 
 }
 
-/* blog */
 
+/*==================== blog =====================*/
 .blog-body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -589,9 +587,9 @@ a {
 .h2-font{
     font-size: 30px;
 }
-/* blog */
+/*============================ blog ================*/
 
-/* photos */
+/*====================== photos====================== */
 .background-container2 {
     margin: 0;
     padding: 0;
@@ -635,11 +633,11 @@ a {
     font-size: 16px;
     margin: 0;
 }
-/* photos */
+/*=================== photos ======================*/
 
 
 
-/* footer */
+/*==================== footer ====================*/
 .image-brand-container {
     border-radius: 9px;
     width: 40px;
@@ -665,14 +663,15 @@ a {
 .background-footer {
     background-color: #FFF;
 }
+/*==================== footer ====================*/
 
-/* ============BLOG CONTENT ARTICLE======================== */
+
+/* ===================== BLOG CONTENT ARTICLE======================== */
 .blog-post-card {
     width: 100%;
     margin: 20px auto;
     padding: 60px;
     border: 1px solid #e0e0e0;
-    /* border-radius: 10px; */
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
@@ -681,46 +680,45 @@ a {
     width: 83%;
     margin: 20px auto;
     padding: 60px;
-    /* border: 1px solid #e0e0e0; */
-    /* border-radius: 10px; */
     background-color: #fff;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    /* transition: box-shadow 0.3s ease; */
 }
 
 .blog-post-card:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
- .blog-post-paragraph h2{
+.blog-post-paragraph h2{
     font-size: 24px;
-        /* font-family: 'Inter', sans-serif; */
-        margin-bottom: 15px;
-        color: #333;
+    margin-bottom: 15px;
+    color: #333;
     }
+
 .blog-post-paragraph p{
     font-size: 15px;
-        font-family: 'Inter', sans-serif;
-        margin-bottom: 15px;
-        color: #555;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 15px;
+    color: #555;
 }
+
 .blog-post-title{
     font-size: 30px;
     margin-bottom: 15px;
     color: #333;
     text-align: center;
 }
+
 .title-blog-post{
     font-size: 30px;
     margin-bottom: 15px;
     color: #333;
-    /* text-align: center; */
 }
+
 .blog-date{
-        font-family: 'Inter', sans-serif;
-        color: #656464;
-        font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    color: #656464;
+    font-size: 14px;
 }
+
 .tag {
     display: inline-block; 
     background-color: #f0f0f0;
@@ -731,11 +729,13 @@ a {
     font-size: 14px;
     pointer-events: none; /* Membuat teks tidak bisa diklik */
 }
+
 .author{
     font-family: 'Inter', sans-serif;
     color: #656464;
     font-size: 14px;
 }
+
 .comment-blogs{
     display: inline-block; 
     background-color: #f0f0f0;
@@ -747,7 +747,7 @@ a {
      pointer-events: none;
 }
 
-/*------------------------------------------------------------------ comments -------------------*/
+/*=============== comments =====================*/
 .comments-wrapper {
     background-color: #f9f9f9;
     padding: 20px;
@@ -792,7 +792,6 @@ a {
     font-size: 12px;
     color: #666;
     margin-bottom: 10px;
-    /* pointer-events: none; */
 }
 
 .comment .comment-content {
@@ -852,30 +851,29 @@ a {
     background-color: #0056b3; 
 }
 
-/* comments */
+/*======================== comments ==============================*/
 
 
 
-/* ===================================================CATEGORY BLOG====================================================== */
-
+/* ============================= CATEGORY BLOG =============================== */
 .media {
     display: flex;
-    align-items: flex-start; /* Mengatur agar konten berada di awal vertikal */
+    align-items: flex-start; 
 }
 
 .media-left {
-    flex-shrink: 0; /* Membuat gambar tidak mengecil */
+    flex-shrink: 0; 
     margin-right: 30px;
 }
 
 .media-left img {
-    width: 250px; /* Mengatur ukuran gambar */
+    width: 250px; 
     height: auto;
     border-radius: 10px;
 }
 
 .media-body {
-    flex: 1; /* Mengambil sisa ruang */
+    flex: 1; 
     overflow: hidden;
 }
 
@@ -911,12 +909,82 @@ a {
     text-decoration: underline;
 }
 
+.title-blog-post a {
+    color: #000000; 
+    text-decoration: none; 
+}
+
+.title-blog-post a:hover {
+    color: #000000;
+    text-decoration: underline; 
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.pagination .page-numbers {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination .page-numbers.current {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.pagination .page-numbers:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.pagination .prev,
+.pagination .next {
+    font-weight: bold;
+    background-color: #e9ecef;
+    color: #333;
+}
+
+.pagination .prev:hover,
+.pagination .next:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.card-pagination {
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+/* ============================= CATEGORY BLOG =============================== */
+
 /* ============================CATEGORY OURTEAMS============================= */
+.card-container-ourteams {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 .card-ourteams{
     display: flex;
     flex-direction: column;
     max-height: 400px;
-    width: 250px;
+    width: 280px;
     padding: 16px;
     border-radius: 12px;
     background: var(--Grayscale-Off-White, #FFF);
@@ -932,13 +1000,14 @@ a {
 }
 .card-image-ourteams {
     position: relative;
-    width: 200px;
+    width: 250px;
     height: 200px;
     border-radius: 8px;
     margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 8px;
+    margin-top: 0px;
+    object-fit: cover;
 }
 
 .card-ourteams:hover {
@@ -961,7 +1030,7 @@ a {
 /* ==========================================CSS RESPONSIVE========================================== */
 
 @media (max-width:864px) {
-    /*komerce society*/
+    /*====komerce society====*/
     .text-boxes {
         display: flex;
         flex-direction: column;
@@ -969,9 +1038,7 @@ a {
         margin-top: 50px;
         margin-left: 20px;
     }
-    /* .language-switcher {
-        display: none;
-    } */
+
     .text-box {
         background-color: #f4f4f4;
         padding: 10px;
@@ -1022,9 +1089,9 @@ a {
     width: 25px;
     height: auto;
     }
-    /*komerce society*/
+    /*====komerce society====*/
 
-    /* howslife komerce */
+    /*===== howslife komerce =====*/
     .background-image1 {
         width: 90%;
     }
@@ -1061,9 +1128,9 @@ a {
         font-size: 15px;
         line-height: normal;
     }
-    /* howslife komerce */
+    /*===== howslife komerce =====*/
 
-    /* our teams */
+    /*===== our teams =====*/
     .title {
         color: var(--Grayscale-Main-Black, #333);
         font-family: 'Plus Jakarta Sans', sans-serif;
@@ -1084,9 +1151,9 @@ a {
         font-size: 12px;
         text-align: center;
     }
-    /* our teams */
+    /*===== our teams =====*/
     
-    /* photos */
+    /*===== photos =====*/
     .background-container2,
     .background1 {
         height: 60vh; 
@@ -1115,8 +1182,9 @@ a {
     .text-photos {
         font-size: 20px;
     }
+    /*===== photos =====*/
 
-    /* blog */
+    /*===== blog =====*/
     .blog-container {
         max-width: 750px;
         margin: 0 auto;
@@ -1145,7 +1213,7 @@ a {
 }
 
 @media (max-width: 768px) {
-    /* card our teams */
+    /*========== card our teams ============*/
     .card {
         flex: 1 1 calc(50% - 32px);
     }
@@ -1163,10 +1231,9 @@ a {
         width: 100%;
         max-width: 400px;
     }
-    /* card our teams */
+    /*========== card our teams ============*/
 
-    /* blog */
-
+    /*========== blog ========*/
     .title {
         color: var(--Grayscale-Main-Black, #333);
         font-family: 'Plus Jakarta Sans', sans-serif;
@@ -1188,11 +1255,17 @@ a {
     font-size: 15px;
     color: #999;
     }
-    
+     /*========== blog ========*/
+}
+
+@media (max-width: 600px) {
+    .pagination .page-numbers {
+        padding: 8px 12px;
+    }
 }
 
 @media (max-width:576px){
-    /*komerce society*/
+    /*============komerce society==============*/
     .text-boxes {
         display: flex;
         flex-direction: column;
@@ -1253,9 +1326,9 @@ a {
     width: 15px;
     height: auto;
     }
-    /*komerce society*/
+    /*============komerce society==============*/
 
-    /* howslife komerce */
+    /*================== howslife komerce ============*/
     .background-image1 {
         width: 90%;
     }
@@ -1360,9 +1433,9 @@ a {
         font-size: 13px;
         line-height: normal;
     }
-    /* howslife komerce */
+   /*================== howslife komerce ============*/
 
-    /* card our teams */
+    /*========= card our teams ========*/
     .card-container {
         display: flex;
         gap: 16px;
@@ -1426,9 +1499,9 @@ a {
         font-size: 12px;
         text-align: center;
     }
-    /* card our teams */
+   /*========= card our teams ========*/
 
-    /* blog */
+    /*========== blog ========*/
     .blog-post {
         width: 100%;
     }
@@ -1440,8 +1513,9 @@ a {
     font-size: 10px;
     color: #999;
     }
+    /*========== blog ========*/
 
-    /* photos */
+    /*========== photos ========*/
     .background-container2,
     .background1 {
         height: 60vh; 
@@ -1486,12 +1560,11 @@ a {
         margin-bottom: 100px;
         margin-top: 30px;
     }
-    /* photos */
+    /*========== photos ========*/
 
-    /* content-article */
+    /*============== content-article ============*/
     .blog-post-paragraph h2{
     font-size: 14px;
-    /* font-family: 'Inter', sans-serif; */
         margin-bottom: 15px;
         color: #333;
     }
@@ -1518,11 +1591,11 @@ a {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
-}
+    }
+    /*============== content-article ============*/
 
 
     /* ==================CATEGORY BLOG================== */
-
     .media {
         display: flex;
         flex-direction: column; 

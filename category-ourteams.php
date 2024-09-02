@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="card-container">
+<div class="card-container-ourteams">
     <?php
     $users = get_users();
     // $users = get_users(array(

@@ -19,12 +19,12 @@
     <div class="container d-flex flex-row">
         <a class="navbar-brand" href="#">
             <?php
-            if ( function_exists( 'the_custom_logo' ) ) {
-                $custom_logo_id = get_theme_mod( 'custom_logo' );
-                $logo           = wp_get_attachment_image_src( $custom_logo_id );
+            if (function_exists('the_custom_logo')) {
+                $custom_logo_id = get_theme_mod('custom_logo');
+                $logo = wp_get_attachment_image_src($custom_logo_id);
             }
             ?>
-            <img src="<?php echo esc_url( $logo[0] ); ?>" alt="Logo" height="40" class="mb-3.5 mt-2 mx-auto logo">
+            <img src="<?php echo esc_url($logo[0]); ?>" alt="Logo" height="40" class="mb-3.5 mt-2 mx-auto logo">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -37,45 +37,43 @@
                 <li class="nav-item navbar-item">
                     <?php
                     global $wp;
-                    $homeUrl      = trailingslashit( home_url( '/' ) );
+                    $homeUrl = trailingslashit(home_url('/'));
                     $menuLocation = get_nav_menu_locations();
-                    $menuId       = $menuLocation['primary'];
-                    $menu         = wp_get_nav_menu_items( $menuId );
-                    $currentUrl   = trailingslashit( home_url( $wp->request ) );
+                    $menuId = $menuLocation['primary'];
+                    $menu = wp_get_nav_menu_items($menuId);
+                    $currentUrl = trailingslashit(home_url($wp->request));
 
-                    $homeActiveClass = ( $homeUrl == $currentUrl ) ? 'navbar-link-active' : '';
+                    $homeActiveClass = ($homeUrl == $currentUrl) ? 'navbar-link-active' : '';
                     echo "<a class='nav-link navbar-link " . esc_attr($homeActiveClass) . "' aria-current='page' href='" . esc_url($homeUrl) . "'>Home</a>";
                     ?>
                 </li>
                 <?php
-                foreach ( $menu as $item ) {
-                    $itemUrl     = trailingslashit( $item->url );
-                    $activeClass = ( $itemUrl == $currentUrl ) ? 'navbar-link-active' : '';
+                foreach ($menu as $item) {
+                    $itemUrl = trailingslashit($item->url);
+                    $activeClass = ($itemUrl == $currentUrl || ($item->title == 'Blog' && is_blog_page())) ? 'navbar-link-active' : '';
                     echo "<li class='nav-item navbar-item'><a class='nav-link navbar-link " . esc_attr($activeClass) . "' aria-current='page' href='" . esc_url($item->url) . "'> " . esc_html($item->title) . "</a></li>";
                 }
                 ?>
                 <li>
                     <div class="d-flex d-md-none align-items-center" style="gap: 15px;">
-                    <a href="#" class="ind_text" style="color: red;">ID</a>
-                    <div>|</div>
-                    <a href="#" class="en_text" style="color: #333;">EN</a>
+                        <a href="#" class="ind_text" style="color: red;">ID</a>
+                        <div>|</div>
+                        <a href="#" class="en_text" style="color: #333;">EN</a>
                     </div>
                 </li>
                 <li>
                     <div class="d-none d-md-flex d-lg-none align-items-center" style="gap: 15px;">
-                    <a href="#" class="ind_text" style="color: red;">ID</a>
-                    <div>|</div>
-                    <a href="#" class="en_text" style="color: #333;">EN</a>
+                        <a href="#" class="ind_text" style="color: red;">ID</a>
+                        <div>|</div>
+                        <a href="#" class="en_text" style="color: #333;">EN</a>
                     </div>
-                </li>  
+                </li>
             </ul>
-            </div>
-        <div class="d-none d-lg-flex align-items-center " style="gap: 15px;">
+        </div>
+        <div class="d-none d-lg-flex align-items-center" style="gap: 15px;">
             <a href="#" class="ind_text" style="color: red;">ID</a>
             <div>|</div>
             <a href="#" class="en_text" style="color: #333;">EN</a>
         </div>
     </div>
 </nav>
-
-

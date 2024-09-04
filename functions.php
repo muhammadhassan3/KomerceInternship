@@ -699,4 +699,9 @@ function custom_user_page_admin()
 	echo '</table>';
 	echo '</div>';
 }
+
+//header untuk underline
+function is_blog_page() {
+	return ( is_category('blog') || is_singular('post'));
+}
 // ======================================CHAIN COMBOBOX===========================

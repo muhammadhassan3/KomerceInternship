@@ -1,70 +1,59 @@
 <?php get_header(); ?>
 
 <!-- hows life at komerce -->
-<div class="background-container-ring">
+<div class="position-relative">
+    <div class="background-heros">
+        <?php $image = get_template_directory_uri() . "/Images/hero.jpg" ?>
+        <img src="<?= $image ?>" alt="KomerceTeam" class="image-hero filter-hero">
+    </div>
+
     <div class="content-wrapper">
-        <h1 class="main-heading ">How’s Life at Komerce?</h1>
+        <h1 class="main-heading">How’s Life at Komerce?</h1>
         <p class="sub-heading">Get an inside look into what working at Komerce is like!</p>
-    </div>
-
-    <div class="button-container">
-        <a class="styled-button" href="category/blog/">
-            <span class="text">Lets Go</span>
-			<?php $image = get_template_directory_uri() . "/Images/arrow-right.png" ?>
-            <img src=<?= $image ?> alt="KomerceTeam" class="arrow-icon ">
-        </a>
-    </div>
-
-    <div class="position-relative">
-        <div class="position-relative">
-            <div class="background-video ">
-				<?php $video = get_template_directory_uri() . "/Images/komship-yt.mp4" ?>
-                    <video id="background-video" src=<?= $video ?> alt="Komerce" class="background-image1"
-                           width="1200px"></video>
-            </div>
-            <div class="play-indicator">
-				<?php $play = get_template_directory_uri() . "/Images/play-circle.png" ?>
-                <img id="play-icon" src="<?= $play ?>" alt="Play icon" class="play-icon">
-				<?php $pause = get_template_directory_uri() . "/Images/pause-circle.png" ?>
-                <img id="pause-icon" src="<?= $pause ?>" alt="Pause icon" class="pause-icon" style="display: none;">
-            </div>
+        <div class="button-container mt-3">
+            <a class="styled-button" href="category/blog/">
+                <span class="text">Let's Go</span>
+                <?php $image = get_template_directory_uri() . "/Images/arrow-right.png" ?>
+                <img src="<?= $image ?>" alt="Arrow" class="arrow-icon">
+            </a>
         </div>
-        <div class="flex-container">
-            <div class="marquee">
-                <div class="marquee-content">
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="number">100</div>
-                        <div class="text ms-2">Management Employee</div>
-                    </div>
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="number">50K</div>
-                        <div class="text ms-2">Product User</div>
-                    </div>
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="number">12K</div>
-                        <div class="text ms-2">Integrated Product</div>
-                    </div>
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="number">500K</div>
-                        <div class="text ms-2">Komtim Talent</div>
-                    </div>
-                    <!-- Repeat the content for smooth looping -->
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="number">100</div>
-                        <div class="text ms-2">Management Employee</div>
-                    </div>
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="number">50K</div>
-                        <div class="text ms-2">Product User</div>
-                    </div>
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="number">12K</div>
-                        <div class="text ms-2">Integrated Product</div>
-                    </div>
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="number">500K</div>
-                        <div class="text ms-2">Komtim Talent</div>
-                    </div>
+    </div>
+
+    <div class="flex-container">
+        <div class="marquee">
+            <div class="marquee-content">
+                <div class="d-flex flex-row align-items-center">
+                    <div class="number">100</div>
+                    <div class="text ms-2">Management Employee</div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                    <div class="number">50K</div>
+                    <div class="text ms-2">Product User</div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                    <div class="number">12K</div>
+                    <div class="text ms-2">Integrated Product</div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                    <div class="number">500K</div>
+                    <div class="text ms-2">Komtim Talent</div>
+                </div>
+                <!-- Repeat content for smooth looping -->
+                <div class="d-flex flex-row align-items-center">
+                    <div class="number">100</div>
+                    <div class="text ms-2">Management Employee</div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                    <div class="number">50K</div>
+                    <div class="text ms-2">Product User</div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                    <div class="number">12K</div>
+                    <div class="text ms-2">Integrated Product</div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                    <div class="number">500K</div>
+                    <div class="text ms-2">Komtim Talent</div>
                 </div>
             </div>
         </div>
@@ -75,30 +64,61 @@
 
 
 <!-- Komerce Society -->
-<div class=" d-flex flex-column">
-    <h1 class="margin2 justify-content-center h1-komerce-society underline-ks">Komerce Society</h1>
-    <div class="mb-3"></div>
-    <div class="bg-content">
-        <div class="text-boxes">
-            <div class="text-box">
-                <h2 class="h2-font">Who are we? <?php $image = get_template_directory_uri() . "/Images/arrow-right.svg" ?>
-                    <img src=<?= $image ?> alt="Team Member 1" class=" bg-arrow"></h2>
 
-                <p class="paragraph-whoarewe">We strongly believe that finding your purpose can be done by helping
-                    others achieve theirs.
-                    The impact we made for millions is the reason we come to work every day.</p>
-            </div>
-            <div class="text-box">
-                <h2 class="h2-font">What we do? <?php $image = get_template_directory_uri() . "/Images/arrow-right.svg"  ?>
-                    <img src=<?= $image ?> alt="Team Member 1" class=" bg-arrow"></h2>
-            </div>
-        </div>
-        <div class="background-containers ">
-			<?php $image = get_template_directory_uri() . "/Images/komerce-team.png" ?>
-            <img src=<?= $image ?> alt="KomerceTeam" class="background-containers ">
-        </div>
+<div class="komerce-section">
+    <div class=d-flex>
+    <?php $image = get_template_directory_uri() . "/Images/arrow-up-right.svg" ?>
+            <img src=<?= $image ?> alt="Arrow" class="arrow-up-right">
     </div>
+  <div class="row">
+    <!-- Left Side: What We Do Section -->
+    <div class="col left-side">
+      <h1 class="ks-font">Komerce Society</h1>
+      <!-- <div class="what-we-do"> -->
+        <div class="wwd-box">
+        <h3 class="wwd-font">What we do?</h3>
+        </div>
+        <div class="mt-4 mb-4">
+            <p class="wwd-paragraph">Komerce is a startup built by Indigo Telkom which operates in the end-to-end e-commerce enabler sector. This startup comes from Purbalingga, Central Java, which was founded in 2019.</p>
+        </div>
+        
+        <div class="d-flex">
+          <h2 class="product-count">12+</h2>
+          <div>
+            <p class="product-count-paragraph">Integrated</p>
+            <p class="product-count-paragraph">Product</p>
+          </div>
+          
+        </div>
+        <div class="product-icons">
+          <!-- Icons here -->
+          <img src="icon1.png" alt="Icon 1">
+          <img src="icon2.png" alt="Icon 2">
+          <img src="icon3.png" alt="Icon 3">
+          <img src="icon4.png" alt="Icon 4">
+          <img src="icon5.png" alt="Icon 5">
+        </div>
+      <!-- </div> -->
+    </div>
+
+    <!-- Right Side: Who We Are Section -->
+    <div class="col right-side">
+      <div class="wwd-box">
+        <h3 class="wwd-font">Who Are We?</h3>
+        </div>
+        <div class="mt-4 mb-4">
+            <p class="wwd-paragraph">We strongly believe that finding your purpose can be done by helping others achieve theirs. The impact we made for millions is the reason we come to work every day.</p>
+        </div>
+        <div>
+            <?php $image = get_template_directory_uri() . "/Images/komerce-team.png" ?>
+            <img src=<?= $image ?> alt="KomerceTeam" class="img-komerce-team">
+
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
 <!-- Komerce Society -->
 
 <!-- Our Teams -->

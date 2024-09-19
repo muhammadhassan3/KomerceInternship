@@ -563,7 +563,7 @@ ul .nav-item {
     font-size: 48px;
     font-weight: 600;
     line-height: normal;
-    background: linear-gradient(89deg, #333 7%, #FAFAFA 87.38%);
+    background: linear-gradient(89deg, #333 7%, #c2c1c1 87.38%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -708,17 +708,51 @@ a {
     background-color: #f5f5f5;
 }
 
+.button-container-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex; 
+    justify-content: space-between; 
+}
+.justify-content-between{
+    justify-content: space-between; 
+}
+.styled-button-blog-right {
+    margin-left: 10px;
+    display: flex;
+    height: 40px;
+    padding: 0px 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    border-radius: 8px;
+background: linear-gradient(117deg, #F95031 4.61%, #CF2A08 66.71%);
+}
+.styled-button-blog-left {
+    border-radius: 8px;
+    border: 1px solid var(--Grayscale-Line, #E2E2E2);
+    background: var(--Grayscale-Input, #F4F4F4);
+    display: flex;
+    height: 40px;
+    padding: 0px 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
 .title-blog {
 font-family: Poppins;
 font-size: 48px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
-background: linear-gradient(112deg, #333 10.36%, #FAFAFA 87.38%);
+background: linear-gradient(112deg, #333 10.36%, #c2c1c1 87.38%);
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 }
+
 
 .paragraph-blog{
     color: var(--Grayscale-Label, #828282);
@@ -869,7 +903,6 @@ line-height: normal;
     left: 10px;
     position: absolute;
 }
-
 /* .h2-font{
     font-size: 30px;
 } */

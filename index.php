@@ -201,12 +201,19 @@
 
 <!-- Blog -->
 <div class="blog-container-blog">
-<div class=d-flex>
-    <?php $image = get_template_directory_uri() . "/Images/arrow-up-right.svg" ?>
-            <img src=<?= $image ?> alt="Arrow" class="arrow-up-right">
-    </div>
-    <div class="title-blog">
-        <h1 class="title-blog" >Blog</h1>
+    <div class="d-flex justify-content-between">
+        <?php $image = get_template_directory_uri() . "/Images/arrow-up-right.svg" ?>
+        <img src=<?= $image ?> alt="Arrow" class="arrow-up-right">
+        <div class="button-container">
+        <a class="styled-button-blog-left" href="#">
+                <?php $image = get_template_directory_uri() . "/Images/arrow-left.svg" ?>
+                <img src="<?= $image ?>" alt="Arrow" class="arrow-icon">
+            </a>
+            <a class="styled-button-blog-right" href="#">
+                <?php $image = get_template_directory_uri() . "/Images/arrow-right.svg" ?>
+                <img src="<?= $image ?>" alt="Arrow" class="arrow-icon">
+            </a>
+        </div>
     </div>
 
     <div class="paragraph-blog">
@@ -247,7 +254,7 @@
                             <?php echo wp_trim_words(get_the_content(), 12, '...'); ?>
                         </p>
                         <div class="container-info">
-                            <span class=""><?php echo get_the_author(); ?></span> <!-- Display the author's name -->
+                            <span class=""><?php echo get_the_author(); ?></span> 
                             <span class=""><?php echo get_the_date('d F Y', $post->ID); ?></span>
                         </div>
 

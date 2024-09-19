@@ -12,8 +12,8 @@
         <p class="sub-heading">Get an inside look into what working at Komerce is like!</p>
         <div class="button-container mt-3">
             <a class="styled-button" href="category/blog/">
-                <span class="text">Let's Go</span>
-                <?php $image = get_template_directory_uri() . "/Images/arrow-right.png" ?>
+                <span class="text">Let's Go!</span>
+                <?php $image = get_template_directory_uri() . "/Images/arrow-right.svg" ?>
                 <img src="<?= $image ?>" alt="Arrow" class="arrow-icon">
             </a>
         </div>
@@ -90,14 +90,33 @@
           </div>
           
         </div>
-        <div class="product-icons">
-          <!-- Icons here -->
-          <img src="icon1.png" alt="Icon 1">
-          <img src="icon2.png" alt="Icon 2">
-          <img src="icon3.png" alt="Icon 3">
-          <img src="icon4.png" alt="Icon 4">
-          <img src="icon5.png" alt="Icon 5">
-        </div>
+        <div class="circle-container mt-4">
+          <div class="circle1">
+            <?php $image = get_template_directory_uri() . "/Images/komtim.svg" ?>
+            <img src=<?= $image ?> alt="komtim" class="img-circle">
+          </div>
+          <div class="circle2">
+            <?php $image = get_template_directory_uri() . "/Images/komship.svg" ?>
+            <img src=<?= $image ?> alt="komtim" class="img-circle">
+          </div>
+          <div class="circle3">
+            <?php $image = get_template_directory_uri() . "/Images/kompack.svg" ?>
+            <img src=<?= $image ?> alt="komtim" class="img-circle">
+          </div>
+          <div class="circle4">
+            <?php $image = get_template_directory_uri() . "/Images/komcards.svg" ?>
+            <img src=<?= $image ?> alt="komtim" class="img-circle">
+          </div>
+          <div class="circle5">
+            <?php $image = get_template_directory_uri() . "/Images/komplace.svg" ?>
+            <img src=<?= $image ?> alt="komtim" class="img-circle">
+          </div>
+          <div class="circle6">
+            <?php $image = get_template_directory_uri() . "/Images/add.svg" ?>
+            <img src=<?= $image ?> alt="komtim" class="img-circle">
+          </div>
+        </div>    
+
       <!-- </div> -->
     </div>
 
@@ -122,13 +141,18 @@
 <!-- Komerce Society -->
 
 <!-- Our Teams -->
-<div class="title margin2">
-    <h1>Our Teams</h1>
-</div>
+<div class="container0">
+    <div class="title0">
+        <div class="arrow0">
+            <?php $image = get_template_directory_uri() . "/Images/arrow-up-right.svg" ?>
+            <img src=<?= $image ?> alt="Arrow" class="arrow0">
+        </div>
+        <h1 class="title0-h1">Our Team</h1>
+    </div>
 
-<div class="paragraph">
-    Lorem ipsum dolor sit amet consectetur. Pretium tempus aenean gravida diam non aliquam id ac phasellus.
-    Cras dui velit pretium purus vitae ipsum in. Quisque nisi laoreet imperdiet mi aliquet.
+    <div class="paragraph0">
+        Lorem ipsum dolor sit amet consectetur. Pretium tempus aenean gravida diam non aliquam id ac phasellus. Cras dui velit pretium purus vitae ipsum in. Quisque nisi laoreet imperdiet mi aliquet.
+    </div>
 </div>
 
 <div class="card-container">
@@ -176,70 +200,65 @@
 
 
 <!-- Blog -->
-<div class="title margin2">
-    <h1>Blog</h1>
-</div>
-
-<div class="paragraph">
-    <p>Lorem ipsum dolor sit amet consectetur. Pretium tempus aenean gravida diam non aliquam id ac phasellus. Cras
-        dui velit pretium purus vitae ipsum in. Quisque nisi laoreet imperdiet mi aliquet</p>
-</div>
-
-<div class="blog-container">
-    <div class="blog-posts ">
-		<?php if ( ! empty( $custom_posts ) ) : ?>
-			<?php foreach ( $custom_posts as $post ) : setup_postdata( $post ); ?>
-                <div class="blog-post">
-                <a href="<?php echo the_permalink($post->ID) ?>">
-                    <span class="link"></span>
-                </a>
-					<?php
-					if ( has_post_thumbnail( $post->ID ) ) {
-						$image_url = get_the_post_thumbnail_url( $post->ID, 'full' );
-					} else {
-						$image_url = get_template_directory_uri() . "/Images/kerkom.jpeg";
-					}
-					?>
-                    <img src="<?= esc_url( $image_url ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>"
-                         class="blog-image filter">
-                    <div class="label-red">
-                        <span class="label-text"><?php echo substr( strip_tags( get_the_title() ), 0, 28 ) . "..." ?></span>
-                    </div>
-                    <div>
-                        <span class="sub-label-text"><?php echo substr( strip_tags( get_the_content() ), 0, 15 ) . "..." ?></span>
-                    </div>
-
-                    <h2 class="post-title mt-3"><?php echo substr( strip_tags( get_the_title() ), 0, 20 ) . "..." ?></h2>
-                    <p class="post-description">
-						<?php echo wp_trim_words( get_the_content(), 12, '...' ); ?>
-                    </p>
-                    <div class="post-info mt-5">
-                        <span class="post-date border-date"><?php echo get_the_date( 'd F Y', $post->ID ); ?></span>
-						<?php
-						foreach ( get_the_category( $post->ID ) as $category ) {
-							echo "<span class='post-category ms-3 border-date'>" . $category->name . "</span>";
-						}
-                        $tags = get_the_tags( $post->ID );
-                        if ($tags)
-                        {
-                           foreach ( $tags as $tag ) {
-							    echo "<span class='post-category ms-3 border-date'>" . $tag->name . "</span>";
-						    }
-                        }
-						?>
-                    </div>
-                    <div class="post-info mt-5">
-						<?php
-                        
-						?>
-                    </div>
-                </div>
-			<?php endforeach;
-			wp_reset_postdata(); ?>
-		<?php else : ?>
-            <strong>Sorry. No posts matching your criteria!</strong>
-		<?php endif; ?>
+<div class="blog-container-blog">
+<div class=d-flex>
+    <?php $image = get_template_directory_uri() . "/Images/arrow-up-right.svg" ?>
+            <img src=<?= $image ?> alt="Arrow" class="arrow-up-right">
     </div>
+    <div class="title-blog">
+        <h1 class="title-blog" >Blog</h1>
+    </div>
+
+    <div class="paragraph-blog">
+        <p>Lorem ipsum dolor sit amet consectetur. Pretium tempus aenean gravida diam non aliquam id ac phasellus. Cras
+            dui velit pretium purus vitae ipsum in. Quisque nisi laoreet imperdiet mi aliquet</p>
+    </div>
+
+    <!-- <div class="blog-container"> -->
+        <div class="blog-posts ">
+            <?php if (! empty($custom_posts)) : ?>
+                <?php foreach ($custom_posts as $post) : setup_postdata($post); ?>
+                    <div class="blog-post">
+                        <a href="<?php echo the_permalink($post->ID) ?>">
+                            <span class="link"></span>
+                        </a>
+                        <?php
+                        if (has_post_thumbnail($post->ID)) {
+                            $image_url = get_the_post_thumbnail_url($post->ID, 'full');
+                        } else {
+                            $image_url = get_template_directory_uri() . "/Images/kerkom.jpeg";
+                        }
+                        ?>
+
+                        <img src="<?= esc_url($image_url); ?>" alt="<?php echo esc_attr(get_the_title()); ?>"
+                            class="blog-image filter">
+                        <div class="post-info">
+                            <?php
+                            $tags = get_the_tags($post->ID);
+                            if ($tags) {
+                                foreach ($tags as $tag) {
+                                    echo "<span class='post-category me-2 border-tags'>" . $tag->name . "</span>";
+                                }
+                            }
+                            ?>
+                        </div>
+                        <h2 class="post-title"><?php echo substr(strip_tags(get_the_title()), 0, 35) . "..." ?></h2>
+                        <p class="post-description">
+                            <?php echo wp_trim_words(get_the_content(), 12, '...'); ?>
+                        </p>
+                        <div class="container-info">
+                            <span class=""><?php echo get_the_author(); ?></span> <!-- Display the author's name -->
+                            <span class=""><?php echo get_the_date('d F Y', $post->ID); ?></span>
+                        </div>
+
+                    </div>
+                <?php endforeach;
+                wp_reset_postdata(); ?>
+            <?php else : ?>
+                <strong>Sorry. No posts matching your criteria!</strong>
+            <?php endif; ?>
+        </div>
+    <!-- </div> -->
 </div>
 <!-- Blog -->
 

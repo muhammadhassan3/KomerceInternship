@@ -126,5 +126,55 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+//JS UNTUK NAVIGASI BLOG
+document.addEventListener('DOMContentLoaded', function () {
+    const container = document.getElementById('blog-posts-container');
+    const leftArrow = document.getElementById('arrow-left');
+    const rightArrow = document.getElementById('arrow-right');
+    const leftButton = document.querySelector('.styled-button-blog-left');
+    const rightButton = document.querySelector('.styled-button-blog-right');
+    
+    const scrollAmount = 1240;
+
+    leftArrow.addEventListener('click', () => {
+        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        
+        setTimeout(() => {
+            checkScrollPosition();
+        }, 300);
+    });
+
+    rightArrow.addEventListener('click', () => {
+        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        
+        setTimeout(() => {
+            checkScrollPosition();
+        }, 300); 
+    });
+
+    rightButton.addEventListener('click', () => {
+        leftButton.classList.add('active');
+    });
+
+    leftButton.addEventListener('click', () => {
+        leftButton.classList.remove('active');
+    });
+
+    function checkScrollPosition() {
+        if (container.scrollLeft <= 0) {
+            leftButton.classList.add('disabled');
+        } else {
+            leftButton.classList.remove('disabled');
+        }
+
+        if (container.scrollLeft + container.offsetWidth >= container.scrollWidth) {
+            rightButton.classList.add('disabled');
+        } else {
+            rightButton.classList.remove('disabled');
+        }
+    }
+
+    checkScrollPosition();
+});
 
 

@@ -134,12 +134,12 @@ line-height: normal;
     font-size: 16px;
 }
 
-.arrow-icon2 {
+/* .arrow-icon2 {
     display: flex;
     width: 24px;
     height: 24px;
     font-size: 16px;
-}
+} */
 
 .image-hero {
     width: 90%;
@@ -483,69 +483,7 @@ background-clip: text;
 }
 
 
-/* ======================================== KOMERCE SOCIETY CSS ====================================== */
-
-/* 
-.content {
-    display: flex;
-    flex-direction: column;
-}
-
-
-
-.text-boxes-photos {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    margin-top: 125px;
-    margin-left: 40px;
-}
-
-
-.bg-arrow{
-    width: 50px;
-    height: auto;
-}
-
-.text-box p {
-    color: #666;
-}
-
-.fade-in {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-}
-
-
-.menu-item {
-    padding: 10px 20px;
-    background-color: #ffffff;
-    margin: 5px 0;
-    border-radius: 5px;
-    cursor: pointer;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-}
-
-.menu-item.fade {
-    opacity: 0.5;
-    background-color: #d0d0d0;
-}
-
-ul .nav-item {
-    cursor: pointer;
-}
-
-
-.background-image1 {
-    border-radius: 15px;
-} */
-
-/* Komerce Society */
+/* ======================================== KOMERCE SOCIETY CSS ======================================
 
 
 /* ============Our Teams============= */
@@ -599,16 +537,16 @@ ul .nav-item {
 }
 
 
-.title {
+/* .title {
     color: var(--Grayscale-Main-Black, #333);
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 16px;
     text-align: center;
-}
+} */
 
-.paragraph {
+/* .paragraph {
     color: var(--Grayscale-Dark-Grey, #626262);
     font-weight: 400;
     line-height: 28px;
@@ -617,12 +555,11 @@ ul .nav-item {
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     text-align: center;
-}
+} */
 
 .paragraph-desc {
     color: var(--Grayscale-Label, #828282);
     text-align: justify;
-    /* Body 1/Regular - 16 */
     font-family: Poppins;
     font-size: 13px;
     font-style: normal;
@@ -726,12 +663,7 @@ a {
 
 
 /*==================== blog =====================*/
-.blog-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-}
+
 
 .blog-posts {
     display: flex;
@@ -771,27 +703,16 @@ a {
     width: 30px; 
 }
 
-
-.button-container-arrow {
+/* .button-container-arrow {
     display: flex;
     justify-content: center;
     align-items: center;
     display: flex; 
     justify-content: space-between; 
-}
+} */
+
 .justify-content-between{
     justify-content: space-between; 
-}
-.styled-button-blog-right {
-    margin-left: 10px;
-    display: flex;
-    height: 40px;
-    padding: 0px 14px;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-    border-radius: 8px;
-    background: linear-gradient(117deg, #F95031 4.61%, #CF2A08 66.71%);
 }
 
 .styled-button-blog-left {
@@ -804,6 +725,53 @@ a {
     justify-content: center;
     align-items: center;
     gap: 14px;
+    transition: background 0.3s ease;
+}
+
+.styled-button-blog-left.active {
+    background: linear-gradient(117deg, #F95031 4.61%, #CF2A08 66.71%);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.styled-button-blog-right {
+    margin-left: 10px;
+    display: flex;
+    height: 40px;
+    padding: 0px 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    border-radius: 8px;
+    background: linear-gradient(117deg, #F95031 4.61%, #CF2A08 66.71%);
+    transition: background 0.3s ease;
+}
+
+.styled-button-blog-right:hover,
+.styled-button-blog-left:hover {
+    background: linear-gradient(117deg, #bdbcbc 4.61%, #bdbcbc 66.71%);
+    color: #fff;
+}
+
+.styled-button-blog-right.disabled,
+.styled-button-blog-left.disabled {
+    background: var(--Grayscale-Input, #F4F4F4);
+    border: 1px solid var(--Grayscale-Line, #E2E2E2);
+    color: #828282;
+    cursor: not-allowed;
+}
+
+.styled-button-blog-right.disabled:hover,
+.styled-button-blog-left.disabled:hover {
+    background: var(--Grayscale-Input, #F4F4F4); 
+    color: #828282;
+}
+
+.styled-button-blog-left img,
+.styled-button-blog-right img {
+    filter: invert(70%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(80%) contrast(100%);
+    transition: filter 0.3s ease;
 }
 
 .title-blog {
@@ -818,7 +786,6 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 }
 
-
 .paragraph-blog{
     color: var(--Grayscale-Label, #828282);
     font-family: Poppins;
@@ -828,12 +795,13 @@ background-clip: text;
     line-height: normal;
     
 }
-.blog-container {
+
+/* .blog-container {
     max-width: 1240px;
     max-height: 600px;
     margin: 0 auto;
     background-color: #F8F8F8;
-}
+} */
 
 .blog-container-blog {
     max-width: 1350px;
@@ -845,17 +813,16 @@ background-clip: text;
     margin-top: 80px;
 }
 
-.blog-title {
+/* .blog-title {
     font-size: 2.5em;
     margin-bottom: 10px;
-}
+} */
 
-.blog-description {
+/* .blog-description {
     font-size: 1em;
     margin-bottom: 20px;
     color: #666;
-
-}
+} */
 
 .blog-posts {
     display: flex;
@@ -868,8 +835,7 @@ background-clip: text;
     gap: 30px;         
     padding: 16px;
     scroll-behavior: smooth; 
-    transition: transform 0.3s ease-in-out;
-    
+    transition: transform 0.3s ease-in-out;   
 }
 
 .blog-post {
@@ -926,13 +892,16 @@ line-height: normal;
     padding: 8px;
     color:#828282
 }
-
-
-.post-category {
+.post-info {
+    font-family: Poppins;
     display: inline-block;
-    color: rgb(46, 43, 43);
-    height: auto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: #F8F8F8;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .border-tags {
@@ -940,9 +909,6 @@ line-height: normal;
     padding: 4px;
     border-radius: 5px;
 }
-/* .h2-font{
-    font-size: 30px;
-} */
 /*============================ blog ================*/
 
 /*====================== photos====================== */
@@ -1383,608 +1349,4 @@ line-height: normal;
 
 
 
-/* ============================CATEGORY OURTEAMS============================= */
-
-/* ==========================================CSS RESPONSIVE========================================== */
-
-@media (max-width:864px) {
-    /*====komerce society====*/
-    .text-boxes {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        margin-top: 50px;
-        margin-left: 20px;
-    }
-
-    .text-box {
-        background-color: #f4f4f4;
-        padding: 10px;
-        border-radius: 8px;
-        margin: 5px 0;
-        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-        max-width: 250px;
-    }
-
-    .paragraph-whoarewe {
-    color: var(--Grayscale-Dark-Grey, #626262);
-    font-weight: 200px;
-    line-height: 12px;
-    margin: 0 auto 16px;
-    font-family: 'Inter', sans-serif;
-    font-size: 10px;
-    }
-
-    .background-containers {
-    width: 90%;
-    height: auto;
-    background: center / cover no-repeat;
-    margin-left: auto;
-
-    }   
-
-    .underline-ks {
-    display: inline-block;
-    position: relative;
-    }
-
-    .underline-ks::after {
-        content: '';
-        bottom: -4px;
-        left: 50%;
-        position: absolute;
-        height: 2px;
-        width: 35%;
-        background-color: var(--Komerce-Dark);
-        transform: translateX(-50%);
-    }    
-
-    .h2-font {
-        font-size: 25px;
-    }
-    
-    /* .bg-arrow{
-    width: 25px;
-    height: auto;
-    } */
-    /*====komerce society====*/
-
-    /*===== howslife komerce =====*/
-    .background-image1 {
-        width: 90%;
-    }
-
-    .play-icon, .pause-icon {
-        cursor: pointer;
-        position: absolute;
-        top: 40px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 2;
-        width: 13%;
-    }
-    .flex-container {
-        display: flex;
-        position: absolute;
-        bottom: -40px;
-        width: 100%;
-        height: 25%;
-        padding: 32px 20px;
-        justify-content: center;
-        align-items: center;
-        background: var(--Komerce-Dark);
-        overflow: hidden;
-    }
-    .number {
-        color: var(--Grayscale-Off-White, #FFF);
-        font-family: Poppins;
-        font-size: 60px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-    }
-    
-    .text {
-        color: var(--Grayscale-Off-White);
-        font-size: 15px;
-        line-height: normal;
-    }
-    /*===== howslife komerce =====*/
-
-    /*===== our teams =====*/
-    .title {
-        color: var(--Grayscale-Main-Black, #333);
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        font-size: 40px;
-        font-weight: 700;
-        margin-top: 16px;
-        margin-bottom: 16px;
-        text-align: center;
-    }
-
-    .paragraph {
-        color: var(--Grayscale-Dark-Grey, #626262);
-        font-weight: 400;
-        line-height: 15px;
-        max-width: 85%;
-        margin: 0 auto 0;
-        font-family: 'Inter', sans-serif;
-        font-size: 12px;
-        text-align: center;
-    }
-    /*===== our teams =====*/
-    
-    /*===== photos =====*/
-    .background-container2,
-    .background1 {
-        height: 60vh; 
-    }
-
-    .text-box2 {
-        padding: 20px;
-        border-radius: 8px;
-        margin-top: 150px;
-        margin-left: 10px;
-        max-width: 400px;
-        font-size: 15px;
-    }
-
-    .video-container-circle {
-        margin-left: 0px;
-    }
-
-    .play-circle {
-        width: 15px;
-    }
-
-    .watch-text-circle {
-        font-size: 15px;
-    }
-    .text-photos {
-        font-size: 20px;
-    }
-    /*===== photos =====*/
-
-    /*===== blog =====*/
-    .blog-container {
-        max-width: 750px;
-        margin: 0 auto;
-        padding: 30px;
-        text-align: center;
-        background-color: #fff;
-        margin-bottom: 100px;
-        margin-top: 30px;
-    }
-    .label-text {
-        color: var(--Grayscale-Off-White, #FFF);
-        font-family: "Plus Jakarta Sans";
-        font-size: 10px;
-        font-weight: 400;
-    }
-    
-    .sub-label-text {
-        color: var(--Grayscale-Off-White, #FFF);
-        font-family: "Plus Jakarta Sans";
-        font-size: 8px;
-        font-weight: 600;
-        top: 180px;
-        left: 10px;
-        position: absolute;
-    }
-}
-
-@media (max-width: 768px) {
-    /*========== card our teams ============*/
-    .card {
-        flex: 1 1 calc(50% - 32px);
-    }
-    
-    .paragraph-desc {
-        font-size: 14px;
-        line-height: 22px;
-    }
-    .card-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 100%;
-        max-width: 400px;
-    }
-    /*========== card our teams ============*/
-
-    /*========== blog ========*/
-    .title {
-        color: var(--Grayscale-Main-Black, #333);
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        font-size: 40px;
-        font-weight: 700;
-        margin-top: 16px;
-        margin-bottom: 16px;
-        text-align: center;
-    }
-
-    .blog-post {
-        width: 48%;
-    }
-
-    .post-info {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-    font-size: 15px;
-    color: #999;
-    }
-     /*========== blog ========*/
-}
-
-@media (max-width: 600px) {
-    .pagination .page-numbers {
-        padding: 8px 12px;
-    }
-}
-
-@media (max-width:576px){
-    /*============komerce society==============*/
-    .text-boxes {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        margin-top: 8px;
-    }
-    .language-switcher {
-        display: none;
-    }
-
-    .text-box {
-        background-color: #f4f4f4;
-        padding: 10px;
-        border-radius: 8px;
-        margin: 5px 0;
-        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-        max-width: 200px;
-    }
-
-    .paragraph-whoarewe {
-    color: var(--Grayscale-Dark-Grey, #626262);
-    font-weight: 200px;
-    line-height: 11px;
-    margin: 0 auto 0px;
-    font-family: 'Inter', sans-serif;
-    font-size: 7px;
-    }
-
-    .background-containers {
-    width: 90%;
-    height: auto;
-    background: center / cover no-repeat;
-    margin-left: auto;
-
-    }   
-
-    /* .underline-ks {
-    display: inline-block;
-    position: relative;
-    }
-
-    .underline-ks::after {
-        content: '';
-        bottom: -4px;
-        left: 50%;
-        position: absolute;
-        height: 2px;
-        width: 50%;
-        background-color: var(--Komerce-Dark);
-        transform: translateX(-50%);
-    }     */
-
-    .h2-font {
-        font-size: 13px;
-    }
-    
-    .bg-arrow{
-    width: 15px;
-    height: auto;
-    }
-    /*============komerce society==============*/
-
-    /*================== howslife komerce ============*/
-    .background-image1 {
-        width: 90%;
-    }
-    .button-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .styled-button {
-        display: flex;
-        padding: 10px;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
-        border-radius: 8px;
-        border: 1px solid var(--Komerce-Dark);
-        background: var(--Komerce-Dark);
-        color: var(--Grayscale-Off-White);
-        text-align: center;
-        font-family: "Plus Jakarta Sans", sans-serif;
-        font-style: normal;
-        text-decoration: none;
-    }
-    .arrow-icon {
-        display: flex;
-        width: 15px;
-        height: 15px;
-        justify-content: center;
-        align-items: center;
-    }
-    .text1 {
-        color: var(--Grayscale-Off-White);
-        font-size: 12px;
-        line-height: normal;
-    }
-    .sub-heading {
-        color: #fff;
-        text-align: center;
-        font-size: 13px;
-        font-style: normal;
-        margin: 0;
-        font-weight: 400;
-        line-height: 20px;
-        font-family: 'Inter', sans-serif;
-    }
-    .flex-container {
-        display: flex;
-        position: absolute;
-        bottom: -40px;
-        width: 100%;
-        height: 5%;
-        padding: 32px 20px;
-        justify-content: center;
-        align-items: center;
-        background: var(--Komerce-Dark);
-        overflow: hidden;
-    }
-    .marquee {
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-    }
-    
-    .marquee-content {
-        display: flex;
-        gap: 64px;
-        width: calc(200% + 64px);
-        animation: marquee 20s linear infinite;
-    }
-
-    .number {
-        color: var(--Grayscale-Off-White);
-        font-size: 35px;
-        line-height: normal;
-    }
-    
-    .text {
-        color: var(--Grayscale-Off-White);
-        font-size: 13px;
-        line-height: normal;
-    }
-   /*================== howslife komerce ============*/
-
-    /*========= card our teams ========*/
-    .card-container {
-        display: flex;
-        gap: 16px;
-        flex-wrap: wrap;
-        justify-content: center;
-        max-width: 1500px;
-        margin: 0 auto;
-        margin-top: 30px;
-    }
-
-    .card {
-        display: flex;
-        flex-direction: column;
-        min-height: 350px;
-        width: 330px;
-        padding: 16px;
-        border-radius: 12px;
-        background: var(--Grayscale-Off-White, #FFF);
-        /* box-shadow: 2px 2px 18px 0px rgba(0, 0, 0, 0.12); */
-        /* color: var(--Gray-2, #4F4F4F); */
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 24px;
-        letter-spacing: 0.3px;
-        transition: transform 0.3s ease;
-        transform-origin: bottom center;
-        margin-bottom: 5px;    
-    }
-
-    .card {
-        padding: 12px;
-    }
-    .card {
-        flex: 1 1 calc(100% - 32px);
-    }
-    .card-image {
-        position: relative;
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-    }
-
-    .name {
-    margin-top: 5px;
-    color: rgb(47, 46, 46);
-    }
-    
-    .paragraph-desc {
-        font-size: 13px;
-        line-height: 20px;
-        color: var(--Grayscale-Dark-Grey, #626262);
-    }
-    
-    .paragraph {
-        color: var(--Grayscale-Dark-Grey, #626262);
-        font-weight: 400;
-        line-height: 15px;
-        max-width: 85%;
-        margin: 0 auto 0;
-        font-family: 'Inter', sans-serif;
-        font-size: 12px;
-        text-align: center;
-    }
-   /*========= card our teams ========*/
-
-    /*========== blog ========*/
-    .blog-post {
-        width: 100%;
-    }
-
-    .post-info {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-    font-size: 10px;
-    color: #999;
-    }
-    /*========== blog ========*/
-
-    /*========== photos ========*/
-    .background-container2,
-    .background1 {
-        height: 60vh; 
-    }
-
-    .text-box2 {
-        padding: 20px;
-        border-radius: 8px;
-        margin-top: 60px;
-        margin-left: 10px;
-        max-width: 250px;
-        font-size: 10px;
-    }
-
-    .video-container-circle {
-        margin-left: 0px;
-    }
-
-    .play-circle {
-        width: 15px;
-    }
-
-    .watch-text-circle {
-        font-size: 10px;
-    }
-    .text-photos {
-        font-size: 15px;
-    }
-    .text-boxes-photos {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        margin-top: 70px;
-        margin-left: 40px;
-    }
-    .blog-container {
-        max-width: 350px;
-        margin: 0 auto;
-        padding: 30px;
-        text-align: center;
-        background-color: #fff;
-        margin-bottom: 100px;
-        margin-top: 30px;
-    }
-    /*========== photos ========*/
-
-    /*============== content-article ============*/
-    .blog-post-paragraph h2{
-    font-size: 14px;
-        margin-bottom: 15px;
-        color: #333;
-    }
-    .blog-post-paragraph p{
-    font-size: 12px;
-        font-family: 'Inter', sans-serif;
-        margin-bottom: 15px;
-        color: #555;
-    }
-
-    .blog-post-title{
-    font-size: 15px;
-    margin-bottom: 15px;
-    color: #333;
-    text-align: center;
-    }
-
-    .blog-post-card {
-    width: 100%;
-    margin: 10px auto;
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-    }
-    /*============== content-article ============*/
-
-
-    /* ==================CATEGORY BLOG================== */
-    .media {
-        display: flex;
-        flex-direction: column; 
-        align-items: flex-start; 
-    }
-
-    .media-left {
-        margin-bottom: 15px; 
-    }
-
-    .media-left img {
-        width: 125%; 
-        height: auto;
-        border-radius: 5px;
-    }
-
-    .media-body {
-        width: 100%; 
-        overflow: hidden;
-    }
-
-    .title-blog-post {
-        margin-top: 0;
-        margin-bottom: 10px;
-        font-size: 1.3rem;
-        box-sizing: border-box;
-    }
-
-    .meta {
-        font-size: 0.9rem;
-        color: #888;
-        margin-bottom: 15px;
-        box-sizing: border-box;
-    }
-
-    .blog-post-paragraph {
-        font-size: 1rem;
-        line-height: 1.6;
-        margin-bottom: 15px;
-        box-sizing: border-box;
-    }
-
-    .more-link {
-        font-weight: bold;
-        color: #007bff;
-        text-decoration: none;
-        box-sizing: border-box;
-    }
-
-    .more-link:hover {
-        text-decoration: underline;
-    }
-
-}
+/* ============================CATEGORY OURTEAMS============================= 

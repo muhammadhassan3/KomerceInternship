@@ -261,7 +261,7 @@
                         $tags = get_the_tags();
                         if ($tags) {
                             foreach ($tags as $tag) {
-                                echo "<span class='post-category me-2 border-tags'>" . $tag->name . "</span>";
+                                echo "<span class=' border-tags'>" . $tag->name . "</span>";
                             }
                         }
                         ?>

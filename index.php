@@ -179,14 +179,24 @@
         );
 
         $users = get_users($args);
-
+        
         if ($users) :
             foreach ($users as $user) :
-                $avatars = get_avatar_url($user->ID); ?>
+                ?>
+                 <?php
+                $avatars = get_avatar_url($user->ID);
+                $jabatan_id = get_user_meta($user->ID, 'jabatan', true);
+                $jabatan_name = get_jabatan_name_by_id($jabatan_id);
+            ?>
                 <div class="card">
                     <img class="card-image" src="<?= esc_url($avatars) ?>" alt="User Avatar" />
+                    <div class="d-flex mt-3">
+                         <div class="name"><?php echo esc_html($user->display_name); ?></div>
+                        <div class="name2"><?php echo esc_html($jabatan_name); ?></div>
+                    </div>
+                   
                     <p class="paragraph-desc mt-3">Being an Innovator at Telkom, makes me an adaptive person and always</p>
-                    <div class="name"><?php echo esc_html($user->display_name); ?></div>
+        
                 </div>
             <?php endforeach; ?>
         <?php else : ?>
@@ -200,73 +210,80 @@
 
 
 <!-- Blog -->
-<div class="blog-container-blog">
+<div class="blog-container-blog" id="blogPostsContainer">
     <div class="d-flex justify-content-between">
-        <?php $image = get_template_directory_uri() . "/Images/arrow-up-right.svg" ?>
-        <img src=<?= $image ?> alt="Arrow" class="arrow-up-right">
+        <?php $image = get_template_directory_uri() . "/Images/arrow-up-right.svg"; ?>
+        <img src="<?= $image ?>" alt="Arrow" class="arrow-up-right">
+
         <div class="button-container">
-        <a class="styled-button-blog-left" href="#">
-                <?php $image = get_template_directory_uri() . "/Images/arrow-left.svg" ?>
+            <a class="styled-button-blog-left" href="javascript:void(0);" id="arrow-left">
+                <?php $image = get_template_directory_uri() . "/Images/arrow-left.svg"; ?>
                 <img src="<?= $image ?>" alt="Arrow" class="arrow-icon">
             </a>
-            <a class="styled-button-blog-right" href="#">
-                <?php $image = get_template_directory_uri() . "/Images/arrow-right.svg" ?>
+            <a class="styled-button-blog-right" href="javascript:void(0);" id="arrow-right">
+                <?php $image = get_template_directory_uri() . "/Images/arrow-right.svg"; ?>
                 <img src="<?= $image ?>" alt="Arrow" class="arrow-icon">
             </a>
         </div>
+    </div>
+
+    <div class="d-flex">
+        <h1 class="title-blog">Blog</h1>
     </div>
 
     <div class="paragraph-blog">
-        <p>Lorem ipsum dolor sit amet consectetur. Pretium tempus aenean gravida diam non aliquam id ac phasellus. Cras
-            dui velit pretium purus vitae ipsum in. Quisque nisi laoreet imperdiet mi aliquet</p>
+        <p>Lorem ipsum dolor sit amet consectetur. Pretium tempus aenean gravida diam non aliquam id ac phasellus. Cras dui velit pretium purus vitae ipsum in. Quisque nisi laoreet imperdiet mi aliquet.</p>
     </div>
 
-    <!-- <div class="blog-container"> -->
-        <div class="blog-posts ">
-            <?php if (! empty($custom_posts)) : ?>
-                <?php foreach ($custom_posts as $post) : setup_postdata($post); ?>
-                    <div class="blog-post">
-                        <a href="<?php echo the_permalink($post->ID) ?>">
-                            <span class="link"></span>
-                        </a>
+    <!-- Blog Posts Section -->
+    <div class="blog-posts" id="blog-posts-container"> <!-- Sesuaikan ID dengan yang ada di JS -->
+        <?php
+
+        if ($all_posts->have_posts()) :
+            while ($all_posts->have_posts()) : $all_posts->the_post(); ?>
+                <div class="blog-post" style="min-width: 300px; margin-right: 20px;"> <!-- Adjust width and spacing as needed -->
+                    <a href="<?php the_permalink(); ?>">
+                        <span class="link"></span>
+                    </a>
+                    <?php
+                    // Get post thumbnail or fallback image
+                    if (has_post_thumbnail()) {
+                        $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                    } else {
+                        $image_url = get_template_directory_uri() . "/Images/kerkom.jpeg";
+                    }
+                    ?>
+
+                    <img src="<?= esc_url($image_url); ?>" alt="<?= esc_attr(get_the_title()); ?>" class="blog-image filter">
+                    
+                    <div class="post-info">
                         <?php
-                        if (has_post_thumbnail($post->ID)) {
-                            $image_url = get_the_post_thumbnail_url($post->ID, 'full');
-                        } else {
-                            $image_url = get_template_directory_uri() . "/Images/kerkom.jpeg";
+                        $tags = get_the_tags();
+                        if ($tags) {
+                            foreach ($tags as $tag) {
+                                echo "<span class='post-category me-2 border-tags'>" . $tag->name . "</span>";
+                            }
                         }
                         ?>
-
-                        <img src="<?= esc_url($image_url); ?>" alt="<?php echo esc_attr(get_the_title()); ?>"
-                            class="blog-image filter">
-                        <div class="post-info">
-                            <?php
-                            $tags = get_the_tags($post->ID);
-                            if ($tags) {
-                                foreach ($tags as $tag) {
-                                    echo "<span class='post-category me-2 border-tags'>" . $tag->name . "</span>";
-                                }
-                            }
-                            ?>
-                        </div>
-                        <h2 class="post-title"><?php echo substr(strip_tags(get_the_title()), 0, 35) . "..." ?></h2>
-                        <p class="post-description">
-                            <?php echo wp_trim_words(get_the_content(), 12, '...'); ?>
-                        </p>
-                        <div class="container-info">
-                            <span class=""><?php echo get_the_author(); ?></span> 
-                            <span class=""><?php echo get_the_date('d F Y', $post->ID); ?></span>
-                        </div>
-
                     </div>
-                <?php endforeach;
-                wp_reset_postdata(); ?>
-            <?php else : ?>
-                <strong>Sorry. No posts matching your criteria!</strong>
-            <?php endif; ?>
-        </div>
-    <!-- </div> -->
+
+                    <h2 class="post-title"><?php echo substr(strip_tags(get_the_title()), 0, 35) . "..."; ?></h2>
+                    <p class="post-description">
+                        <?php echo wp_trim_words(get_the_content(), 12, '...'); ?>
+                    </p>
+                    <div class="container-info">
+                        <span><?php the_author(); ?></span> <!-- Display the author's name -->
+                        <span><?php echo get_the_date('d F Y'); ?></span> <!-- Display the post's date -->
+                    </div>
+                </div>
+            <?php endwhile; 
+            wp_reset_postdata();
+        else : ?>
+            <strong>Sorry. No posts found!</strong>
+        <?php endif; ?>
+    </div>
 </div>
+
 <!-- Blog -->
 
 

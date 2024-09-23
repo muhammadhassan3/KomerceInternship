@@ -29,66 +29,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // script fade menu
 // script.js
-document.addEventListener('DOMContentLoaded', () => {
-    const menuItems = document.querySelectorAll('.menu-item');
+// document.addEventListener('DOMContentLoaded', () => {
+//     const menuItems = document.querySelectorAll('.menu-item');
 
-    menuItems.forEach(item => {
-        item.addEventListener('mouseover', () => {
-            item.classList.add('fade');
-        });
+//     menuItems.forEach(item => {
+//         item.addEventListener('mouseover', () => {
+//             item.classList.add('fade');
+//         });
 
-        item.addEventListener('mouseout', () => {
-            item.classList.remove('fade');
-        });
-    });
-});
+//         item.addEventListener('mouseout', () => {
+//             item.classList.remove('fade');
+//         });
+//     });
+// });
 
-
-//script underline menu
-
-//script untuk mempay video
-
-document.addEventListener("DOMContentLoaded", function () {
-    var pauseIcon = document.getElementById("pause-icon");
-    var playIcon = document.getElementById("play-icon");
-    var video = document.getElementById("background-video");
-
-    playIcon.addEventListener("click", function () {
-        video.play();
-        playIcon.style.display = "none";
-        pauseIcon.style.display = "block";
-    });
-
-    pauseIcon.addEventListener("click", function () {
-        video.pause();
-        playIcon.style.display = "block";
-        pauseIcon.style.display = "none";
-    });
-
-    video.addEventListener("pause", function () {
-        playIcon.style.display = "block";
-        pauseIcon.style.display = "none";
-    });
-
-    video.addEventListener("play", function () {
-        playIcon.style.display = "none";
-        pauseIcon.style.display = "block";
-    });
-
-    // Tampilkan pause-icon saat kursor diarahkan ke video
-    video.addEventListener("mouseover", function () {
-        if (!video.paused) {
-            pauseIcon.style.display = "block";
-        }
-    });
-
-    // Sembunyikan pause-icon saat kursor keluar dari video
-    video.addEventListener("mouseout", function () {
-        if (!video.paused && !pauseIcon.contains(event.relatedTarget) && !video.contains(event.relatedTarget)) {
-            pauseIcon.style.display = "none";
-        }
-    });
-});
 
 // Crud wordpress divisi dan jabatan
 
@@ -155,6 +109,22 @@ jQuery(document).ready(function($) {
     });
 });
 
+//JS UNTUK NAVIGASI BLOG
+document.addEventListener('DOMContentLoaded', function () {
+    const container = document.getElementById('blog-posts-container');
+    const leftArrow = document.getElementById('arrow-left');
+    const rightArrow = document.getElementById('arrow-right');
+    
+    const scrollAmount = 800;
+
+    leftArrow.addEventListener('click', () => {
+        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    rightArrow.addEventListener('click', () => {
+        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+});
 
 
 

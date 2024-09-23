@@ -41,12 +41,16 @@ function initStyle()
 	wp_enqueue_style("custom-css", get_template_directory_uri() . '/style.css', array(), $version, "all");
 }
 
-$args         = array(
-	'numberposts' => 3,
-	'post_type'   => 'post',
-	'post_status' => 'publish'
+//mengambil postingan
+   $args = array(
+	'post_type' => 'post',
+	'posts_per_page' => -1
 );
-$custom_posts = get_posts($args);
+$all_posts = new WP_Query($args);
+
+function enqueue_custom_scripts() {
+    wp_enqueue_script('custom-main-js', get_template_directory_uri() . '/main.js', array(), false, true);
+}
 
 add_action('init', 'lintang_menus');
 add_action("wp_enqueue_scripts", 'initStyle');

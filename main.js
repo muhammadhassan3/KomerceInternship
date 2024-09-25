@@ -133,25 +133,28 @@ document.addEventListener('DOMContentLoaded', function () {
     const rightArrow = document.getElementById('arrow-right');
     const leftButton = document.querySelector('.styled-button-blog-left');
     const rightButton = document.querySelector('.styled-button-blog-right');
-    
-    const scrollAmount = 1240;
 
+    // Fungsi untuk mendapatkan scroll amount dinamis berdasarkan lebar post
+    function getScrollAmount() {
+        const post = document.querySelector('.blog-post');
+        const postStyle = window.getComputedStyle(post);
+        const gap = parseInt(postStyle.getPropertyValue('gap')) || 30; // Ambil gap antar elemen
+        return post.offsetWidth + gap; // Total scroll amount
+    }
+
+    // Fungsi untuk menggeser kontainer ke kiri
     leftArrow.addEventListener('click', () => {
-        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        
-        setTimeout(() => {
-            checkScrollPosition();
-        }, 300);
+        container.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+        setTimeout(checkScrollPosition, 300);
     });
 
+    // Fungsi untuk menggeser kontainer ke kanan
     rightArrow.addEventListener('click', () => {
-        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        
-        setTimeout(() => {
-            checkScrollPosition();
-        }, 300); 
+        container.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+        setTimeout(checkScrollPosition, 300);
     });
 
+    // Fungsi untuk mengaktifkan/menonaktifkan tombol
     rightButton.addEventListener('click', () => {
         leftButton.classList.add('active');
     });
@@ -160,6 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
         leftButton.classList.remove('active');
     });
 
+    // Fungsi untuk mengecek posisi scroll dan mengatur status tombol
     function checkScrollPosition() {
         if (container.scrollLeft <= 0) {
             leftButton.classList.add('disabled');
@@ -174,6 +178,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Listener untuk memperbarui scroll amount saat ukuran layar berubah
+    window.addEventListener('resize', checkScrollPosition);
+
+    // Panggil pertama kali untuk set kondisi awal
     checkScrollPosition();
 });
 

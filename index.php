@@ -10,7 +10,7 @@
     <div class="content-wrapper">
         <h1 class="main-heading">How’s Life at Komerce?</h1>
         <p class="sub-heading">Get an inside look into what working at Komerce is like!</p>
-        <div class="button-container mt-3">
+        <div class="button-container">
             <a class="styled-button" href="category/blog/">
                 <span class="text">Let's Go!</span>
                 <?php $image = get_template_directory_uri() . "/Images/arrow-right.svg" ?>
@@ -59,7 +59,6 @@
         </div>
     </div>
 </div>
-
 <!-- hows life at komerce -->
 
 
@@ -225,6 +224,7 @@
                 <img src="<?= $image ?>" alt="Arrow" class="arrow-icon">
             </a>
         </div>
+
     </div>
 
     <div class="d-flex">
@@ -238,10 +238,11 @@
     <!-- Blog Posts Section -->
     <div class="blog-posts" id="blog-posts-container"> <!-- Sesuaikan ID dengan yang ada di JS -->
         <?php
+       
 
         if ($all_posts->have_posts()) :
             while ($all_posts->have_posts()) : $all_posts->the_post(); ?>
-                <div class="blog-post" style="min-width: 300px; margin-right: 20px;"> <!-- Adjust width and spacing as needed -->
+                <div class="blog-post" style=""> <!-- Adjust width and spacing as needed -->
                     <a href="<?php the_permalink(); ?>">
                         <span class="link"></span>
                     </a>
@@ -261,7 +262,7 @@
                         $tags = get_the_tags();
                         if ($tags) {
                             foreach ($tags as $tag) {
-                                echo "<span class=' border-tags'>" . $tag->name . "</span>";
+                                echo "<span class='border-tags'>" . $tag->name . "</span>";
                             }
                         }
                         ?>
@@ -283,7 +284,6 @@
         <?php endif; ?>
     </div>
 </div>
-
 <!-- Blog -->
 
 
@@ -291,13 +291,13 @@
 <div class="background-container2 ">
     <div class="background1">
         <div class="content">
-            <div class="text-boxes-photos ">
+            <!-- <div class="text-boxes-photos "> -->
                         <div class="text-box2 text-white">
                             <h2 class="text-photos">“We have the resources to go as far as we want with ideas. And no idea is too
                                 crazy.”</h2>
-                            <br></br>
+                            <!-- <br></br> -->
                             <p>Is Nursamsi, Lead Front-End Engineer</p>
-                            <br></br>
+                            <!-- <br></br> -->
 							<?php $image = get_template_directory_uri() . "/Images/play-circle.svg"; ?>
                             <div class="video-container-circle">
                                 <a href="https://www.youtube.com/watch?v=SeHz-w4arGY" target="_blank">
@@ -306,7 +306,7 @@
                                 <p class="watch-text-circle">Watch the film</p>
                             </div>
                         </div>
-            </div>
+            <!-- </div> -->
         </div>
     </div>
     <!-- Photos -->

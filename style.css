@@ -215,7 +215,7 @@ line-height: normal;
 
 
 /* Komerce Society */
-.h1-komerce-society {
+/* .h1-komerce-society {
     color: var(--Gray-1, var(--Grayscale-Main-Black, #333));
     text-align: center;
     font-style: normal;
@@ -318,9 +318,8 @@ ul .nav-item {
     width: 90%;
     height: auto;
     background: center / cover no-repeat;
-    /* margin-left: auto; */
 
-}
+} */
 /*Komerce Society*/
 
 /* ======================================== KOMERCE SOCIETY CSS ====================================== */
@@ -370,7 +369,7 @@ font-family: Poppins;
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
-line-height: 30px;
+line-height: normal;
 }
 
 
@@ -525,7 +524,7 @@ background-clip: text;
     color: #828282;
     text-align: justify;
     font-style: normal;
-    line-height: 30px;
+    line-height: normal;
     margin-top: 30px;
     }
 
@@ -663,17 +662,19 @@ a {
 
 
 /*==================== blog =====================*/
-
-
 .blog-posts {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    max-width: 100%;
-    overflow-x: auto; 
+    max-width: 1290px;
+    max-height: 600px;
+    /* margin: 0 auto; */
+    overflow-x: auto;
+    overflow: hidden;  
     gap: 30px;         
-    padding: 16px;
-    scroll-behavior: smooth; 
+    /* padding: 16px; */
+    scroll-behavior: smooth;
+    transition: transform 0.3s ease-in-out;
 }
 
 .blog-post {
@@ -681,41 +682,17 @@ a {
     background-color: #ffffff;
     position: relative;
     border-radius: 14px;
-    min-width: 375px;
+    min-width: 410px;
     padding: 16px;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    flex: 0 0 auto; 
+    flex: 0 0 30%; 
 }
 
 .styled-button-blog-left,
 .styled-button-blog-right {
     cursor: pointer;
-}
-
-.arrow-up-right {
-    cursor: pointer;
-    width: 40px; 
-}
-
-.arrow-icon {
-    width: 30px; 
-}
-
-/* .button-container-arrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: flex; 
-    justify-content: space-between; 
-} */
-
-.justify-content-between{
-    justify-content: space-between; 
-}
-
-.styled-button-blog-left {
     border-radius: 8px;
     border: 1px solid var(--Grayscale-Line, #E2E2E2);
     background: var(--Grayscale-Input, #F4F4F4);
@@ -737,13 +714,6 @@ a {
 
 .styled-button-blog-right {
     margin-left: 10px;
-    display: flex;
-    height: 40px;
-    padding: 0px 14px;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-    border-radius: 8px;
     background: linear-gradient(117deg, #F95031 4.61%, #CF2A08 66.71%);
     transition: background 0.3s ease;
 }
@@ -774,34 +744,48 @@ a {
     transition: filter 0.3s ease;
 }
 
-.title-blog {
-font-family: Poppins;
-font-size: 48px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-background: linear-gradient(112deg, #333 10.36%, #c2c1c1 87.38%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+.button-container-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between; 
 }
 
-.paragraph-blog{
+.arrow-up-right {
+    cursor: pointer;
+    width: 40px; 
+}
+
+.arrow-icon {
+    width: 30px; 
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-blog {
+    font-family: Poppins;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background: linear-gradient(112deg, #333 10.36%, #c2c1c1 87.38%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.paragraph-blog {
     color: var(--Grayscale-Label, #828282);
     font-family: Poppins;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    
 }
-
-/* .blog-container {
-    max-width: 1240px;
-    max-height: 600px;
-    margin: 0 auto;
-    background-color: #F8F8F8;
-} */
 
 .blog-container-blog {
     max-width: 1350px;
@@ -813,42 +797,15 @@ background-clip: text;
     margin-top: 80px;
 }
 
-/* .blog-title {
+.blog-title {
     font-size: 2.5em;
     margin-bottom: 10px;
-} */
+}
 
-/* .blog-description {
+.blog-description {
     font-size: 1em;
     margin-bottom: 20px;
     color: #666;
-} */
-
-.blog-posts {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    max-width: 1240px;
-    max-height: 600px;
-    margin: 0 auto;
-    overflow: hidden;  
-    gap: 30px;         
-    padding: 16px;
-    scroll-behavior: smooth; 
-    transition: transform 0.3s ease-in-out;   
-}
-
-.blog-post {
-    max-height: 600px;
-    background-color: #ffffff;
-    position: relative;
-    border-radius: 14px;
-    min-width: 375px;
-    padding: 16px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    flex: 0 0 30%; 
 }
 
 .blog-image {
@@ -865,10 +822,10 @@ background-clip: text;
 
 .post-title {
     font-family: Poppins;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
 .post-description {
@@ -890,25 +847,29 @@ line-height: normal;
     display: flex; 
     justify-content: space-between; 
     padding: 8px;
-    color:#828282
+    color: #828282;
 }
+
 .post-info {
     font-family: Poppins;
-    display: inline-block;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    background-color: #F8F8F8;
-    margin-bottom: 10px;
+    display: flex; 
+    color: #828282;
+    gap: 10px;
+    flex-wrap: wrap;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .border-tags {
-    background-color:  #F8F8F8;
+    background-color: #F8F8F8;
     padding: 4px;
     border-radius: 5px;
 }
+
 /*============================ blog ================*/
 
 /*====================== photos====================== */
@@ -926,12 +887,17 @@ line-height: normal;
 .text-box2 {
     padding: 20px;
     border-radius: 8px;
-    margin-top: 60px;
+    line-height: 100px;
     margin-left: 50px;
     max-width: 500px;
-    font-size: 15px;
+    font-size: 20px;
+    font-family: Poppins;
 }
-
+.text-photos{
+    font-size: 30px;
+    font-family: Poppins;
+    margin-top: 190px;
+}
 .background1 {
     margin: 0;
     padding: 0;
@@ -952,12 +918,26 @@ line-height: normal;
 }
 
 .watch-text-circle {
-    font-size: 16px;
+    font-size: 20px;
     margin: 0;
+    font-family: Poppins;
+}
+.text-boxes {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 125px;
+    margin-left: 40px;
+}
+
+.text-boxes-photos {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 125px;
+    margin-left: 40px;
 }
 /*=================== photos ======================*/
-
-
 
 /*==================== footer ====================*/
 .image-brand-container {
@@ -1346,7 +1326,1359 @@ line-height: normal;
 .div-ourteams {
     max-width: 200px;
 }
-
-
-
 /* ============================CATEGORY OURTEAMS============================= 
+
+/* ==========================================CSS RESPONSIVE========================================== */
+
+/* ===============================CSS 1024PX======================================= */
+@media (max-width: 1024px) {
+
+    /* //////////////////////// HOWS LIFE 1024PX //////////////////////////// */
+    .main-heading {
+        font-size: 36px;
+        margin-bottom: 0px;
+    }
+
+    .sub-heading {
+        font-size: 18px; 
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    .styled-button {
+        padding: 8px 20px;
+        gap: 2px;
+        font-weight: 500;
+        height: 40px;
+        border-radius: 8px;
+        margin-top: 5px;
+    }
+
+    .arrow-icon{
+        width: 20px;
+    }
+
+    .text-heros {
+        font-size: 15px; 
+    }
+
+    .image-hero {
+        width: 90%; 
+        margin-top: 30px; 
+        border-radius: 5px;
+    }
+
+    .content-wrapper {
+        top: 100px; 
+        padding: 5px; 
+        text-align: center; 
+    }
+
+    .flex-container {
+        padding: 20px 20px; 
+    }
+
+    .number {
+        font-size: 36px; 
+    }
+
+    .text {
+        font-size: 14px; 
+    }
+
+    .marquee-content {
+        gap: 16px; 
+        animation-duration: 50s; 
+    }
+
+    /* //////////////////////// BLOG 1024PX //////////////////////////// */
+    .blog-posts {
+        display: flex;
+    }
+    
+    .blog-post {
+        min-width: 325px;
+        gap: 30px;
+        flex: 0 0 45%; 
+    }
+    .arrow-up-right {
+        width: 40px; 
+    }
+    .title-blog {
+        font-size: 40px;
+    }
+    
+    .paragraph-blog {
+        font-size: 18px;
+    }
+    .post-title {
+        font-size: 18px;
+    }
+    
+    .post-description {
+        font-size: 18px;
+    }
+    .blog-container-blog {
+        width: 90%;
+    }
+    .blog-image {
+        height: 250px;
+    }
+
+    /* =======================OURTEAMS 1024PX======================= */
+        .card {
+        width: 280px;
+        min-height: 400px;
+    }
+
+    .title0-h1 {
+        font-size: 40px;
+    }
+
+    .paragraph0 {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+
+    /* ====================KOMERCE SOCIETY CSS 1024PX =========================== */
+    .komerce-section {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    }
+
+    .ks-font {
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background: linear-gradient(89deg, #333 26.88%, #dadada 87.35%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+
+    .wwd-box {
+    background-color: #F4F4F4;
+    padding: 4px 8px;
+    border-radius: 8px;
+    display: inline-block;
+    align-items: center;
+    max-width: max-content;
+    }
+
+    .wwd-font {
+        color: var(--Grayscale-Main-Black, #333);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    }
+
+    .wwd-paragraph{
+        color: var(--Grayscale-Main-Black, #333);
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    }
+
+
+    .row {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+    .col {
+    flex: 1;
+    padding: 20px;
+    }
+
+    .left-side {
+    max-width: 50%;
+    }
+
+    .right-side {
+    max-width: 50%;
+
+    flex-direction: column;
+    justify-content: space-between;
+    }
+
+    .product-count{
+    /* Headline 1/Semibold - 96 */
+    font-family: Poppins;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background: linear-gradient(117deg, #F95031 4.61%, #CF2A08 66.71%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+
+    .product-count-paragraph{
+        color: var(--Grayscale-Label, #828282);
+        /* Headline 5/Regular - 24 */
+        font-family: Poppins;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    .img-komerce-team{
+        width:350px;
+        flex: 1 0 0;
+    }
+    .arrow-up-right {
+        width: 25px;
+    }
+
+    .circle1, .circle2, .circle3, .circle4, .circle5, .circle6  {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 52px;
+    border: 3px solid var(--Grayscale-Line, #E2E2E2);
+    position: absolute;
+    }
+
+    .circle1 {
+            background: var(--Grayscale-BG, #F8F8F8);
+            z-index: 0;
+    }
+    .circle2 {
+            background: var(--Grayscale-BG, #F8F8F8);
+            z-index: 1;
+            left: 50px;
+    }
+    .circle3 {
+            background: var(--Grayscale-BG, #F8F8F8);
+            z-index: 2;
+            left: 100px;
+    }
+    .circle4 {
+            background: var(--Grayscale-BG, #F8F8F8);
+            z-index: 3;
+            left: 150px;
+    }
+    .circle5 {
+            background: var(--Grayscale-BG, #F8F8F8);
+            z-index: 4;
+            left: 200px;
+    }
+    .circle6 {
+            background: linear-gradient(117deg, #F95031 4.61%, #CF2A08 66.71%);
+            z-index: 5;
+            left: 250px;
+    }
+    .img-circle {
+        display: flex;
+        width: 55px;
+        height: 55px;
+        padding: 11px 8px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+    .circle-container{
+        display: flex;
+        position: relative;
+    }
+
+     /* ===================== Photos ================================================= */
+     .background-container2 {
+        height: 800px;
+    }
+    
+    .text-box2 {
+        line-height: 70px;
+        margin-left: 25px;
+        max-width: 500px;
+        font-size: 18px;
+    }
+    
+    .background1 {
+        height: 800px;
+    }
+    .text-photos{
+        font-size: 30px;
+        margin-top: 250px;
+    }
+    .play-circle{
+        width: 28px;
+    }
+    .watch-text-circle {
+        font-size: 18px;
+        margin: 0;
+    }
+}
+/* ============================CSS RESPONSIVE 768PX========================== */
+@media (max-width: 768px) {
+
+    /* =======================HOW'S LIFE AT KOMERCE======================== */
+    .main-heading {
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+
+    .sub-heading {
+        font-size: 14px; 
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    .styled-button {
+        padding: 3px 8px;
+        gap: 2px;
+        font-weight: 500;
+        height: 40px;
+        border-radius: 8px;
+        margin-top: 5px;
+    }
+
+    .arrow-icon{
+        width: 15px;
+    }
+
+    .text-heros {
+        font-size: 13px; 
+    }
+
+    .image-hero {
+        width: 90%; 
+        margin-top: 30px; 
+        border-radius: 5px;
+    }
+
+    .content-wrapper {
+        top: 100px; 
+        padding: 5px; 
+        text-align: center; 
+    }
+
+    .flex-container {
+        padding: 20px 20px; 
+    }
+
+    .number {
+        font-size: 35px; 
+    }
+
+    .text {
+        font-size: 14px; 
+    }
+
+    .marquee-content {
+        gap: 16px; 
+        animation-duration: 50s; 
+    }
+    
+    /* ====================================BLOG========================== */
+    .blog-posts {
+        display: flex;
+    }
+    
+    .blog-post {
+        min-width: 300px;
+        gap: 30px;
+        flex: 0 0 45%; 
+    }
+    .arrow-up-right {
+        width: 40px; 
+    }
+    .title-blog {
+        font-size: 40px;
+    }
+    
+    .paragraph-blog {
+        font-size: 14px;
+    }
+    .post-title {
+        font-size: 14px;
+    }
+    
+    .post-description {
+        font-size: 14px;
+    }
+    .blog-container-blog {
+        width: 90%;
+    }
+    .blog-image {
+        height: 200px;
+    }
+
+    /* ===================================OURTEAMS ===================================== */
+      .card-container {
+        gap: 50px;
+    }
+
+    .card {
+        width: 250px;
+        min-height: 380px;
+    }
+
+    .title0-h1 {
+        font-size: 36px;
+    }
+
+    .paragraph0 {
+        font-size: 14px;
+    }
+
+    /* ===========KOMERCE SOCIETY============== */
+    .komerce-section {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    }
+
+    .ks-font {
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background: linear-gradient(89deg, #333 26.88%, #dadada 87.35%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+
+    .wwd-box {
+    background-color: #F4F4F4;
+    padding: 4px 8px;
+    border-radius: 8px;
+    display: inline-block;
+    align-items: center;
+    max-width: max-content;
+    }
+
+    .wwd-font {
+        color: var(--Grayscale-Main-Black, #333);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    }
+
+    .wwd-paragraph{
+        color: var(--Grayscale-Main-Black, #333);
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    }
+
+
+    .row {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+    .col {
+    flex: 1;
+    padding: 20px;
+    }
+
+    .left-side {
+    max-width: 50%;
+    }
+
+    .right-side {
+    max-width: 50%;
+
+    flex-direction: column;
+    justify-content: space-between;
+    }
+
+    .product-count{
+    /* Headline 1/Semibold - 96 */
+    font-family: Poppins;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background: linear-gradient(117deg, #F95031 4.61%, #CF2A08 66.71%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+
+    .product-count-paragraph{
+        color: var(--Grayscale-Label, #828282);
+        /* Headline 5/Regular - 24 */
+        font-family: Poppins;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    .img-komerce-team{
+        width:350px;
+        flex: 1 0 0;
+    }
+    .arrow-up-right {
+        width: 25px;
+    }
+
+    .circle1, .circle2, .circle3, .circle4, .circle5, .circle6  {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45px;
+    border: 3px solid var(--Grayscale-Line, #E2E2E2);
+    position: absolute;
+    }
+
+    .circle1 {
+            background: var(--Grayscale-BG, #F8F8F8);
+            z-index: 0;
+    }
+    .circle2 {
+            background: var(--Grayscale-BG, #F8F8F8);
+            z-index: 1;
+            left: 33px;
+    }
+    .circle3 {
+            background: var(--Grayscale-BG, #F8F8F8);
+            z-index: 2;
+            left: 66px;
+    }
+    .circle4 {
+            background: var(--Grayscale-BG, #F8F8F8);
+            z-index: 3;
+            left: 99px;
+    }
+    .circle5 {
+            background: var(--Grayscale-BG, #F8F8F8);
+            z-index: 4;
+            left: 132px;
+    }
+    .circle6 {
+            background: linear-gradient(117deg, #F95031 4.61%, #CF2A08 66.71%);
+            z-index: 5;
+            left: 165px;
+    }
+    .img-circle {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        padding: 11px 8px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+    .circle-container{
+        display: flex;
+        position: relative;
+    }
+
+     /* ===================== Photos ================================================= */
+     .background-container2 {
+        height: 700px;
+    }
+    
+    .text-box2 {
+        line-height: 70px;
+        margin-left: 12px;
+        max-width: 400px;
+        font-size: 14px;
+    }
+    
+    .background1 {
+        height: 700px;
+    }
+    .text-photos{
+        font-size: 20px;
+        margin-top: 200px;
+    }
+    .play-circle{
+        width: 20px;
+    }
+    .watch-text-circle {
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
+/* ==============================CSS RESPOSIVE 576PX====================================== */
+@media (max-width: 576px) {
+
+    /* ==================HOWS LIFE====================== */
+    .main-heading {
+        font-size: 24px;
+        margin-bottom: 0px;
+        margin-top: 15px;
+    }
+
+    .sub-heading {
+        font-size: 13px; 
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    .styled-button {
+        padding: 6px 6px;
+        gap: 2px;
+        font-weight: 500;
+        height: 20px;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+
+    .arrow-icon{
+        width: 10px;
+    }
+
+    .text-heros {
+        font-size: 10px; 
+    }
+
+    .image-hero {
+        width: 90%; 
+        margin-top: 30px; 
+        border-radius: 5px;
+    }
+
+    .content-wrapper {
+        top: 65px; 
+        padding: 5px; 
+        text-align: center; 
+    }
+
+    .flex-container {
+        padding: 10px 10px; 
+    }
+
+    .number {
+        font-size: 22px; 
+    }
+
+    .text {
+        font-size: 13px; 
+    }
+
+    .marquee-content {
+        gap: 16px; 
+        animation-duration: 50s; 
+    }
+
+    /* =================BLOG======================= */
+    .blog-posts {
+        display: flex;
+    }
+    
+    .blog-post {
+        min-width: 457px;
+        gap: 30px;
+        flex: 0 0 30%; 
+    }
+    .arrow-up-right {
+        width: 30px; 
+    }
+    .title-blog {
+        font-size: 36px;
+    }
+    
+    .paragraph-blog {
+        font-size: 14px;
+    }
+    .post-title {
+        font-size: 14px;
+    }
+    
+    .post-description {
+        font-size: 14px;
+    }
+    .blog-container-blog {
+        width: 90%;
+    }
+    .blog-image {
+        height: 230px;
+    }
+
+    /* ===============OURTEAMS================ */
+    .container0 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Pastikan tidak ada peregangan */
+        height: auto; /* Pastikan tinggi container auto */
+    }
+
+    .paragraph0 {
+        flex-grow: 0; /* Pastikan paragraf tidak mengambil ruang tambahan */
+        height: auto; /* Tidak ada tinggi tetap yang berlebihan */
+        margin-top: 0px;
+    }
+
+    .title0-h1 {
+        flex-grow: 0; /* Pastikan paragraf tidak mengambil ruang tambahan */
+        height: auto; /* Tidak ada tinggi tetap yang berlebihan */
+        margin-top: 0px;
+    }
+
+    /* =============KOMERCE SOCIETY================ */
+    .komerce-section {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    }
+
+    .ks-font {
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background: linear-gradient(89deg, #333 26.88%, #dadada 87.35%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+
+    .wwd-box {
+    background-color: #F4F4F4;
+    padding: 4px 8px;
+    border-radius: 8px;
+    display: inline-block;
+    align-items: center;
+    max-width: max-content;
+    }
+
+    .wwd-font {
+        color: var(--Grayscale-Main-Black, #333);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    }
+
+    .wwd-paragraph{
+        color: var(--Grayscale-Main-Black, #333);
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    }
+
+
+    .row {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+    .col {
+    flex: 1;
+    padding: 20px;
+    }
+
+    .left-side {
+    max-width: 50%;
+    }
+
+    .right-side {
+    max-width: 50%;
+
+    flex-direction: column;
+    justify-content: space-between;
+    }
+
+    .product-count{
+    /* Headline 1/Semibold - 96 */
+    font-family: Poppins;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background: linear-gradient(117deg, #F95031 4.61%, #CF2A08 66.71%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+
+    .product-count-paragraph{
+        color: var(--Grayscale-Label, #828282);
+        /* Headline 5/Regular - 24 */
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 0px;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    .img-komerce-team{
+        width:170px;
+        flex: 1 0 0;
+    }
+    .arrow-up-right {
+        width: 25px;
+    }
+
+    .circle1, .circle2, .circle3, .circle4, .circle5, .circle6  {
+        display: flex;
+        width: 25px;
+        height: 25px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 45px;
+        border: 2px solid var(--Grayscale-Line, #E2E2E2);
+        position: absolute;
+    }
+
+    .circle1 {
+            background: var(--Grayscale-BG, #F8F8F8);
+            z-index: 0;
+    }
+    .circle2 {
+            background: var(--Grayscale-BG, #F8F8F8);
+            z-index: 1;
+            left: 20px;
+    }
+    .circle3 {
+            background: var(--Grayscale-BG, #F8F8F8);
+            z-index: 2;
+            left: 40px;
+    }
+    .circle4 {
+            background: var(--Grayscale-BG, #F8F8F8);
+            z-index: 3;
+            left: 60px;
+    }
+    .circle5 {
+            background: var(--Grayscale-BG, #F8F8F8);
+            z-index: 4;
+            left: 80px;
+    }
+    .circle6 {
+            background: linear-gradient(117deg, #F95031 4.61%, #CF2A08 66.71%);
+            z-index: 5;
+            left: 100px;
+    }
+    .img-circle {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        padding: 11px 8px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+    .circle-container{
+        display: flex;
+        position: relative;
+    }
+
+    /* ===================== Photos ================================================= */
+    .background-container2 {
+        height: 700px;
+    }
+    
+    .text-box2 {
+        line-height: 70px;
+        margin-left: 12px;
+        max-width: 300px;
+        font-size: 14px;
+    }
+    
+    .background1 {
+        height: 700px;
+    }
+    .text-photos{
+        font-size: 20px;
+        margin-top: 200px;
+    }
+    .play-circle{
+        width: 20px;
+    }
+    .watch-text-circle {
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
+/* ========================CSS RESPONSIVE 400PX============================ */
+@media (max-width: 400px) {
+    /* ==========HOWS LIFE================ */
+    .main-heading {
+        font-size: 13px;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+
+    .sub-heading {
+        font-size: 10px; 
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .styled-button {
+        padding: 4px 6px;
+        gap: 2px;
+        font-weight: 500;
+        height: 15px;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+
+    .arrow-icon{
+        width: 9px;
+    }
+
+    .text-heros {
+        font-size: 6px; 
+    }
+
+    .image-hero {
+        width: 90%; 
+        margin-top: 30px; 
+        border-radius: 5px;
+    }
+
+    .content-wrapper {
+        top: 50px; 
+        padding: 5px; 
+        text-align: center; 
+    }
+
+    .flex-container {
+        padding: 7px 7px; 
+    }
+
+    .number {
+        font-size: 20px; 
+    }
+
+    .text {
+        font-size: 7px; 
+    }
+
+    .marquee-content {
+        gap: 16px; 
+        animation-duration: 50s; 
+    }
+
+    /* =========================BLOG========================= */
+    .blog-posts {
+        display: flex;
+    }
+    
+    .blog-post {
+        min-width: 260px;
+        gap: 30px;
+        flex: 0 0 30%; 
+    }
+    .arrow-up-right {
+        width: 30px; 
+    }
+    .title-blog {
+        font-size: 24px;
+    }
+    .post-title {
+        font-size: 10px;
+    }
+    
+    .post-description {
+        font-size: 10px;
+    }
+    .paragraph-blog {
+        font-size: 10px;
+    }
+    .container-info {
+        font-size: 10px;
+    }
+    
+    .post-info {
+        font-size: 10px;
+    }
+    .blog-container-blog {
+        width: 90%;
+    }
+    .blog-image {
+        height: 200px;
+    }
+
+    /* ====================OURTEAMS================= */
+     .container0 {
+        padding: 30px;
+    }
+
+    .title0-h1 {
+        font-size: 24px; /* Lebih kecil pada layar sangat kecil */
+        margin-bottom: 8px; /* Jarak lebih kecil */
+    }
+
+    .paragraph0 {
+        font-size: 12px; /* Ukuran lebih kecil pada mobile kecil */
+        margin-bottom: 16px;
+    }
+
+    .card {
+        width: 90%; /* Kartu tidak terlalu lebar di mobile kecil */
+    }
+
+    .card-container {
+        gap: 15px; /* Mengurangi gap antar kartu */
+    }
+
+    /* ====================KOMERCE SOCIETY======================= */
+    .komerce-section {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    }
+
+    .ks-font {
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background: linear-gradient(89deg, #333 26.88%, #FAFAFA 87.35%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+
+    .wwd-box {
+    background-color: #F4F4F4;
+    padding: 4px 8px;
+    border-radius: 8px;
+    display: inline-block;
+    align-items: center;
+    max-width: max-content;
+    }
+
+    .wwd-font {
+        color: var(--Grayscale-Main-Black, #333);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    }
+
+    .wwd-paragraph{
+        color: var(--Grayscale-Main-Black, #333);
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    }
+
+
+    .row {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+    .col {
+    flex: 1;
+    padding: 20px;
+    }
+
+    .left-side {
+    max-width: 50%;
+    }
+
+    .right-side {
+    max-width: 50%;
+
+    flex-direction: column;
+    justify-content: space-between;
+    }
+
+    .product-count{
+    /* Headline 1/Semibold - 96 */
+    font-family: Poppins;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background: linear-gradient(117deg, #F95031 4.61%, #CF2A08 66.71%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+
+    .product-count-paragraph{
+        color: var(--Grayscale-Label, #828282);
+        /* Headline 5/Regular - 24 */
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 0px;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    .img-komerce-team{
+        width:140px;
+        flex: 1 0 0;
+    }
+    .arrow-up-right {
+        width: 25px;
+    }
+
+    .circle1, .circle2, .circle3, .circle4, .circle5, .circle6  {
+        display: flex;
+        width: 25px;
+        height: 25px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 45px;
+        border: 2px solid var(--Grayscale-Line, #E2E2E2);
+        position: absolute;
+    }
+
+    .circle1 {
+            background: var(--Grayscale-BG, #F8F8F8);
+            z-index: 0;
+    }
+    .circle2 {
+            background: var(--Grayscale-BG, #F8F8F8);
+            z-index: 1;
+            left: 20px;
+    }
+    .circle3 {
+            background: var(--Grayscale-BG, #F8F8F8);
+            z-index: 2;
+            left: 40px;
+    }
+    .circle4 {
+            background: var(--Grayscale-BG, #F8F8F8);
+            z-index: 3;
+            left: 60px;
+    }
+    .circle5 {
+            background: var(--Grayscale-BG, #F8F8F8);
+            z-index: 4;
+            left: 80px;
+    }
+    .circle6 {
+            background: linear-gradient(117deg, #F95031 4.61%, #CF2A08 66.71%);
+            z-index: 5;
+            left: 100px;
+    }
+    .img-circle {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        padding: 11px 8px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+    .circle-container{
+        display: flex;
+        position: relative;
+    }
+
+    /* ===================== Photos ================================================= */
+    .background-container2 {
+        height: 500px;
+    }
+    
+    .text-box2 {
+        line-height: 25px;
+        margin-left: 10px;
+        max-width: 240px;
+        font-size: 10px;
+    }
+    
+    .background1 {
+        height: 500px;
+    }
+    .text-photos{
+        font-size: 13px;
+        margin-top: 180px;
+    }
+    .play-circle{
+        width: 15px;
+    }
+    .watch-text-circle {
+        font-size: 10px;
+        margin: 0;
+    }
+}
+
+/* ========================CSS RESPONSIVE 350PX============================ */
+@media (max-width: 350px) {
+    /* ==========HOWS LIFE================ */
+    .main-heading {
+        font-size: 10px;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+
+    .sub-heading {
+        font-size: 6px; 
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .styled-button {
+        padding: 2px 4px;
+        gap: 2px;
+        font-weight: 300;
+        height: 15px;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+
+    .arrow-icon{
+        width: 9px;
+    }
+
+    .text-heros {
+        font-size: 6px; 
+    }
+
+    .image-hero {
+        width: 90%; 
+        margin-top: 30px; 
+        border-radius: 5px;
+    }
+
+    .content-wrapper {
+        top: 50px; 
+        padding: 5px; 
+        text-align: center; 
+    }
+
+    .flex-container {
+        padding: 5px 5px; 
+    }
+
+    .number {
+        font-size: 13px; 
+    }
+
+    .text {
+        font-size: 6px; 
+    }
+
+    .marquee-content {
+        gap: 16px; 
+        animation-duration: 50s; 
+    }
+
+    /* =========================BLOG========================= */
+    .blog-posts {
+        display: flex;
+    }
+    
+    .blog-post {
+        min-width: 225px;
+        gap: 30px;
+        flex: 0 0 30%; 
+    }
+    .arrow-up-right {
+        width: 20px; 
+    }
+    .title-blog {
+        font-size: 14px;
+    }
+    .post-title {
+        font-size: 8px;
+    }
+    
+    .post-description {
+        font-size: 8px;
+    }
+    .paragraph-blog {
+        font-size: 8px;
+    }
+    .container-info {
+        font-size: 8px;
+    }
+    
+    .post-info {
+        font-size: 6px;
+    }
+    .blog-container-blog {
+        width: 90%;
+    }
+    .blog-image {
+        height: 200px;
+    }
+    .styled-button-blog-left,
+    .styled-button-blog-right {
+    height: 25px;
+    padding: 0px 10px;
+    }
+    .styled-button-blog-left.active {
+        background: linear-gradient(117deg, #F95031 4.61%, #CF2A08 66.71%);
+        border: none;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .styled-button-blog-right {
+        margin-left: 5px;
+        background: linear-gradient(117deg, #F95031 4.61%, #CF2A08 66.71%);
+        transition: background 0.3s ease;
+    }
+
+    /* ===================== Photos ================================================= */
+    .background-container2 {
+        height: 400px;
+    }
+    
+    .text-box2 {
+        line-height: 20px;
+        margin-left: 10px;
+        max-width: 200px;
+        font-size: 8px;
+    }
+    
+    .background1 {
+        height: 400px;
+    }
+    .text-photos{
+        font-size: 12px;
+        margin-top: 120px;
+    }
+    .play-circle{
+        width: 15px;
+    }
+    .watch-text-circle {
+        font-size: 8px;
+        margin: 0;
+    }
+}

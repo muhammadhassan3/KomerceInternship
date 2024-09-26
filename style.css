@@ -573,7 +573,7 @@ background-clip: text;
     justify-content: center;
     max-width: 1500px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .card {
@@ -2025,20 +2025,40 @@ a {
     .container0 {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start; /* Pastikan tidak ada peregangan */
-        height: auto; /* Pastikan tinggi container auto */
+        justify-content: flex-start;
+        align-items: flex-start; /* Atur agar semua elemen rata kiri */
+        padding: 30px;
     }
 
-    .paragraph0 {
-        flex-grow: 0; /* Pastikan paragraf tidak mengambil ruang tambahan */
-        height: auto; /* Tidak ada tinggi tetap yang berlebihan */
-        margin-top: 0px;
+    .title0 {
+        align-items: flex-start; /* Paksa title rata kiri */
+        justify-content: flex-end !important;
+        padding: 0; /* Hapus padding berlebih */
+        margin-top: 10px;
     }
 
     .title0-h1 {
-        flex-grow: 0; /* Pastikan paragraf tidak mengambil ruang tambahan */
-        height: auto; /* Tidak ada tinggi tetap yang berlebihan */
+        text-align: left; /* Pastikan text dalam title rata kiri */
+        font-size: 28px; /* Ukuran font yang disesuaikan */
+        margin-bottom: 0px;
+        justify-content: flex-end;
+        
+    }
+
+    .paragraph0 {
+        font-size: 14px;
+        text-align: left; /* Pastikan paragraf rata kiri */
         margin-top: 0px;
+        margin-bottom: 12px;
+    }
+
+    .card-container {
+        gap: 20px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 320px;
     }
 
     /* =============KOMERCE SOCIETY================ */
@@ -2329,26 +2349,37 @@ a {
     }
 
     /* ====================OURTEAMS================= */
-     .container0 {
+    .container0 {
         padding: 30px;
+        align-items: flex-start; /* Atur semua elemen agar rata kiri */
+    }
+
+    .title0 {
+        align-items: flex-start; /* Pastikan judul rata kiri */
+        padding: 0; /* Hapus padding */
+        justify-content: flex-end !important;
     }
 
     .title0-h1 {
-        font-size: 24px; /* Lebih kecil pada layar sangat kecil */
-        margin-bottom: 8px; /* Jarak lebih kecil */
+        text-align: left; /* Rata kiri teks title */
+        font-size: 24px; /* Ukuran lebih kecil */
+        margin-bottom: 8px;
     }
 
     .paragraph0 {
-        font-size: 12px; /* Ukuran lebih kecil pada mobile kecil */
+        font-size: 12px;
+        text-align: left; /* Paragraf tetap rata kiri */
+        margin-top: 0;
         margin-bottom: 16px;
     }
 
-    .card {
-        width: 90%; /* Kartu tidak terlalu lebar di mobile kecil */
+    .card-container {
+        gap: 15px;
     }
 
-    .card-container {
-        gap: 15px; /* Mengurangi gap antar kartu */
+    .card {
+        width: 90%;
+        max-width: 300px;
     }
 
     /* ====================KOMERCE SOCIETY======================= */
@@ -2596,6 +2627,56 @@ a {
     .marquee-content {
         gap: 16px; 
         animation-duration: 50s; 
+    }
+
+    /* =========================OUR TEAMS========================= */
+    .container0 {
+        padding: 20px; /* Sesuaikan padding untuk ukuran layar yang lebih kecil */
+        align-items: flex-start; /* Semua elemen rata kiri */
+    }
+
+    .title0 {
+        align-items: flex-start; /* Pastikan judul rata kiri */
+        padding: 0; /* Hapus padding */
+        justify-content: flex-end !important; /* Agar konten judul tetap di bawah */
+    }
+
+    .title0-h1 {
+        text-align: left; /* Pastikan teks judul rata kiri */
+        font-size: 22px; /* Ukuran font lebih kecil untuk 350px */
+        margin-bottom: 5px; /* Kurangi jarak antara judul dan paragraf */
+    }
+
+    .paragraph0 {
+        font-size: 12px; /* Ukuran font yang sesuai untuk 350px */
+        text-align: left; /* Pastikan paragraf rata kiri */
+        margin-top: 0;
+        margin-bottom: 12px; /* Kurangi jarak bawah untuk layar kecil */
+    }
+
+    .card-container {
+        gap: 10px; /* Kurangi gap antar kartu */
+    }
+
+    .card {
+        width: 80%; /* Sesuaikan lebar kartu agar tidak terlalu lebar */
+        max-width: 275px; /* Sesuaikan max-width untuk layar kecil */
+    }
+
+    /* Mengubah ukuran font untuk name, name2, dan paragraph-desc */
+    .name {
+        font-size: 10px; /* Mengecilkan ukuran font name */
+        margin-top: 5px;
+    }
+
+    .name2 {
+        font-size: 10px; /* Mengecilkan ukuran font name2 */
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    .paragraph-desc {
+        font-size: 10px; /* Mengecilkan ukuran font paragraph-desc */
     }
 
     /* =========================BLOG========================= */

@@ -12,8 +12,12 @@
 				?>
                 <img src="<?php echo $logo[0] ?>" alt="Logo" height="40" class="mb-3 logo">
             </div>
-            <div class="max-vw-100 row ">
-                <div class="col-sm d-flex flex-column me-5">
+
+            <!-- footer lama  -->
+            
+
+            <div class="footer-container">
+                <div class="footer-column address">
                     <div class="d-flex flex-row">
                         <img src="https://storage.googleapis.com/komerce/assets/LP-Komcard/location.svg" alt="location"
                              height="24" class="me-2">
@@ -32,8 +36,8 @@
                         <p><a>contact@komerce.id</a></p>
                     </div>
                 </div>
-                <div class="col-sm me-5 row">
-                    <div class="col d-flex flex-column ">
+                
+                    <div class="footer-column company ">
                         <h4>Company</h4>
                         <ul class="list-unstyled">
                             <li><a href="https://komclass.id/" class="nav-link">Event</a></li>
@@ -44,7 +48,7 @@
                             <li><a href="https://komerce.id/impact" class="nav-link">Social Impact</a></li>
                         </ul>
                     </div>
-                    <div class="col d-flex flex-column ">
+                    <div class="footer-column product">
                         <h4>Product</h4>
                         <ul class="list-unstyled">
                             <li><a href="https://www.komtim.id/" class="nav-link">Komtim</a></li>
@@ -58,7 +62,7 @@
                             <li><a href="https://www.pendampingumkm.id/" class="nav-link">Pendamping UMKM</a></li>
                         </ul>
                     </div>
-                </div>
+               
                 <div class="col-sm d-flex flex-column ">
                     <p>Find Out Our Latest News</p>
                     <div class="d-flex flex-row mb-2">
@@ -117,6 +121,65 @@
                     </div>
                 </div>
             </div>
+            <!-- footer lama  -->
+            <!-- <div class="footer-container">
+            <div class="footer-column address">
+                <img src="location.svg" alt="location" height="24">
+                <p>Head Office Komerce<br>Sawah Tengah Street No. 3 Desa Tunjungmuli<br>Kecamatan Karangmoncol<br>Kabupaten Purbalingga (53355)</p>
+                <img src="whatsapp.svg" alt="Phone number" height="24">
+                <p>+62 813 6064 6002</p>
+                <img src="sms.svg" alt="email" height="24">
+                <p>contact@komerce.id</p>
+            </div>
+            <div class="footer-column company">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">Event</a></li>
+                    <li><a href="#">Affiliate</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Social Impact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column product">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#">Komtim</a></li>
+                    <li><a href="#">Komship</a></li>
+                    <li><a href="#">Kompack</a></li>
+                    <li><a href="#">Komplace</a></li>
+                    <li><a href="#">Komcards</a></li>
+                    <li><a href="#">Komform</a></li>
+                    <li><a href="#">Komchat</a></li>
+                    <li><a href="#">Komclass</a></li>
+                    <li><a href="#">Pendamping UMKM</a></li>
+                </ul>
+            </div>
+            <div class="footer-column news">
+                <p>Find Out Our Latest News</p>
+                <div class="social-icons">
+                    <img src="instagram.svg" alt="Instagram" height="24">
+                    <img src="facebook.svg" alt="Facebook" height="24">
+                    <img src="youtube.svg" alt="YouTube" height="24">
+                    <img src="linkedin.svg" alt="LinkedIn" height="24">
+                    <img src="telegram.svg" alt="Telegram" height="24">
+                </div>
+                <p>Collaboration Partners</p>
+                <div class="partners">
+                    <img src="zahir.png" alt="Zahir">
+                    <img src="jne.png" alt="JNE">
+                    <img src="sicepat.png" alt="Sicepat">
+                    <img src="idexpress.png" alt="IDExpress">
+                    <img src="sap.png" alt="SAP">
+                </div>
+                <p>Registered in</p>
+                <div class="registration">
+                    <img src="kominfo.png" alt="Kominfo">
+                    <p><a href="#">PSE Kominfo</a></p>
+                </div>
+            </div>
+        </div> -->
+
         </div>
         <div class="h-divider mb-1"></div>
         <div class="max-vw-100 d-flex flex-row justify-content-between container">

@@ -965,6 +965,94 @@ a {
 .background-footer {
     background-color: #FFF;
 }
+
+
+/* ===========tambahan footer=================== */
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    background-color: #FFF;
+    justify-content: center;
+    justify-items: center;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column img {
+    margin-bottom: 10px;
+}
+
+.address-p {
+    margin-bottom: 20px;
+}
+
+.company, .product, .news {
+    display: flex;
+    flex-direction: column;
+}
+
+/* h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+} */
+
+/* ul {
+    list-style: none;
+} */
+
+/* ul li {
+    margin-bottom: 8px;
+} */
+
+/* ul li a {
+    text-decoration: none;
+    color: #000;
+} */
+
+/* ul li a:hover {
+    text-decoration: underline;
+} */
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.partners {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.registration {
+    display: flex;
+    flex-direction: column;
+}
+
+.registration img {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 /*==================== footer ====================*/
 
 
@@ -1327,6 +1415,9 @@ a {
     max-width: 200px;
 }
 /* ============================CATEGORY OURTEAMS============================= 
+
+
+
 
 /* ==========================================CSS RESPONSIVE========================================== */
 
@@ -2762,4 +2853,7 @@ a {
         font-size: 8px;
         margin: 0;
     }
+
+    /* ===================FOOTER====================== */
+    
 }

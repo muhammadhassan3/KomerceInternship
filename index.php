@@ -273,8 +273,13 @@
                         <?php echo wp_trim_words(get_the_content(), 12, '...'); ?>
                     </p>
                     <div class="container-info">
-                        <span><?php the_author(); ?></span> <!-- Display the author's name -->
-                        <span><?php echo get_the_date('d F Y'); ?></span> <!-- Display the post's date -->
+                    <?php
+                        $avatars = get_avatar_url($user->ID); 
+                    ?>
+                        
+                        <span><img class="card-image-blog" src="<?= esc_url($avatars) ?>" alt="User Avatar" />
+                        <?php the_author(); ?></span> 
+                        <span><?php echo get_the_date('d F Y'); ?></span> 
                     </div>
                 </div>
             <?php endwhile; 

@@ -56,25 +56,23 @@
                 }
                 ?>
                 <li>
-                    <div class="d-flex d-md-none align-items-center" style="gap: 15px;">
-                        <a href="#" class="ind_text" style="color: red;">ID</a>
-                        <div>|</div>
-                        <a href="#" class="en_text" style="color: #333;">EN</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="d-none d-md-flex d-lg-none align-items-center" style="gap: 15px;">
-                        <a href="#" class="ind_text" style="color: red;">ID</a>
-                        <div>|</div>
-                        <a href="#" class="en_text" style="color: #333;">EN</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="d-none d-lg-flex align-items-center" style="gap: 15px;">
-            <a href="#" class="ind_text" style="color: red;">ID</a>
-            <div>|</div>
-            <a href="#" class="en_text" style="color: #333;">EN</a>
-        </div>
+                        <div class="language-switch d-flex d-md-none align-items-center">
+                            <a href="#" class="language-option active">ID</a>
+                            <a href="#" class="language-option">EN</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="language-switch d-none d-md-flex d-lg-none align-items-center">
+                            <a href="#" class="language-option active">ID</a>
+                            <a href="#" class="language-option">EN</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="language-switch d-none d-lg-flex align-items-center">
+                <a href="#" class="language-option">ID</a>
+                <a href="#" class="language-option active">EN</a>
+            </div>
     </div>
 </nav>

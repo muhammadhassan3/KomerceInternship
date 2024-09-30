@@ -24,7 +24,48 @@ body {
     left: 0;
     z-index: 1;
   }
+  .language-switch {
+    display: flex;
+    gap: 10px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+}
 
+.language-option {
+    color: #000;
+    display: flex;
+    width: 56px;
+    padding: var(--Margin-Margin-1, 4px);
+    align-items: center;
+    border-radius: 8px;
+    background: var(--Grayscale-Background, #F7F7F7);
+
+}
+
+.language-option.active {
+    display: flex;
+    width: var(--Radius-Radius-7, 24px);
+    height: var(--Radius-Radius-7, 24px);
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: var(--Margin-Margin-1, 4px);
+    background: var(--Grayscale-Off-White, #FFF);
+}
+
+.language-option:not(.active) {
+    display: flex;
+    width: var(--Radius-Radius-7, 24px);
+    height: var(--Radius-Radius-7, 24px);
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: var(--Radius-Radius-7, 24px);
+}
 
 /* css underline untuk menu */
 .navbar-item {
@@ -677,6 +718,13 @@ a {
     transition: transform 0.3s ease-in-out;
 }
 
+.card-image-blog {
+    width: 25px;
+    height:  25px;
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
 .blog-post {
     max-height: 600px;
     background-color: #ffffff;
@@ -994,29 +1042,6 @@ a {
     display: flex;
     flex-direction: column;
 }
-
-/* h4 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: bold;
-} */
-
-/* ul {
-    list-style: none;
-} */
-
-/* ul li {
-    margin-bottom: 8px;
-} */
-
-/* ul li a {
-    text-decoration: none;
-    color: #000;
-} */
-
-/* ul li a:hover {
-    text-decoration: underline;
-} */
 
 .social-icons {
     display: flex;
@@ -1716,6 +1741,60 @@ a {
         font-size: 18px;
         margin: 0;
     }
+
+    /* =======footer========= */
+    .footer-container {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+        padding: 20px; 
+        justify-items: start;
+    }
+
+    .footer-column {
+        align-items: flex-start; 
+    }
+
+    .footer-column img {
+        width: 20px; 
+        margin-bottom: 5px;
+    }
+
+    .footer-column a {
+        font-size: 14px; 
+    }
+
+    .footer-column h4 {
+        font-size: 16px; 
+    }
+
+    .social-icons img {
+        width: 20px; 
+    }
+
+    .partners img {
+        width: 50px; 
+    }
+
+    .registration img {
+        width: 50px; 
+    }
+
+    .h-divider {
+        display: none; 
+    }
+
+    .max-vw-100 {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .max-vw-100 p {
+        font-size: 12px;
+    }
+
+    .max-vw-100 div {
+        gap: 10px; 
+    }
 }
 /* ============================CSS RESPONSIVE 768PX========================== */
 @media (max-width: 768px) {
@@ -2014,6 +2093,61 @@ a {
         font-size: 14px;
         margin: 0;
     }
+
+    /* =============footer========== */
+
+    .footer-container {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+        padding: 20px; 
+        justify-items: start;
+    }
+
+    .footer-column {
+        align-items: flex-start; 
+    }
+
+    .footer-column img {
+        width: 20px; 
+        margin-bottom: 5px; 
+    }
+
+    .footer-column a {
+        font-size: 14px; 
+    }
+
+    .footer-column h4 {
+        font-size: 16px; 
+    }
+
+    .social-icons img {
+        width: 20px; 
+    }
+
+    .partners img {
+        width: 50px; 
+    }
+
+    .registration img {
+        width: 50px;
+    }
+
+    .h-divider {
+        display: none; 
+    }
+
+    .max-vw-100 {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .max-vw-100 p {
+        font-size: 12px; 
+    }
+
+    .max-vw-100 div {
+        gap: 10px;
+    }
 }
 
 /* ==============================CSS RESPOSIVE 576PX====================================== */
@@ -2082,7 +2216,12 @@ a {
     .blog-posts {
         display: flex;
     }
-    
+    .card-image-blog {
+        width: 20px;
+        height:  20px;
+        border-radius: 50%; 
+        object-fit: cover; 
+    }
     .blog-post {
         min-width: 457px;
         gap: 30px;
@@ -2117,20 +2256,20 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: flex-start; /* Atur agar semua elemen rata kiri */
+        align-items: flex-start;
         padding: 30px;
     }
 
     .title0 {
-        align-items: flex-start; /* Paksa title rata kiri */
+        align-items: flex-start; 
         justify-content: flex-end !important;
-        padding: 0; /* Hapus padding berlebih */
+        padding: 0; 
         margin-top: 10px;
     }
 
     .title0-h1 {
-        text-align: left; /* Pastikan text dalam title rata kiri */
-        font-size: 28px; /* Ukuran font yang disesuaikan */
+        text-align: left;
+        font-size: 28px; 
         margin-bottom: 0px;
         justify-content: flex-end;
         
@@ -2138,7 +2277,7 @@ a {
 
     .paragraph0 {
         font-size: 14px;
-        text-align: left; /* Pastikan paragraf rata kiri */
+        text-align: left; 
         margin-top: 0px;
         margin-bottom: 12px;
     }
@@ -2336,6 +2475,167 @@ a {
         font-size: 14px;
         margin: 0;
     }
+
+    /* =============footer============ */
+    .footer-container {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+        padding: 20px; 
+        justify-items: start;
+    }
+
+    .footer-column {
+        align-items: flex-start;
+    }
+
+    .footer-column img {
+        width: 20px; 
+        margin-bottom: 5px; 
+    }
+
+    .footer-column a {
+        font-size: 14px; 
+    }
+
+    .footer-column h4 {
+        font-size: 16px; 
+    }
+
+    .social-icons img {
+        width: 20px;
+    }
+
+    .partners img {
+        width: 50px; 
+    }
+
+    .registration img {
+        width: 50px; 
+    }
+
+    .h-divider {
+        display: none; 
+    }
+
+    .max-vw-100 {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .max-vw-100 p {
+        font-size: 12px; 
+    }
+
+    .max-vw-100 div {
+        gap: 10px; 
+    }
+}
+
+/* ========================CSS RESPONSIVE 450PX============================ */
+@media (max-width: 450px) {
+    /* ==========HOWS LIFE================ */
+    .main-heading {
+        font-size: 13px;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+
+    .sub-heading {
+        font-size: 10px; 
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .styled-button {
+        padding: 4px 6px;
+        gap: 2px;
+        font-weight: 500;
+        height: 15px;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+
+    .arrow-icon{
+        width: 9px;
+    }
+
+    .text-heros {
+        font-size: 6px; 
+    }
+
+    .image-hero {
+        width: 90%; 
+        margin-top: 30px; 
+        border-radius: 5px;
+    }
+
+    .content-wrapper {
+        top: 60px; 
+        padding: 5px; 
+        text-align: center; 
+    }
+
+    .flex-container {
+        padding: 7px 7px; 
+    }
+
+    .number {
+        font-size: 20px; 
+    }
+
+    .text {
+        font-size: 7px; 
+    }
+
+    .marquee-content {
+        gap: 16px; 
+        animation-duration: 50s; 
+    }
+
+    /* =========================BLOG========================= */
+    .blog-posts {
+        display: flex;
+    }
+    .card-image-blog {
+        width: 15px;
+        height:  15px;
+        border-radius: 50%; 
+        object-fit: cover; 
+    }
+    .blog-post {
+        min-width: 323px;
+        gap: 30px;
+        flex: 0 0 30%; 
+    }
+    .arrow-up-right {
+        width: 30px; 
+    }
+    .title-blog {
+        font-size: 24px;
+    }
+    .post-title {
+        font-size: 10px;
+    }
+    
+    .post-description {
+        font-size: 10px;
+    }
+    .paragraph-blog {
+        font-size: 10px;
+    }
+    .container-info {
+        font-size: 10px;
+    }
+    
+    .post-info {
+        font-size: 10px;
+    }
+    .blog-container-blog {
+        width: 90%;
+    }
+    .blog-image {
+        height: 200px;
+    }
 }
 
 /* ========================CSS RESPONSIVE 400PX============================ */
@@ -2403,7 +2703,12 @@ a {
     .blog-posts {
         display: flex;
     }
-    
+    .card-image-blog {
+        width: 15px;
+        height:  15px;
+        border-radius: 50%; 
+        object-fit: cover; 
+    }
     .blog-post {
         min-width: 260px;
         gap: 30px;
@@ -2442,24 +2747,24 @@ a {
     /* ====================OURTEAMS================= */
     .container0 {
         padding: 30px;
-        align-items: flex-start; /* Atur semua elemen agar rata kiri */
+        align-items: flex-start; 
     }
 
     .title0 {
-        align-items: flex-start; /* Pastikan judul rata kiri */
-        padding: 0; /* Hapus padding */
+        align-items: flex-start; 
+        padding: 0; 
         justify-content: flex-end !important;
     }
 
     .title0-h1 {
-        text-align: left; /* Rata kiri teks title */
-        font-size: 24px; /* Ukuran lebih kecil */
+        text-align: left; 
+        font-size: 24px; 
         margin-bottom: 8px;
     }
 
     .paragraph0 {
         font-size: 12px;
-        text-align: left; /* Paragraf tetap rata kiri */
+        text-align: left; 
         margin-top: 0;
         margin-bottom: 16px;
     }
@@ -2657,6 +2962,60 @@ a {
         font-size: 10px;
         margin: 0;
     }
+
+    /* ===================FOOTER===================== */
+    .footer-container {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+        padding: 20px; 
+        justify-items: start;
+    }
+
+    .footer-column {
+        align-items: flex-start; 
+    }
+
+    .footer-column img {
+        width: 20px; 
+        margin-bottom: 5px; 
+    }
+
+    .footer-column a {
+        font-size: 14px; 
+    }
+
+    .footer-column h4 {
+        font-size: 16px; 
+    }
+
+    .social-icons img {
+        width: 20px; 
+    }
+
+    .partners img {
+        width: 50px; 
+    }
+
+    .registration img {
+        width: 50px; 
+    }
+
+    .h-divider {
+        display: none; 
+    }
+
+    .max-vw-100 {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .max-vw-100 p {
+        font-size: 12px; 
+    }
+
+    .max-vw-100 div {
+        gap: 10px; 
+    }
 }
 
 /* ========================CSS RESPONSIVE 350PX============================ */
@@ -2722,59 +3081,63 @@ a {
 
     /* =========================OUR TEAMS========================= */
     .container0 {
-        padding: 20px; /* Sesuaikan padding untuk ukuran layar yang lebih kecil */
-        align-items: flex-start; /* Semua elemen rata kiri */
+        padding: 20px; 
+        align-items: flex-start; 
     }
 
     .title0 {
-        align-items: flex-start; /* Pastikan judul rata kiri */
-        padding: 0; /* Hapus padding */
-        justify-content: flex-end !important; /* Agar konten judul tetap di bawah */
+        align-items: flex-start; 
+        padding: 0; 
+        justify-content: flex-end !important; 
     }
 
     .title0-h1 {
-        text-align: left; /* Pastikan teks judul rata kiri */
-        font-size: 22px; /* Ukuran font lebih kecil untuk 350px */
-        margin-bottom: 5px; /* Kurangi jarak antara judul dan paragraf */
+        text-align: left; 
+        font-size: 22px; 
+        margin-bottom: 5px; 
     }
 
     .paragraph0 {
-        font-size: 12px; /* Ukuran font yang sesuai untuk 350px */
-        text-align: left; /* Pastikan paragraf rata kiri */
+        font-size: 12px; 
+        text-align: left; 
         margin-top: 0;
-        margin-bottom: 12px; /* Kurangi jarak bawah untuk layar kecil */
+        margin-bottom: 12px; 
     }
 
     .card-container {
-        gap: 10px; /* Kurangi gap antar kartu */
+        gap: 10px; 
     }
 
     .card {
-        width: 80%; /* Sesuaikan lebar kartu agar tidak terlalu lebar */
-        max-width: 275px; /* Sesuaikan max-width untuk layar kecil */
+        width: 80%; 
+        max-width: 275px; 
     }
 
-    /* Mengubah ukuran font untuk name, name2, dan paragraph-desc */
     .name {
-        font-size: 10px; /* Mengecilkan ukuran font name */
+        font-size: 10px;
         margin-top: 5px;
     }
 
     .name2 {
-        font-size: 10px; /* Mengecilkan ukuran font name2 */
+        font-size: 10px; 
         margin-top: 5px;
         margin-left: 10px;
     }
 
     .paragraph-desc {
-        font-size: 10px; /* Mengecilkan ukuran font paragraph-desc */
+        font-size: 10px; 
     }
 
     /* =========================BLOG========================= */
     .blog-posts {
         display: flex;
     }
-    
+    .card-image-blog {
+        width: 13px;
+        height:  13px;
+        border-radius: 50%; 
+        object-fit: cover; 
+    }
     .blog-post {
         min-width: 225px;
         gap: 30px;

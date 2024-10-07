@@ -10,11 +10,11 @@ function themelintang_theme_support()
 
 add_action('after_setup_theme', 'themelintang_theme_support');
 
-function theme_initScript()
-{
-	$version = wp_get_theme()->get("Version");
-	wp_enqueue_script("main-css", get_template_directory_uri() . '/main.js', array(), $version, true);
-}
+// function theme_initScript()
+// {
+// 	$version = wp_get_theme()->get("Version");
+// 	wp_enqueue_script("main-css", get_template_directory_uri() . '/main.js', array(), $version, true);
+// }
 
 function lintang_menus()
 {
@@ -54,7 +54,8 @@ function enqueue_custom_scripts() {
 
 add_action('init', 'lintang_menus');
 add_action("wp_enqueue_scripts", 'initStyle');
-add_action('wp_enqueue_scripts', 'theme_initScript');
+// add_action('wp_enqueue_scripts', 'theme_initScript');
+ add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
 //menambahkan class css dalam fungsi the_content();
 function add_blog_post_paragraph_class($content)

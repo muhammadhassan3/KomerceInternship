@@ -57,14 +57,14 @@
                 ?>
                 <li>
                         <div class="language-switch d-flex d-md-none align-items-center">
-                            <a href="#" class="language-option active">ID</a>
-                            <a href="#" class="language-option">EN</a>
+                            <a href="#" class="language-option ">ID</a>
+                            <a href="#" class="language-option active">EN</a>
                         </div>
                     </li>
                     <li>
                         <div class="language-switch d-none d-md-flex d-lg-none align-items-center">
-                            <a href="#" class="language-option active">ID</a>
-                            <a href="#" class="language-option">EN</a>
+                            <a href="#" class="language-option">ID</a>
+                            <a href="#" class="language-option active">EN</a>
                         </div>
                     </li>
                 </ul>

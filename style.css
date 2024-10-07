@@ -2290,6 +2290,9 @@ a {
         width: 90%;
         max-width: 320px;
     }
+    .paragraph-desc {
+        font-size: 10px; 
+    }
 
     /* =============KOMERCE SOCIETY================ */
     .komerce-section {
@@ -2776,6 +2779,9 @@ a {
     .card {
         width: 90%;
         max-width: 300px;
+    }
+    .paragraph-desc {
+        font-size: 10px; 
     }
 
     /* ====================KOMERCE SOCIETY======================= */

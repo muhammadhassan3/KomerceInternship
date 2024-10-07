@@ -274,10 +274,11 @@
                     </p>
                     <div class="container-info">
                     <?php
-                        $avatars = get_avatar_url($user->ID); 
+                       $author_id = get_the_author_meta('ID'); 
+                         $avatar_url = get_avatar_url($author_id);
                     ?>
                         
-                        <span><img class="card-image-blog" src="<?= esc_url($avatars) ?>" alt="User Avatar" />
+                        <span><img class="card-image-blog" src="<?= esc_url($avatar_url) ?>" alt="User Avatar" />
                         <?php the_author(); ?></span> 
                         <span><?php echo get_the_date('d F Y'); ?></span> 
                     </div>

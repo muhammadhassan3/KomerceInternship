@@ -43,6 +43,82 @@ document.addEventListener('DOMContentLoaded', function () {
 //     });
 // });
 
+//JS UNTUK NAVIGASI BLOG
+// document.addEventListener('DOMContentLoaded', function () {
+//     const container = document.getElementById('blog-posts-container');
+//     const leftArrow = document.getElementById('arrow-left');
+//     const rightArrow = document.getElementById('arrow-right');
+    
+//     const scrollAmount = 800;
+
+//     leftArrow.addEventListener('click', () => {
+//         container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+//     });
+
+//     rightArrow.addEventListener('click', () => {
+//         container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+//     });
+// });
+
+//JS UNTUK NAVIGASI BLOG
+document.addEventListener('DOMContentLoaded', function () {
+    const container = document.getElementById('blog-posts-container');
+    const leftArrow = document.getElementById('arrow-left');
+    const rightArrow = document.getElementById('arrow-right');
+    const leftButton = document.querySelector('.styled-button-blog-left');
+    const rightButton = document.querySelector('.styled-button-blog-right');
+
+    // Fungsi untuk mendapatkan scroll amount dinamis berdasarkan lebar post
+    function getScrollAmount() {
+        const post = document.querySelector('.blog-post');
+        const postStyle = window.getComputedStyle(post);
+        const gap = parseInt(postStyle.getPropertyValue('gap')) || 30; // Ambil gap antar elemen
+        return post.offsetWidth + gap; // Total scroll amount
+    }
+
+    // Fungsi untuk menggeser kontainer ke kiri
+    leftArrow.addEventListener('click', () => {
+        container.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+        setTimeout(checkScrollPosition, 300);
+    });
+
+    // Fungsi untuk menggeser kontainer ke kanan
+    rightArrow.addEventListener('click', () => {
+        container.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+        setTimeout(checkScrollPosition, 300);
+    });
+
+    // Fungsi untuk mengaktifkan/menonaktifkan tombol
+    rightButton.addEventListener('click', () => {
+        leftButton.classList.add('active');
+    });
+
+    leftButton.addEventListener('click', () => {
+        leftButton.classList.remove('active');
+    });
+
+    // Fungsi untuk mengecek posisi scroll dan mengatur status tombol
+    function checkScrollPosition() {
+        if (container.scrollLeft <= 0) {
+            leftButton.classList.add('disabled');
+        } else {
+            leftButton.classList.remove('disabled');
+        }
+
+        if (container.scrollLeft + container.offsetWidth >= container.scrollWidth) {
+            rightButton.classList.add('disabled');
+        } else {
+            rightButton.classList.remove('disabled');
+        }
+    }
+
+    // Listener untuk memperbarui scroll amount saat ukuran layar berubah
+    window.addEventListener('resize', checkScrollPosition);
+
+    // Panggil pertama kali untuk set kondisi awal
+    checkScrollPosition();
+});
+
 
 // Crud wordpress divisi dan jabatan
 
@@ -109,80 +185,6 @@ jQuery(document).ready(function($) {
     });
 });
 
-//JS UNTUK NAVIGASI BLOG
-document.addEventListener('DOMContentLoaded', function () {
-    const container = document.getElementById('blog-posts-container');
-    const leftArrow = document.getElementById('arrow-left');
-    const rightArrow = document.getElementById('arrow-right');
-    
-    const scrollAmount = 800;
 
-    leftArrow.addEventListener('click', () => {
-        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    });
-
-    rightArrow.addEventListener('click', () => {
-        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    });
-});
-
-//JS UNTUK NAVIGASI BLOG
-document.addEventListener('DOMContentLoaded', function () {
-    const container = document.getElementById('blog-posts-container');
-    const leftArrow = document.getElementById('arrow-left');
-    const rightArrow = document.getElementById('arrow-right');
-    const leftButton = document.querySelector('.styled-button-blog-left');
-    const rightButton = document.querySelector('.styled-button-blog-right');
-
-    // Fungsi untuk mendapatkan scroll amount dinamis berdasarkan lebar post
-    function getScrollAmount() {
-        const post = document.querySelector('.blog-post');
-        const postStyle = window.getComputedStyle(post);
-        const gap = parseInt(postStyle.getPropertyValue('gap')) || 30; // Ambil gap antar elemen
-        return post.offsetWidth + gap; // Total scroll amount
-    }
-
-    // Fungsi untuk menggeser kontainer ke kiri
-    leftArrow.addEventListener('click', () => {
-        container.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
-        setTimeout(checkScrollPosition, 300);
-    });
-
-    // Fungsi untuk menggeser kontainer ke kanan
-    rightArrow.addEventListener('click', () => {
-        container.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
-        setTimeout(checkScrollPosition, 300);
-    });
-
-    // Fungsi untuk mengaktifkan/menonaktifkan tombol
-    rightButton.addEventListener('click', () => {
-        leftButton.classList.add('active');
-    });
-
-    leftButton.addEventListener('click', () => {
-        leftButton.classList.remove('active');
-    });
-
-    // Fungsi untuk mengecek posisi scroll dan mengatur status tombol
-    function checkScrollPosition() {
-        if (container.scrollLeft <= 0) {
-            leftButton.classList.add('disabled');
-        } else {
-            leftButton.classList.remove('disabled');
-        }
-
-        if (container.scrollLeft + container.offsetWidth >= container.scrollWidth) {
-            rightButton.classList.add('disabled');
-        } else {
-            rightButton.classList.remove('disabled');
-        }
-    }
-
-    // Listener untuk memperbarui scroll amount saat ukuran layar berubah
-    window.addEventListener('resize', checkScrollPosition);
-
-    // Panggil pertama kali untuk set kondisi awal
-    checkScrollPosition();
-});
 
 

@@ -297,13 +297,10 @@
 <div class="background-container2 ">
     <div class="background1">
         <div class="content">
-            <!-- <div class="text-boxes-photos "> -->
                         <div class="text-box2 text-white">
                             <h2 class="text-photos">“We have the resources to go as far as we want with ideas. And no idea is too
                                 crazy.”</h2>
-                            <!-- <br></br> -->
                             <p>Is Nursamsi, Lead Front-End Engineer</p>
-                            <!-- <br></br> -->
 							<?php $image = get_template_directory_uri() . "/Images/play-circle.svg"; ?>
                             <div class="video-container-circle">
                                 <a href="https://www.youtube.com/watch?v=SeHz-w4arGY" target="_blank">
@@ -312,7 +309,6 @@
                                 <p class="watch-text-circle">Watch the film</p>
                             </div>
                         </div>
-            <!-- </div> -->
         </div>
     </div>
     <!-- Photos -->

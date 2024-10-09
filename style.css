@@ -946,6 +946,7 @@ a {
     font-family: Poppins;
     margin-top: 190px;
 }
+
 .background1 {
     margin: 0;
     padding: 0;
@@ -963,6 +964,7 @@ a {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-top: -50px;
 }
 
 .watch-text-circle {
@@ -1162,6 +1164,10 @@ a {
      pointer-events: none;
 }
 
+.blog-post-content{
+    width: 100%;
+}
+
 /*=============== comments =====================*/
 .comments-wrapper {
     background-color: #f9f9f9;
@@ -1244,6 +1250,7 @@ a {
 
 .comment-respond input[type="text"],
 .comment-respond input[type="email"],
+.comment-respond input[type="url"],
 .comment-respond textarea {
     width: 100%;
     padding: 10px;
@@ -1266,6 +1273,11 @@ a {
     background-color: #0056b3; 
 }
 
+.comment-form-url input {
+    width: 100%;
+    max-width: 100%; 
+}
+
 /*======================== comments ==============================*/
 
 
@@ -1279,10 +1291,11 @@ a {
 .media-left {
     flex-shrink: 0; 
     margin-right: 30px;
+    /* width: 100%;   */
 }
 
 .media-left img {
-    width: 250px; 
+    width: 100%; 
     height: auto;
     border-radius: 10px;
 }
@@ -1379,7 +1392,6 @@ a {
 
 .card-pagination {
     background-color: #fff;
-    margin-bottom: 30px;
 }
 
 /* ============================= CATEGORY BLOG =============================== */
@@ -1440,6 +1452,10 @@ a {
     max-width: 200px;
 }
 /* ============================CATEGORY OURTEAMS============================= 
+
+
+//=======================================MENU BLOG==================
+
 
 
 
@@ -1741,6 +1757,9 @@ a {
         font-size: 18px;
         margin: 0;
     }
+    .video-container-circle {
+        margin-top: -10px;
+    }
 
     /* =======footer========= */
     .footer-container {
@@ -1760,11 +1779,11 @@ a {
     }
 
     .footer-column a {
-        font-size: 14px; 
+        font-size: 15px; 
     }
 
     .footer-column h4 {
-        font-size: 16px; 
+        font-size: 18px; 
     }
 
     .social-icons img {
@@ -1789,13 +1808,119 @@ a {
     }
 
     .max-vw-100 p {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .max-vw-100 div {
         gap: 10px; 
     }
+
+    /* ================CONTENT ARTICLE================ */
+    .blog-post-title{
+        font-size: 24px;
+        color: #333;
+    }
+    /* .blog-post-content{
+        width: 650px;
+    } */
+    .blog-post-card{
+        padding: 30px;
+    }
+    .blog-date{
+        color: #656464;
+        font-size: 17px;
+    }
+    .tag{
+        font-size: 17px;
+    }
+    .author{
+        font-size: 17px;
+    }
+    .comment-blogs{
+        font-size: 15px;
+    }
+    .blog-post-paragraph p{
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    /* =====================COMMENT======================== */
+    .comments-header h2{
+        font-size: 24px;
+        color: #333;
+        text-align: center;
+    }
+    .comment-reply-title a{
+        font-size: 24px;
+        text-align: center;
+    }
+    .comment-notes,
+    .comment-form-cookies-consent{
+        font-size: 17px;
+    }
+    .comment-form-comment,
+    .comment-form-author,
+    .comment-form-email,
+    .comment-form-url,
+    .form-submit{
+        font-size: 17px;
+    }
+
+    /* ===================CATEGORY BLOG====================== */
+    .media-left img {
+        /* width: 100%;
+        height: 100%; */
+        border-radius: 10px;
+    }
+    .title-blog-post {
+        font-size: 24px;
+    }
+    .media {
+        display: block;
+        text-align: center; 
+    }
+    .blog-post-paragraph p{
+        font-size: 17px;
+    }
+    .card-blog-post {
+        width: 82%;
+        padding: 0px;
+        margin: 70px;
+    }
+    .more-link {
+      font-size: 17px;
+    }
+    .media-left {
+        margin-bottom: 20px; 
+        /* width: 677px;
+        height: 340px; */
+    }
+    .media-body {
+        text-align: left; 
+    }
+    .media-body {
+        text-align: left; 
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+        padding: 15px 0;
+    }
+
+    .pagination .page-numbers,
+    .pagination .prev,
+    .pagination .next {
+        margin: 4px 2px; 
+        padding: 8px 10px; 
+        font-size: 15px; 
+    }
+
+    .pagination .page-numbers.current {
+        padding: 8px 10px;
+    }
 }
+
+
 /* ============================CSS RESPONSIVE 768PX========================== */
 @media (max-width: 768px) {
 
@@ -2093,6 +2218,9 @@ a {
         font-size: 14px;
         margin: 0;
     }
+    .video-container-circle {
+        margin-top: -25px;
+    }
 
     /* =============footer========== */
 
@@ -2147,6 +2275,109 @@ a {
 
     .max-vw-100 div {
         gap: 10px;
+    }
+
+    /* ================CONTENT ARTICLE================ */
+    .blog-post-title{
+        font-size: 18px;
+        color: #333;
+    }
+    /* .blog-post-content{
+        width: 600px;
+    } */
+    .blog-post-card{
+        padding: 30px;
+    }
+    .blog-date{
+        color: #656464;
+        font-size: 14px;
+    }
+    .tag{
+        font-size: 14px;
+    }
+    .author{
+        font-size: 14px;
+    }
+    .comment-blogs{
+        font-size: 14px;
+    }
+    .blog-post-paragraph p{
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    /* =====================COMMENT======================== */
+    .comments-header h2{
+        font-size: 17px;
+        color: #333;
+        text-align: center;
+    }
+    .comment-reply-title a{
+        font-size: 17px;
+        text-align: center;
+    }
+    .comment-notes,
+    .comment-form-cookies-consent{
+        font-size: 14px;
+    }
+    .comment-form-comment,
+    .comment-form-author,
+    .comment-form-email,
+    .comment-form-url,
+    .form-submit{
+        font-size: 14px;
+    }
+
+    /* ===================CATEGORY BLOG====================== */
+    .media-left img {
+        /* width: 100%;
+        height: 100%; */
+        border-radius: 10px;
+    }
+    .title-blog-post {
+        font-size: 17px;
+    }
+    .media {
+        display: block;
+        text-align: center; 
+    }
+    .blog-post-paragraph p{
+        font-size: 14px;
+    }
+    .card-blog-post {
+        width: 88%;
+        padding: 0px;
+        margin: 45px;
+    }
+    .more-link {
+      font-size: 14px;
+    }
+    .media-left {
+        margin-bottom: 20px; 
+        /* width: 680px;
+        height: 340px; */
+    }
+    .media-body {
+        text-align: left; 
+    }
+    .media-body {
+        text-align: left; 
+    }
+    .pagination {
+        flex-wrap: wrap;
+        padding: 15px 0;
+    }
+
+    .pagination .page-numbers,
+    .pagination .prev,
+    .pagination .next {
+        margin: 5px 3px; 
+        padding: 10px 12px; 
+        font-size: 13px; 
+    }
+
+    .pagination .page-numbers.current {
+        padding: 10px 12px;
     }
 }
 
@@ -2276,7 +2507,7 @@ a {
     }
 
     .paragraph0 {
-        font-size: 14px;
+        font-size: 12px;
         text-align: left; 
         margin-top: 0px;
         margin-bottom: 12px;
@@ -2532,6 +2763,111 @@ a {
     .max-vw-100 div {
         gap: 10px; 
     }
+
+    /* ================CONTENT ARTICLE================ */
+    .blog-post-title{
+        font-size: 18px;
+        color: #333;
+    }
+    /* .blog-post-content{
+        width: 335px;
+    } */
+    .blog-post-card{
+        padding: 20px;
+    }
+    .blog-date{
+        color: #656464;
+        font-size: 13px;
+    }
+    .tag{
+        font-size: 13px;
+    }
+    .author{
+        font-size: 13px;
+    }
+    .comment-blogs{
+        font-size: 13px;
+    }
+    .blog-post-paragraph p{
+        font-size: 13px;
+        text-align: justify;
+    }
+
+    /* =====================COMMENT======================== */
+    .comments-header h2{
+        font-size: 17px;
+        color: #333;
+        text-align: center;
+    }
+    .comment-reply-title a{
+        font-size: 17px;
+        text-align: center;
+    }
+    .comment-notes,
+    .comment-form-cookies-consent{
+        font-size: 13px;
+    }
+    .comment-form-comment,
+    .comment-form-author,
+    .comment-form-email,
+    .comment-form-url,
+    .form-submit{
+        font-size: 13px;
+    }
+
+    /* ===================CATEGORY BLOG====================== */
+    .media-left img {
+        /* width: 100%;
+        height: 100%; */
+        border-radius: 10px;
+    }
+    .title-blog-post {
+        font-size: 17px;
+    }
+    .media {
+        display: block;
+        text-align: center; 
+    }
+    .blog-post-paragraph p{
+        font-size: 13px;
+    }
+    .card-blog-post {
+        width: 87%;
+        padding: 0px;
+        margin: 25px;
+    }
+    .more-link {
+      font-size: 10px;
+    }
+    .media-left {
+        margin-bottom: 20px; 
+        /* width: 363px;
+        height: 200px; */
+    }
+    .media-body {
+        text-align: left; 
+    }
+    .media-body {
+        text-align: left; 
+    }
+
+    /* MENU BLOG  */
+    .pagination {
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+
+    .pagination .page-numbers,
+    .pagination .prev,
+    .pagination .next {
+        margin: 4px 2px; 
+        padding: 8px 10px; 
+        font-size: 11px; 
+    }
+
+    .pagination .page-numbers.current {
+        padding: 8px 10px;
+    }
 }
 
 /* ========================CSS RESPONSIVE 450PX============================ */
@@ -2638,6 +2974,108 @@ a {
     }
     .blog-image {
         height: 200px;
+    }
+
+    /* ================CONTENT ARTICLE================ */
+    .blog-post-title{
+        font-size: 13px;
+        color: #333;
+    }
+    /* .blog-post-content{
+        width: 335px;
+    } */
+    .blog-post-card{
+        padding: 20px;
+    }
+    .blog-date{
+        color: #656464;
+        font-size: 10px;
+    }
+    .tag{
+        font-size: 10px;
+    }
+    .author{
+        font-size: 10px;
+    }
+    .comment-blogs{
+        font-size: 10px;
+    }
+    .blog-post-paragraph p{
+        font-size: 10px;
+        text-align: justify;
+    }
+
+    /* =====================COMMENT======================== */
+    .comments-header h2{
+        font-size: 13px;
+        color: #333;
+        text-align: center;
+    }
+    .comment-reply-title a{
+        font-size: 13px;
+        text-align: center;
+    }
+    .comment-notes,
+    .comment-form-cookies-consent{
+        font-size: 10px;
+    }
+    .comment-form-comment,
+    .comment-form-author,
+    .comment-form-email,
+    .comment-form-url,
+    .form-submit{
+        font-size: 13px;
+    }
+
+    /* ===================CATEGORY BLOG====================== */
+    .media-left img {
+        /* width: 100%;
+        height: 100%; */
+        border-radius: 10px;
+    }
+    .title-blog-post {
+        font-size: 13px;
+    }
+    .media {
+        display: block;
+        text-align: center; 
+    }
+    .blog-post-paragraph p{
+        font-size: 10px;
+    }
+    .card-blog-post {
+        width: 87%;
+        padding: 0px;
+        margin: 25px;
+    }
+    .more-link {
+      font-size: 10px;
+    }
+    .media-left {
+        margin-bottom: 20px; 
+        /* width: 363px;
+        height: 200px; */
+    }
+    .media-body {
+        text-align: left; 
+    }
+
+    /* MENU BLOG  */
+    .pagination {
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+
+    .pagination .page-numbers,
+    .pagination .prev,
+    .pagination .next {
+        margin: 4px 2px; 
+        padding: 8px 10px; 
+        font-size: 10px; 
+    }
+
+    .pagination .page-numbers.current {
+        padding: 8px 10px;
     }
 }
 
@@ -2766,7 +3204,7 @@ a {
     }
 
     .paragraph0 {
-        font-size: 12px;
+        font-size: 10px;
         text-align: left; 
         margin-top: 0;
         margin-bottom: 16px;
@@ -2968,6 +3406,9 @@ a {
         font-size: 10px;
         margin: 0;
     }
+    .video-container-circle {
+        margin-top: -10px;
+    }
 
     /* ===================FOOTER===================== */
     .footer-container {
@@ -3021,6 +3462,108 @@ a {
 
     .max-vw-100 div {
         gap: 10px; 
+    }
+
+    /* ================CONTENT ARTICLE================ */
+    .blog-post-title{
+        font-size: 13px;
+        color: #333;
+    }
+    /* .blog-post-content{
+        width: 280px;
+    } */
+    .blog-post-card{
+        padding: 20px;
+    }
+    .blog-date{
+        color: #656464;
+        font-size: 10px;
+    }
+    .tag{
+        font-size: 10px;
+    }
+    .author{
+        font-size: 10px;
+    }
+    .comment-blogs{
+        font-size: 10px;
+    }
+    .blog-post-paragraph p{
+        font-size: 10px;
+        text-align: justify;
+    }
+
+     /* =====================COMMENT======================== */
+     .comments-header h2{
+        font-size: 13px;
+        color: #333;
+        text-align: center;
+    }
+    .comment-reply-title a{
+        font-size: 13px;
+        text-align: center;
+    }
+    .comment-notes,
+    .comment-form-cookies-consent{
+        font-size: 10px;
+    }
+    .comment-form-comment,
+    .comment-form-author,
+    .comment-form-email,
+    .comment-form-url,
+    .form-submit{
+        font-size: 13px;
+    }
+
+    /* ===================CATEGORY BLOG====================== */
+    .media-left img {
+        /* width: 100%;
+        height: 100%; */
+        border-radius: 10px;
+    }
+    .title-blog-post {
+        font-size: 13px;
+    }
+    .media {
+        display: block;
+        text-align: center; 
+    }
+    .blog-post-paragraph p{
+        font-size: 10px;
+    }
+    .card-blog-post {
+        width: 85%;
+        padding: 0px;
+        margin: 25px;
+    }
+    .more-link {
+      font-size: 10px;
+    }
+    .media-left {
+        margin-bottom: 20px; 
+        /* width: 307px;
+        height: 200px; */
+    }
+    .media-body {
+        text-align: left; 
+    }
+
+    /* MENU BLOG   */
+    .pagination {
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+
+    .pagination .page-numbers,
+    .pagination .prev,
+    .pagination .next {
+        margin: 4px 2px; 
+        padding: 8px 10px; 
+        font-size: 10px; 
+    }
+
+    .pagination .page-numbers.current {
+        padding: 8px 10px;
     }
 }
 
@@ -3104,7 +3647,7 @@ a {
     }
 
     .paragraph0 {
-        font-size: 12px; 
+        font-size: 10px; 
         text-align: left; 
         margin-top: 0;
         margin-bottom: 12px; 
@@ -3196,6 +3739,60 @@ a {
         transition: background 0.3s ease;
     }
 
+     /* ================CONTENT ARTICLE================ */
+     .blog-post-title{
+        font-size: 10px;
+        color: #333;
+    }
+    /* .blog-post-content{
+        width: 250px;
+    } */
+    .blog-post-card{
+        padding: 20px;
+    }
+    .blog-date{
+        color: #656464;
+        font-size: 8px;
+    }
+    .tag{
+        font-size: 8px;
+    }
+    .author{
+        font-size: 8px;
+    }
+    .comment-blogs{
+        font-size: 8px;
+    }
+    .blog-post-paragraph p{
+        font-size: 8px;
+        text-align: justify;
+    }
+
+   /* =====================COMMENT======================== */
+   .comments-header h2{
+    font-size: 10px;
+    color: #333;
+    text-align: center;
+    }
+    .comment-reply-title a{
+        font-size: 10px;
+        text-align: center;
+    }
+    .comment-notes,
+    .comment-form-cookies-consent{
+        font-size: 8px;
+    }
+    .comment-form-comment,
+    .comment-form-author,
+    .comment-form-email,
+    .comment-form-url,
+    .form-submit{
+        font-size: 10px;
+    }
+
+    /* MENU BLOG  */
+    
+    
     /* ===================== Photos ================================================= */
     .background-container2 {
         height: 400px;
@@ -3222,7 +3819,112 @@ a {
         font-size: 8px;
         margin: 0;
     }
+    .video-container-circle {
+        margin-top: -10px;
+    }
 
     /* ===================FOOTER====================== */
+    .footer-container {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+        padding: 20px; 
+        justify-items: start;
+    }
+
+    .footer-column {
+        align-items: flex-start; 
+    }
+
+    .footer-column img {
+        width: 20px; 
+        margin-bottom: 5px; 
+    }
+
+    .footer-column a {
+        font-size: 14px; 
+    }
+
+    .footer-column h4 {
+        font-size: 16px; 
+    }
+
+    .social-icons img {
+        width: 20px; 
+    }
+
+    .partners img {
+        width: 50px; 
+    }
+
+    .registration img {
+        width: 50px; 
+    }
+
+    .h-divider {
+        display: none; 
+    }
+
+    .max-vw-100 {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .max-vw-100 p {
+        font-size: 12px; 
+    }
+
+    .max-vw-100 div {
+        gap: 10px; 
+    }
     
+    /* ===================CATEGORY BLOG====================== */
+    .media-left img {
+        /* width: 100%;
+        height: 100%; */
+        border-radius: 8px;
+    }
+    .title-blog-post {
+        font-size: 10px;
+    }
+    .media {
+        display: block;
+        text-align: center; 
+    }
+    .blog-post-paragraph p{
+        font-size: 8px;
+    }
+    .card-blog-post {
+        width: 83%;
+        padding: 0px;
+        margin: 25px;
+    }
+    .more-link {
+      font-size: 8px;
+    }
+    .media-left {
+        margin-bottom: 20px; 
+        /* width: 270px;
+        height: 140px; */
+    }
+    .media-body {
+        text-align: left; 
+    }
+
+     /* MENU BLOG   */
+     .pagination {
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+
+    .pagination .page-numbers,
+    .pagination .prev,
+    .pagination .next {
+        margin: 4px 2px; 
+        padding: 6px 8px; 
+        font-size: 8px; 
+    }
+
+    .pagination .page-numbers.current {
+        padding: 6px 8px;
+    }
 }

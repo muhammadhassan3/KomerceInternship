@@ -146,7 +146,7 @@ line-height: normal;
     background: linear-gradient(117deg, #F95031 4.61%, #CF2A08 66.71%);
     color: var(--Grayscale-Off-White);
     text-align: center;
-    font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: Poppins;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -556,13 +556,13 @@ background-clip: text;
 }
 
 .paragraph0 {
+    color: var(--Grayscale-Main-Black, #333);
+    font-family: Poppins;
     flex: 1 0 0;
-    font-family:Poppins;
     font-size: 16px;
     font-weight: 400;
     align-self: stretch;
     line-height: normal;
-    color: #828282;
     text-align: justify;
     font-style: normal;
     line-height: normal;
@@ -598,7 +598,7 @@ background-clip: text;
 } */
 
 .paragraph-desc {
-    color: var(--Grayscale-Label, #828282);
+    color: var(--Grayscale-Main-Black, #333);
     text-align: justify;
     font-family: Poppins;
     font-size: 13px;
@@ -675,7 +675,7 @@ background-clip: text;
 }
 
 a {
-    font-family: 'Inter', sans-serif;
+   font-family: Poppins;
     text-decoration: none;
 }
 
@@ -827,7 +827,7 @@ a {
 }
 
 .paragraph-blog {
-    color: var(--Grayscale-Label, #828282);
+    color: var(--Grayscale-Main-Black, #333);
     font-family: Poppins;
     font-size: 16px;
     font-style: normal;
@@ -895,7 +895,7 @@ a {
     display: flex; 
     justify-content: space-between; 
     padding: 8px;
-    color: #828282;
+    color: var(--Grayscale-Main-Black, #333);
 }
 
 .post-info {
@@ -905,7 +905,7 @@ a {
     font-weight: 400;
     line-height: normal;
     display: flex; 
-    color: #828282;
+    color: var(--Grayscale-Main-Black, #333);
     gap: 10px;
     flex-wrap: wrap;
     margin-top: 10px;
@@ -1086,7 +1086,7 @@ a {
 /* ===================== BLOG CONTENT ARTICLE======================== */
 .blog-post-card {
     width: 100%;
-    margin: 20px auto;
+    margin: 0px auto;
     padding: 60px;
     border: 1px solid #e0e0e0;
     background-color: #fff;
@@ -2522,7 +2522,7 @@ a {
         max-width: 320px;
     }
     .paragraph-desc {
-        font-size: 10px; 
+        font-size: 12px; 
     }
 
     /* =============KOMERCE SOCIETY================ */
@@ -2942,7 +2942,7 @@ a {
         object-fit: cover; 
     }
     .blog-post {
-        min-width: 323px;
+        min-width: 300px;
         gap: 30px;
         flex: 0 0 30%; 
     }
@@ -2953,21 +2953,21 @@ a {
         font-size: 24px;
     }
     .post-title {
-        font-size: 10px;
+        font-size: 12px;
     }
     
     .post-description {
-        font-size: 10px;
+        font-size: 12px;
     }
     .paragraph-blog {
-        font-size: 10px;
+        font-size: 12px;
     }
     .container-info {
-        font-size: 10px;
+        font-size: 12px;
     }
     
     .post-info {
-        font-size: 10px;
+        font-size: 12px;
     }
     .blog-container-blog {
         width: 90%;
@@ -2978,7 +2978,7 @@ a {
 
     /* ================CONTENT ARTICLE================ */
     .blog-post-title{
-        font-size: 13px;
+        font-size: 15px;
         color: #333;
     }
     /* .blog-post-content{
@@ -2989,19 +2989,19 @@ a {
     }
     .blog-date{
         color: #656464;
-        font-size: 10px;
+        font-size: 13px;
     }
     .tag{
-        font-size: 10px;
+        font-size: 13px;
     }
     .author{
-        font-size: 10px;
+        font-size: 13px;
     }
     .comment-blogs{
-        font-size: 10px;
+        font-size: 13px;
     }
     .blog-post-paragraph p{
-        font-size: 10px;
+        font-size: 13px;
         text-align: justify;
     }
 
@@ -3034,14 +3034,14 @@ a {
         border-radius: 10px;
     }
     .title-blog-post {
-        font-size: 13px;
+        font-size: 15px;
     }
     .media {
         display: block;
         text-align: center; 
     }
     .blog-post-paragraph p{
-        font-size: 10px;
+        font-size: 13px;
     }
     .card-blog-post {
         width: 87%;
@@ -3049,7 +3049,7 @@ a {
         margin: 25px;
     }
     .more-link {
-      font-size: 10px;
+      font-size: 13px;
     }
     .media-left {
         margin-bottom: 20px; 
@@ -3162,21 +3162,21 @@ a {
         font-size: 24px;
     }
     .post-title {
-        font-size: 10px;
+        font-size: 12px;
     }
     
     .post-description {
         font-size: 10px;
     }
     .paragraph-blog {
-        font-size: 10px;
+        font-size: 12px;
     }
     .container-info {
-        font-size: 10px;
+        font-size: 12px;
     }
     
     .post-info {
-        font-size: 10px;
+        font-size: 12px;
     }
     .blog-container-blog {
         width: 90%;
@@ -3204,7 +3204,7 @@ a {
     }
 
     .paragraph0 {
-        font-size: 10px;
+        font-size: 12px;
         text-align: left; 
         margin-top: 0;
         margin-bottom: 16px;
@@ -3219,7 +3219,7 @@ a {
         max-width: 300px;
     }
     .paragraph-desc {
-        font-size: 10px; 
+        font-size: 12px; 
     }
 
     /* ====================KOMERCE SOCIETY======================= */
@@ -3466,7 +3466,7 @@ a {
 
     /* ================CONTENT ARTICLE================ */
     .blog-post-title{
-        font-size: 13px;
+        font-size: 15px;
         color: #333;
     }
     /* .blog-post-content{
@@ -3477,19 +3477,19 @@ a {
     }
     .blog-date{
         color: #656464;
-        font-size: 10px;
+        font-size: 13px;
     }
     .tag{
-        font-size: 10px;
+        font-size: 13px;
     }
     .author{
-        font-size: 10px;
+        font-size: 13px;
     }
     .comment-blogs{
-        font-size: 10px;
+        font-size: 13px;
     }
     .blog-post-paragraph p{
-        font-size: 10px;
+        font-size: 13px;
         text-align: justify;
     }
 
@@ -3522,14 +3522,14 @@ a {
         border-radius: 10px;
     }
     .title-blog-post {
-        font-size: 13px;
+        font-size: 15px;
     }
     .media {
         display: block;
         text-align: center; 
     }
     .blog-post-paragraph p{
-        font-size: 10px;
+        font-size: 13px;
     }
     .card-blog-post {
         width: 85%;
@@ -3537,7 +3537,7 @@ a {
         margin: 25px;
     }
     .more-link {
-      font-size: 10px;
+      font-size: 13px;
     }
     .media-left {
         margin-bottom: 20px; 
@@ -3564,6 +3564,11 @@ a {
 
     .pagination .page-numbers.current {
         padding: 8px 10px;
+    }
+
+    .py-5 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
     }
 }
 

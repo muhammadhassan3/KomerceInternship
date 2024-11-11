@@ -42,11 +42,80 @@ function initStyle()
 }
 
 //mengambil postingan
-   $args = array(
+$args = array(
 	'post_type' => 'post',
 	'posts_per_page' => -1
 );
 $all_posts = new WP_Query($args);
+
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$args = array(
+    'category_name' => 'society',
+    'posts_per_page' => 4,
+    'paged' => $paged
+);
+$query = new WP_Query($args);
+
+
+function load_more_posts() {
+    $paged = $_POST['page'];
+    $category = $_POST['category'];
+
+    $args = array(
+        'category_name' => $category,
+        'posts_per_page' => 4,
+        'paged' => $paged
+    );
+
+    $query = new WP_Query($args);
+    if ($query->have_posts()) :
+        while ($query->have_posts()) : $query->the_post(); ?>
+            <div class="card-society-event">
+                <?php if (has_post_thumbnail()) {
+                    $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                } else {
+                    $image_url = get_template_directory_uri() . "/Images/kerkom.jpeg";
+                } ?>
+                <div class="overlay">
+                    <img src="<?= esc_url($image_url); ?>" alt="<?= esc_attr(get_the_title()); ?>">
+                    <div class="read-more-button">
+                        <a href="<?php the_permalink(); ?>"><span class="link"></span></a>
+                        Baca Selengkapnya
+                    </div>
+                </div>
+                <div class="card-society-content">
+                    <div class="card-society-title">
+                        <?php
+                        $title = strip_tags(get_the_title());
+                        echo strlen($title) > 40 ? substr($title, 0, 35) . "..." : $title;
+                        ?>
+                    </div>
+                    <div class="card-society-footer">
+                        <span><?php echo get_the_date('d F Y'); ?></span>
+                        <span><?php the_author(); ?></span>
+                    </div>
+                </div>
+            </div>
+        <?php endwhile;
+        wp_reset_postdata();
+    endif;
+    die();
+}
+
+add_action('wp_ajax_load_more_posts', 'load_more_posts');
+add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts');
+
+// Tambahkan di functions.php
+function enqueue_load_more_script() {
+    wp_enqueue_script('load-more', get_template_directory_uri() . '/js/load-more.js', array('jquery'), null, true);
+    
+    global $query; // Pastikan $query tersedia
+    wp_localize_script('load-more', 'load_more_params', array(
+        'ajaxUrl' => admin_url('admin-ajax.php'),
+        'maxPages' => $query->max_num_pages
+    ));
+}
+add_action('wp_enqueue_scripts', 'enqueue_load_more_script');
 
 function enqueue_custom_scripts() {
     wp_enqueue_script('custom-main-js', get_template_directory_uri() . '/main.js', array(), false, true);
@@ -66,7 +135,36 @@ function add_blog_post_paragraph_class($content)
 }
 add_filter('the_content', 'add_blog_post_paragraph_class');
 
+
+
 //CATEGORY OURTEAMS
+// function get_divisi_name_by_id($divisi_id) {
+//     global $wpdb;
+//     $table_name = $wpdb->prefix . 'divisi';
+//     $divisi_name = $wpdb->get_var($wpdb->prepare("SELECT nama_divisi FROM $table_name WHERE id = %d", $divisi_id));
+//     return $divisi_name;
+// }
+
+// function get_jabatan_name_by_id($jabatan_id) {
+//     global $wpdb;
+//     $table_name = $wpdb->prefix . 'jabatan';
+//     $jabatan_name = $wpdb->get_var($wpdb->prepare("SELECT nama_jabatan FROM $table_name WHERE id = %d", $jabatan_id));
+//     return $jabatan_name;
+// }
+
+// function get_jabatan_id_by_name($jabatan_name) {
+//     global $wpdb;
+
+//     // Asumsikan bahwa jabatan_name disimpan dalam tabel custom bernama 'jabatan' di dalam database
+//     $table_name = $wpdb->prefix . 'jabatan';
+//     $jabatan_id = $wpdb->get_var($wpdb->prepare(
+//         "SELECT id FROM $table_name WHERE nama_jabatan = %s",
+//         $jabatan_name
+//     ));
+
+//     return $jabatan_id ? $jabatan_id : false;
+// }
+
 function get_divisi_name_by_id($divisi_id) {
     global $wpdb;
     $table_name = $wpdb->prefix . 'divisi';
@@ -83,15 +181,33 @@ function get_jabatan_name_by_id($jabatan_id) {
 
 function get_jabatan_id_by_name($jabatan_name) {
     global $wpdb;
-
-    // Asumsikan bahwa jabatan_name disimpan dalam tabel custom bernama 'jabatan' di dalam database
     $table_name = $wpdb->prefix . 'jabatan';
-    $jabatan_id = $wpdb->get_var($wpdb->prepare(
-        "SELECT id FROM $table_name WHERE nama_jabatan = %s",
-        $jabatan_name
-    ));
-
+    $jabatan_id = $wpdb->get_var($wpdb->prepare("SELECT id FROM $table_name WHERE nama_jabatan = %s", $jabatan_name));
     return $jabatan_id ? $jabatan_id : false;
+}
+
+// Fungsi tambahan: Get Divisi ID by Divisi Name
+function get_divisi_id_by_name($divisi_name) {
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'divisi';
+    $divisi_id = $wpdb->get_var($wpdb->prepare("SELECT id FROM $table_name WHERE nama_divisi = %s", $divisi_name));
+    return $divisi_id ? $divisi_id : false;
+}
+
+// Fungsi tambahan: Get all Divisi Names
+function get_all_divisi_names() {
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'divisi';
+    $divisi_names = $wpdb->get_col("SELECT nama_divisi FROM $table_name");
+    return $divisi_names;
+}
+
+// Fungsi tambahan: Get all Jabatan Names
+function get_all_jabatan_names() {
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'jabatan';
+    $jabatan_names = $wpdb->get_col("SELECT nama_jabatan FROM $table_name");
+    return $jabatan_names;
 }
 
 // CRUD WORDPRESS TANPA PLUGIN

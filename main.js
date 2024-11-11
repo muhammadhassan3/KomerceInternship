@@ -186,5 +186,42 @@ jQuery(document).ready(function($) {
 });
 
 
+// Tampilkan lebih banyak
+jQuery(document).ready(function($) {
+    var page = 2;
+    var maxPages = load_more_params.maxPages;
+    var ajaxUrl = load_more_params.ajaxUrl;
+    var postsPerPage = 4; // Jumlah postingan yang akan ditampilkan pertama kali
 
+    $('.load-more-button').on('click', function() {
+        if (page <= maxPages) {
+            $.ajax({
+                url: ajaxUrl,
+                type: 'POST',
+                data: {
+                    action: 'load_more_posts',
+                    page: page,
+                    category: 'society'
+                },
+                success: function(response) {
+                    $('.card-society-container').append(response);
+                    page++;
+                    // Sembunyikan tombol "Tampilkan Lebih Banyak" jika sudah memuat semua halaman
+                    if (page > maxPages) {
+                        $('.load-more-button').hide();
+                    }
+                    $('.load-less-button').show(); // Tampilkan tombol "Tampilkan Lebih Sedikit"
+                }
+            });
+        }
+    });
 
+    // Fungsi untuk tombol "Tampilkan Lebih Sedikit"
+    $('.load-less-button').on('click', function() {
+        // Hanya tampilkan postingan awal
+        $('.card-society-container .card-society-event').slice(postsPerPage).remove();
+        page = 2; // Reset page counter
+        $('.load-more-button').show(); // Tampilkan kembali tombol "Tampilkan Lebih Banyak"
+        $('.load-less-button').hide(); // Sembunyikan tombol "Tampilkan Lebih Sedikit"
+    });
+});

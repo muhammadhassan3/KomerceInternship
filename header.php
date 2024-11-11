@@ -51,7 +51,11 @@
                 <?php
                 foreach ($menu as $item) {
                     $itemUrl = trailingslashit($item->url);
-                    $activeClass = ($itemUrl == $currentUrl || ($item->title == 'Blog' && is_blog_page())) ? 'navbar-link-active' : '';
+                    $activeClass = ($itemUrl == $currentUrl 
+                                    || ($item->title == 'Society' && !is_home() && !is_front_page() && (is_category('society') || in_category('society')))
+                                    || ($item->title == 'Blog' && (is_category('blog') || in_category('blog'))))
+                                    ? 'navbar-link-active' : '';
+                
                     echo "<li class='nav-item navbar-item'><a class='nav-link navbar-link " . esc_attr($activeClass) . "' aria-current='page' href='" . esc_url($item->url) . "'> " . esc_html($item->title) . "</a></li>";
                 }
                 ?>

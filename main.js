@@ -225,3 +225,43 @@ jQuery(document).ready(function($) {
         $('.load-less-button').hide(); // Sembunyikan tombol "Tampilkan Lebih Sedikit"
     });
 });
+
+//menampilkan user ourteams
+document.addEventListener("DOMContentLoaded", function () {
+    const loadMoreButtons = document.querySelectorAll(".load-more-button");
+    const loadLessButtons = document.querySelectorAll(".load-less-button");
+
+    loadMoreButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const divisi = button.getAttribute("data-divisi");
+            const userCards = document.querySelectorAll(`.users-grid[data-divisi="${divisi}"] .card-ourteams.hidden`);
+
+            userCards.forEach((card, index) => {
+                if (index < 4) {
+                    card.classList.remove("hidden"); // Tampilkan 4 user tambahan
+                }
+            });
+
+            if (document.querySelectorAll(`.users-grid[data-divisi="${divisi}"] .card-ourteams.hidden`).length === 0) {
+                button.style.display = "none";
+                document.querySelector(`.load-less-button[data-divisi="${divisi}"]`).style.display = "inline-block";
+            }
+        });
+    });
+
+    loadLessButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const divisi = button.getAttribute("data-divisi");
+            const userCards = document.querySelectorAll(`.users-grid[data-divisi="${divisi}"] .card-ourteams`);
+
+            userCards.forEach((card, index) => {
+                if (index >= 4) {
+                    card.classList.add("hidden"); // Sembunyikan semua kecuali 4 user pertama
+                }
+            });
+
+            document.querySelector(`.load-more-button[data-divisi="${divisi}"]`).style.display = "inline-block";
+            button.style.display = "none";
+        });
+    });
+});

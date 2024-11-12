@@ -235,27 +235,30 @@
         <p>Lorem ipsum dolor sit amet consectetur. Pretium tempus aenean gravida diam non aliquam id ac phasellus. Cras dui velit pretium purus vitae ipsum in. Quisque nisi laoreet imperdiet mi aliquet.</p>
     </div>
 
-    <!-- Blog Posts Section -->
-    <div class="blog-posts" id="blog-posts-container"> <!-- Sesuaikan ID dengan yang ada di JS -->
+   <!-- Blog Posts Section -->
+   <div class="blog-posts" id="blog-posts-container"> <!-- Sesuaikan ID dengan yang ada di JS -->
         <?php
        
 
         if ($all_posts->have_posts()) :
             while ($all_posts->have_posts()) : $all_posts->the_post(); ?>
                 <div class="blog-post" style=""> <!-- Adjust width and spacing as needed -->
-                    <a href="<?php the_permalink(); ?>">
-                        <span class="link"></span>
-                    </a>
-                    <?php
-                    // Get post thumbnail or fallback image
-                    if (has_post_thumbnail()) {
-                        $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-                    } else {
-                        $image_url = get_template_directory_uri() . "/Images/kerkom.jpeg";
-                    }
-                    ?>
+                    
+                <div class="blog-overlay">
+            <?php if (has_post_thumbnail()) {
+                $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+            } else {
+                $image_url = get_template_directory_uri() . "/Images/kerkom.jpeg";
+            } ?>
+            <div class="overlay">
+            <img src="<?= esc_url($image_url); ?>" alt="<?= esc_attr(get_the_title()); ?>" class="blog-image filter">
+                <div class="read-more-button">
+                    <a href="<?php the_permalink(); ?>"><span class="link"></span></a>
+                    Baca Selengkapnya
+                </div>
+            </div>
 
-                    <img src="<?= esc_url($image_url); ?>" alt="<?= esc_attr(get_the_title()); ?>" class="blog-image filter">
+                  
                     
                     <div class="post-info">
                         <?php
@@ -268,12 +271,12 @@
                         ?>
                     </div>
 
-                    <h2 class="post-title"> <?php
-                            $title = strip_tags(get_the_title());
-                            echo strlen($title) > 40 ? substr($title, 0, 35) . "..." : $title;?></h2>
+                    <h2 class="post-title"><?php echo substr(strip_tags(get_the_title()), 0, 35) . "..."; ?></h2>
                     <p class="post-description">
                         <?php echo wp_trim_words(get_the_content(), 12, '...'); ?>
                     </p>
+                </div>
+
                     <div class="container-info">
                     <?php
                        $author_id = get_the_author_meta('ID'); 

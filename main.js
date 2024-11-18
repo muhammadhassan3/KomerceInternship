@@ -121,7 +121,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // Crud wordpress divisi dan jabatan
-
 jQuery(document).ready(function ($) {
     $('.delete-divisi-link').on('click', function (e) {
         e.preventDefault();
@@ -186,82 +185,111 @@ jQuery(document).ready(function($) {
 });
 
 
-// Tampilkan lebih banyak
-jQuery(document).ready(function($) {
-    var page = 2;
-    var maxPages = load_more_params.maxPages;
-    var ajaxUrl = load_more_params.ajaxUrl;
-    var postsPerPage = 4; // Jumlah postingan yang akan ditampilkan pertama kali
+// Tampilkan lebih banyak society
+jQuery(document).ready(function ($) {
+    var page = 2; // Mulai dari halaman ke-2 karena halaman pertama sudah dimuat
 
-    $('.load-more-button').on('click', function() {
-        if (page <= maxPages) {
-            $.ajax({
-                url: ajaxUrl,
-                type: 'POST',
-                data: {
-                    action: 'load_more_posts',
-                    page: page,
-                    category: 'society'
-                },
-                success: function(response) {
-                    $('.card-society-container').append(response);
+    $('.load-more-button-society').on('click', function () {
+        $.ajax({
+            url: load_more_params.ajaxUrl,
+            type: 'POST',
+            data: {
+                action: 'load_more_posts_society',
+                page: page,
+            },
+            success: function (response) {
+                // Parse JSON response dari server
+                const data = JSON.parse(response);
+
+                if (data.posts.trim() !== '') {
+                    $('.card-society-container').append(data.posts); // Tambahkan postingan baru
                     page++;
-                    // Sembunyikan tombol "Tampilkan Lebih Banyak" jika sudah memuat semua halaman
-                    if (page > maxPages) {
-                        $('.load-more-button').hide();
-                    }
-                    $('.load-less-button').show(); // Tampilkan tombol "Tampilkan Lebih Sedikit"
                 }
-            });
-        }
+
+                // Jika tidak ada lagi postingan, sembunyikan tombol "Tampilkan Lebih Banyak"
+                if (!data.hasMore) {
+                    $('.load-more-button-society').hide();
+                }
+
+                // Selalu tampilkan tombol "Tampilkan Lebih Sedikit"
+                $('.load-less-button-society').show();
+            },
+        });
     });
 
-    // Fungsi untuk tombol "Tampilkan Lebih Sedikit"
-    $('.load-less-button').on('click', function() {
-        // Hanya tampilkan postingan awal
-        $('.card-society-container .card-society-event').slice(postsPerPage).remove();
-        page = 2; // Reset page counter
-        $('.load-more-button').show(); // Tampilkan kembali tombol "Tampilkan Lebih Banyak"
-        $('.load-less-button').hide(); // Sembunyikan tombol "Tampilkan Lebih Sedikit"
+    $('.load-less-button-society').on('click', function () {
+        // Hapus semua postingan kecuali 4 pertama
+        $('.card-society-container .card-society-event:gt(5)').remove();
+
+        page = 2; // Reset halaman ke-2
+        $('.load-more-button-society').show(); // Tampilkan kembali tombol "Tampilkan Lebih Banyak"
+        $('.load-less-button-society').hide(); // Sembunyikan tombol "Tampilkan Lebih Sedikit"
     });
 });
 
 //menampilkan user ourteams
 document.addEventListener("DOMContentLoaded", function () {
-    const loadMoreButtons = document.querySelectorAll(".load-more-button");
-    const loadLessButtons = document.querySelectorAll(".load-less-button");
+    // Fungsi untuk mengatur visibilitas tombol dan elemen
+    function updateButtons(divisi) {
+        const hiddenCards = document.querySelectorAll(`.users-grid[data-divisi="${divisi}"] .card-ourteams.hidden`);
+        const totalCards = document.querySelectorAll(`.users-grid[data-divisi="${divisi}"] .card-ourteams`).length;
 
-    loadMoreButtons.forEach(button => {
+        const loadMoreButton = document.querySelector(`.load-more-button[data-divisi="${divisi}"]`);
+        const loadLessButton = document.querySelector(`.load-less-button[data-divisi="${divisi}"]`);
+
+         if (hiddenCards.length === 0) {
+            loadMoreButton.style.display = "none";
+            loadLessButton.style.display = "inline-block";
+        } else if (hiddenCards.length > 1 && hiddenCards.length < 4) {
+            loadMoreButton.style.display = "inline-block";
+            loadLessButton.style.display = "inline-block"; // Sembunyikan tombol Load Less jika tersisa 1-4 kartu tersembunyi
+        } else if (hiddenCards.length === totalCards) {
+            loadLessButton.style.display = "none";
+            loadMoreButton.style.display = "inline-block";
+        } else {
+            loadMoreButton.style.display = "inline-block";
+            loadLessButton.style.display = "none";
+        }
+    }
+
+    // Event listener untuk tombol "Load More"
+    document.querySelectorAll(".load-more-button").forEach(button => {
         button.addEventListener("click", function () {
             const divisi = button.getAttribute("data-divisi");
-            const userCards = document.querySelectorAll(`.users-grid[data-divisi="${divisi}"] .card-ourteams.hidden`);
+            const hiddenCards = document.querySelectorAll(`.users-grid[data-divisi="${divisi}"] .card-ourteams.hidden`);
 
-            userCards.forEach((card, index) => {
+            hiddenCards.forEach((card, index) => {
                 if (index < 4) {
-                    card.classList.remove("hidden"); // Tampilkan 4 user tambahan
+                    card.classList.remove("hidden"); // Tampilkan hingga 4 kartu
                 }
             });
 
-            if (document.querySelectorAll(`.users-grid[data-divisi="${divisi}"] .card-ourteams.hidden`).length === 0) {
-                button.style.display = "none";
-                document.querySelector(`.load-less-button[data-divisi="${divisi}"]`).style.display = "inline-block";
-            }
+            // Update visibilitas tombol
+            updateButtons(divisi);
         });
     });
 
-    loadLessButtons.forEach(button => {
+    // Event listener untuk tombol "Load Less"
+    document.querySelectorAll(".load-less-button").forEach(button => {
         button.addEventListener("click", function () {
             const divisi = button.getAttribute("data-divisi");
             const userCards = document.querySelectorAll(`.users-grid[data-divisi="${divisi}"] .card-ourteams`);
 
             userCards.forEach((card, index) => {
                 if (index >= 4) {
-                    card.classList.add("hidden"); // Sembunyikan semua kecuali 4 user pertama
+                    card.classList.add("hidden"); // Sembunyikan semua kecuali 4 kartu pertama
                 }
             });
 
-            document.querySelector(`.load-more-button[data-divisi="${divisi}"]`).style.display = "inline-block";
-            button.style.display = "none";
+            // Update visibilitas tombol
+            updateButtons(divisi);
         });
     });
+
+    // Atur tombol awal berdasarkan keadaan awal elemen
+    document.querySelectorAll(".users-grid").forEach(grid => {
+        const divisi = grid.getAttribute("data-divisi");
+        updateButtons(divisi);
+    });
 });
+

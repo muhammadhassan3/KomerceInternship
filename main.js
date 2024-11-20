@@ -189,6 +189,11 @@ jQuery(document).ready(function($) {
 jQuery(document).ready(function ($) {
     var page = 2; // Mulai dari halaman ke-2 karena halaman pertama sudah dimuat
 
+    // Cek jumlah postingan awal, sembunyikan tombol jika kosong
+    if ($('.card-society-container .card-society-event').length === 0) {
+        $('.load-more-button-society, .load-less-button-society').hide();
+    }
+
     $('.load-more-button-society').on('click', function () {
         $.ajax({
             url: load_more_params.ajaxUrl,
@@ -226,6 +231,7 @@ jQuery(document).ready(function ($) {
         $('.load-less-button-society').hide(); // Sembunyikan tombol "Tampilkan Lebih Sedikit"
     });
 });
+
 
 //menampilkan user ourteams
 document.addEventListener("DOMContentLoaded", function () {

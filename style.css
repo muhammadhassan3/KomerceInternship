@@ -1553,7 +1553,7 @@ a {
 .card-society-container {
     display: grid;
    grid-template-columns: repeat(3, 1fr); /* Dua kolom */
-   gap: 100px; /* Jarak antar kartu */
+   gap: 50px; /* Jarak antar kartu */
    margin-left: 110px;
    margin-right: 110px;
    margin-top: 80px;
@@ -1561,7 +1561,7 @@ a {
 
 /* Gaya Kartu */
 .card-society-event {
-    max-width: 1000px;
+    width: 400px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -1579,8 +1579,8 @@ a {
 
 .card-society-event img {
     padding: 15px;
-    width: 500px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
     border-radius: 20px 20px 0px 0px;
 }
 
@@ -1682,7 +1682,7 @@ a {
 
 .scty-content-wrapper {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;

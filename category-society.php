@@ -64,11 +64,17 @@
     </div>
 </div>
 
-<!-- Tombol Tampilkan Lebih Banyak -->
-<div class="btn-society">
-    <button class="load-more-button-society">Tampilkan lebih banyak</button>
-    <button class="load-less-button-society" style="display: none;">Tampilkan lebih sedikit</button>
-</div>
+<?php
+// Cek total postingan di kategori "society"
+$total_posts = $query->found_posts;
+?>
 
+<!-- Tombol Tampilkan Lebih Banyak -->
+<?php if ($total_posts > 6) : ?>
+    <div class="btn-society">
+        <button class="load-more-button-society">Tampilkan lebih banyak</button>
+        <button class="load-less-button-society" style="display: none;">Tampilkan lebih sedikit</button>
+    </div>
+<?php endif; ?>
 
 <?php get_footer(); ?>

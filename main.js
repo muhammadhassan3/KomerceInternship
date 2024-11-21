@@ -189,8 +189,8 @@ jQuery(document).ready(function($) {
 jQuery(document).ready(function ($) {
     var page = 2; // Mulai dari halaman ke-2 karena halaman pertama sudah dimuat
 
-    // Cek jumlah postingan awal, sembunyikan tombol jika kosong
-    if ($('.card-society-container .card-society-event').length === 0) {
+    // Cek jumlah awal postingan
+    if ($('.card-society-container .card-society-event').length <= 6) {
         $('.load-more-button-society, .load-less-button-society').hide();
     }
 
@@ -223,7 +223,7 @@ jQuery(document).ready(function ($) {
     });
 
     $('.load-less-button-society').on('click', function () {
-        // Hapus semua postingan kecuali 4 pertama
+        // Hapus semua postingan kecuali 6 pertama
         $('.card-society-container .card-society-event:gt(5)').remove();
 
         page = 2; // Reset halaman ke-2

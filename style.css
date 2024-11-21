@@ -2232,11 +2232,11 @@ a {
     }
 
     .card-society-event {
-        width: 300px;
+        width: 320px;
     }
 
     .card-society-event img {
-        width: 300px;
+        width: 320px;
     }
 
     .card-society-event .overlay .read-more-button {
@@ -2255,8 +2255,9 @@ a {
     .card-society-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px; 
-        margin-top: 30px;
+        gap: 70px; 
+        margin-top: 40px;
+        justify-content: center;
     }
 
     .card-society-footer {
@@ -2265,7 +2266,7 @@ a {
 
     .btn-society{
         margin-top: 20px;
-        gap: 27px;
+        gap: 70px;
     }
 
     .load-more-button, .load-less-button {
@@ -2802,8 +2803,9 @@ a {
     .card-society-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px; 
+        gap: 60px; 
         margin-top: 30px;
+        justify-content: center;
     }
 
     .card-society-footer {
@@ -3332,16 +3334,17 @@ a {
         }
     
         .card-society-event {
-            width: 280px;
+            width: 290px;
         }
     
         .card-society-event img {
-            width: 280px;
+            width: 290px;
+            height: 230px;
         }
     
         .card-society-event .overlay .read-more-button {
             padding: 4px 8px;
-            font-size: 10px;
+            font-size: 12px;
         }
     
         .card-society-content {
@@ -3349,14 +3352,14 @@ a {
         }
     
         .card-society-title {
-            font-size: 13px;
+            font-size: 15px;
         }
     
         .card-society-container {
             display: grid;
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px; 
-            margin-top: 30px;
+            justify-content: center;
         }
     
         .card-society-footer {
@@ -3368,15 +3371,22 @@ a {
             gap: 20px;
         }
     
-        .load-more-button, .load-less-button {
-            font-size: 12px;
-            padding: 10px 20px;
-        }
+       .load-more-button, .load-less-button {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
 
         .load-more-button-society, .load-less-button-society {
             font-size: 12px;
             padding: 10px 20px;
         }
+
+        /* CATEGORY OURTEAMS */
+        .btn-ourteams {
+           gap: 30px;
+        }
+        
+        
 }
 
 /* ========================CSS RESPONSIVE 450PX============================ */
@@ -3629,31 +3639,32 @@ a {
     }
     
     .card-society-event {
-        width: 280px;
+        width: 290px;
     }
-    
+
     .card-society-event img {
-        width: 280px;
+        width: 290px;
+        height: 230px;
     }
-    
+
     .card-society-event .overlay .read-more-button {
         padding: 4px 8px;
         font-size: 10px;
     }
-    
+
     .card-society-content {
         padding-top: 0px;
     }
-    
+
     .card-society-title {
         font-size: 13px;
     }
-    
+
     .card-society-container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 30px; 
-        margin-top: 30px;
+        justify-content: center;
     }
     
     .card-society-footer {
@@ -3666,14 +3677,20 @@ a {
     }
     
     .load-more-button, .load-less-button {
-        font-size: 12px;
-        padding: 10px 20px;
+        font-size: 8px;
+        padding: 5px 10px;
     }
-
     .load-more-button-society, .load-less-button-society {
         font-size: 12px;
         padding: 10px 20px;
     }
+
+
+    /* CATEGORY OURTEAMS  */
+    .btn-ourteams{
+        gap: 30px;
+    }
+    
 }
 
 /* ========================CSS RESPONSIVE 400PX============================ */
@@ -4210,11 +4227,12 @@ a {
     }
 
     .card-society-event {
-        width: 280px;
+        width: 290px;
     }
 
     .card-society-event img {
-        width: 280px;
+        width: 290px;
+        height: 230px;
     }
 
     .card-society-event .overlay .read-more-button {
@@ -4234,7 +4252,7 @@ a {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 30px; 
-        margin-top: 30px;
+        justify-content: center;
     }
 
     .card-society-footer {
@@ -4247,14 +4265,21 @@ a {
     }
 
     .load-more-button, .load-less-button {
-        font-size: 12px;
-        padding: 10px 20px;
+        font-size: 8px;
+        padding: 5px 10px;
     }
 
     .load-more-button-society, .load-less-button-society {
         font-size: 12px;
         padding: 10px 20px;
     }
+    /* CATEGORY OURTEAMS  */ 
+    .btn-ourteams{
+    gap: 30px;
+    }
+    
+
+
 }
 
 
@@ -4661,11 +4686,12 @@ a {
     }
 
     .card-society-event {
-        width: 250px;
+        width: 260px;
     }
 
     .card-society-event img {
-        width: 250px;
+        width: 260px;
+        height: 200px;
     }
 
     .card-society-event .overlay .read-more-button {
@@ -4685,7 +4711,7 @@ a {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 30px; 
-        margin-top: 30px;
+        justify-content: center;
     }
 
     .card-society-footer {
@@ -4698,12 +4724,18 @@ a {
     }
 
     .load-more-button, .load-less-button {
-        font-size: 12px;
-        padding: 10px 20px;
+        font-size: 8px;
+        padding: 5px 10px;
     }
 
     .load-more-button-society, .load-less-button-society {
         font-size: 12px;
         padding: 5px 10px;
     }
+
+    /* CATEGORY OURTEAMS  */ 
+    .btn-ourteams{
+    gap: 30px;
+    }
+   
 }

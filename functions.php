@@ -49,20 +49,22 @@ $args = array(
 $all_posts = new WP_Query($args);
 
 //menampilkan load more and less button
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$args = array(
-    'category_name' => 'society',
-    'posts_per_page' => 4,
-    'paged' => $paged
-);
-$query = new WP_Query($args);
+// Enqueue scripts and localize AJAX URL
+function enqueue_society_scripts() {
+    wp_enqueue_script('society-load-more', get_template_directory_uri() . '/js/main.js', array('jquery'), null, true);
 
+    // Localize script to pass AJAX URL to JavaScript
+    wp_localize_script('society-load-more', 'society_ajax', array(
+        'ajax_url' => admin_url('admin-ajax.php'),
+    ));
+}
+add_action('wp_enqueue_scripts', 'enqueue_society_scripts');
 
-function load_more_posts_society() {
-    $paged = isset($_POST['page']) ? intval($_POST['page']) : 1;
+// Handle AJAX request for Load More
+function load_more_society_posts() {
+    $paged = isset($_POST['paged']) ? intval($_POST['paged']) : 1;
 
     $args = array(
-        'post_type' => 'post',
         'category_name' => 'society',
         'posts_per_page' => 6,
         'paged' => $paged,
@@ -70,13 +72,7 @@ function load_more_posts_society() {
 
     $query = new WP_Query($args);
 
-    $response = array(
-        'posts' => '',
-        'hasMore' => false,
-    );
-
     if ($query->have_posts()) :
-        ob_start(); // Start buffering output
         while ($query->have_posts()) : $query->the_post(); ?>
             <div class="card-society-event">
                 <?php if (has_post_thumbnail()) {
@@ -105,30 +101,16 @@ function load_more_posts_society() {
                 </div>
             </div>
         <?php endwhile;
-        $response['posts'] = ob_get_clean(); // Capture the output buffer
-
-        // Periksa apakah masih ada postingan untuk halaman berikutnya
-        $response['hasMore'] = $query->max_num_pages > $paged;
+        wp_reset_postdata();
+    else :
+        echo '<p>No more posts available!</p>';
     endif;
 
-    wp_reset_postdata();
-    echo json_encode($response); // Kirim data dalam format JSON
-    wp_die();
+    die(); // End AJAX request
 }
+add_action('wp_ajax_load_more_society', 'load_more_society_posts');
+add_action('wp_ajax_nopriv_load_more_society', 'load_more_society_posts');
 
-add_action('wp_ajax_load_more_posts_society', 'load_more_posts_society');
-add_action('wp_ajax_nopriv_load_more_posts_society', 'load_more_posts_society');
-
-function enqueue_load_more_script() {
-    wp_enqueue_script('load-more', get_template_directory_uri() . '/js/load-more.js', array('jquery'), null, true);
-    
-    global $query; 
-    wp_localize_script('load-more', 'load_more_params', array(
-        'ajaxUrl' => admin_url('admin-ajax.php'),
-        'maxPages' => $query->max_num_pages
-    ));
-}
-add_action('wp_enqueue_scripts', 'enqueue_load_more_script');
 
 
 function enqueue_custom_scripts() {

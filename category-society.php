@@ -3,7 +3,7 @@
 <!-- SOCIETY EVENTS -->
 <div class="background-society">
     <?php $image = get_template_directory_uri() . "/Images/komerce2.png"; ?>
-    <img src="<?= $image ?>" alt="KomerceTeam" class="image-society filter-hero">
+    <img src="<?= esc_url($image) ?>" alt="KomerceTeam" class="image-society filter-hero">
 
     <!-- Centered Content Wrapper -->
     <div class="scty-content-wrapper">
@@ -17,15 +17,24 @@
 <!-- SOCIETY EVENTS -->
 
 <!-- Container Kartu -->
+<?php
+// Query untuk mendapatkan jumlah total postingan dalam kategori Society
+$total_posts_query = new WP_Query(array(
+    'category_name' => 'society',
+    'posts_per_page' => -1, // Ambil semua postingan untuk menghitung jumlah
+));
+$total_posts_count = $total_posts_query->found_posts;
+?>
+
 <div class="background-society-card">
-    <div class="card-society-container">
+    <div class="card-society-container" data-total-posts="<?php echo esc_attr($total_posts_count); ?>">
         <?php
+        // Query untuk mendapatkan postingan kategori Society
         $args = array(
-            'post_type' => 'post',
-            'category_name' => 'society',
-            'posts_per_page' => 6,
-            'paged' => 1,
+            'category_name' => 'society', // Kategori Society
+            'posts_per_page' => 6,       // Jumlah postingan awal ditampilkan
         );
+
         $query = new WP_Query($args);
 
         if ($query->have_posts()) :
@@ -64,17 +73,23 @@
     </div>
 </div>
 
-<?php
-// Cek total postingan di kategori "society"
-$total_posts = $query->found_posts;
-?>
+<!-- Load More Button -->
+<div class="btn-society">
+    <?php
+    // Cek jumlah total postingan dalam kategori Society
+    $total_posts = new WP_Query(array(
+        'category_name' => 'society',
+        'posts_per_page' => -1, // Ambil semua postingan untuk menghitung jumlah
+    ));
 
-<!-- Tombol Tampilkan Lebih Banyak -->
-<?php if ($total_posts > 6) : ?>
-    <div class="btn-society">
-        <button class="load-more-button-society">Tampilkan lebih banyak</button>
-        <button class="load-less-button-society" style="display: none;">Tampilkan lebih sedikit</button>
-    </div>
-<?php endif; ?>
+    if ($total_posts->found_posts > 6) : ?>
+        <div class="btn-society">
+            <button class="load-more-button-society" data-page="1">Tampilkan lebih banyak</button>
+            <button class="load-less-button-society" style="display: none;">Tampilkan lebih sedikit</button>
+        </div>
+    <?php endif; ?>
+    
+    
+</div>
 
 <?php get_footer(); ?>

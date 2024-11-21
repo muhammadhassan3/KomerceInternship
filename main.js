@@ -187,50 +187,57 @@ jQuery(document).ready(function($) {
 
 // Tampilkan lebih banyak society
 jQuery(document).ready(function ($) {
-    var page = 2; // Mulai dari halaman ke-2 karena halaman pertama sudah dimuat
+    let page = 2; // Start from page 2 since the first page is already loaded
+    const postsPerPage = 6; // Number of posts per page
+    const totalPosts = parseInt($('.card-society-container').data('total-posts')); // Total posts from PHP
 
-    // Cek jumlah awal postingan
-    if ($('.card-society-container .card-society-event').length <= 6) {
-        $('.load-more-button-society, .load-less-button-society').hide();
-    }
-
+    // Load More button event
     $('.load-more-button-society').on('click', function () {
+        const button = $(this);
+        button.text('Loading...'); // Indicate loading
+
         $.ajax({
-            url: load_more_params.ajaxUrl,
+            url: society_ajax.ajax_url, // URL from localized script
             type: 'POST',
             data: {
-                action: 'load_more_posts_society',
-                page: page,
+                action: 'load_more_society',
+                paged: page,
             },
             success: function (response) {
-                // Parse JSON response dari server
-                const data = JSON.parse(response);
-
-                if (data.posts.trim() !== '') {
-                    $('.card-society-container').append(data.posts); // Tambahkan postingan baru
+                if (response.trim() === '') {
+                    button.text('No more posts').hide(); // Hide button if no more posts
+                } else {
+                    $('.card-society-container').append(response);
+                    button.text('Tampilkan lebih banyak');
                     page++;
-                }
 
-                // Jika tidak ada lagi postingan, sembunyikan tombol "Tampilkan Lebih Banyak"
-                if (!data.hasMore) {
-                    $('.load-more-button-society').hide();
-                }
+                    // Calculate total loaded posts
+                    const totalLoadedPosts = (page - 1) * postsPerPage;
 
-                // Selalu tampilkan tombol "Tampilkan Lebih Sedikit"
-                $('.load-less-button-society').show();
+                    // Hide Load More button if all posts are loaded
+                    if (totalLoadedPosts >= totalPosts) {
+                        button.hide();
+                    }
+
+                    // Show Load Less button
+                    $('.load-less-button-society').show();
+                }
+            },
+            error: function () {
+                button.text('Try again').prop('disabled', false);
             },
         });
     });
 
+    // Load Less button event
     $('.load-less-button-society').on('click', function () {
-        // Hapus semua postingan kecuali 6 pertama
-        $('.card-society-container .card-society-event:gt(5)').remove();
-
-        page = 2; // Reset halaman ke-2
-        $('.load-more-button-society').show(); // Tampilkan kembali tombol "Tampilkan Lebih Banyak"
-        $('.load-less-button-society').hide(); // Sembunyikan tombol "Tampilkan Lebih Sedikit"
+        location.reload(); // Refresh to reset the post list
     });
 });
+
+
+
+
 
 
 //menampilkan user ourteams

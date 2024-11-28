@@ -639,8 +639,8 @@ background-clip: text;
 
 .card-image {
     position: relative;
-    max-width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
 }
 
 .name {
@@ -2227,6 +2227,10 @@ a {
     .card-image-ourteams{
         width: 200px;
     }
+    .card-image {
+    width: 248px;
+    height: 248px;
+    }
 
     /* =================================== CATEGORY SOCIETY============ */
     .image-society {
@@ -2780,6 +2784,10 @@ a {
     .card-image-ourteams{
         width: 200px;
     }
+    .card-image {
+    width: 218px;
+    height: 218px;
+    }
 
     /* =================================== CATEGORY SOCIETY============ */
     .image-society {
@@ -2994,6 +3002,10 @@ a {
     }
     .paragraph-desc {
         font-size: 12px; 
+    }
+    .card-image {
+    width: 288px;
+    height: 288px;
     }
 
     /* =============KOMERCE SOCIETY================ */
@@ -3649,6 +3661,10 @@ a {
     .h6-font{
         font-size: 10px;
     }
+    .card-image {
+    width: 288px;
+    height: 288px;
+    }
 
     /* =================================== CATEGORY SOCIETY============ */
     .image-society {
@@ -3871,6 +3887,10 @@ a {
     }
     .paragraph-desc {
         font-size: 12px; 
+    }
+    .card-image {
+    width: 268px;
+    height: 268px;
     }
 
     /* ====================KOMERCE SOCIETY======================= */
@@ -4428,6 +4448,10 @@ a {
 
     .paragraph-desc {
         font-size: 10px; 
+    }
+    .card-image {
+    width: 224px;
+    height: 224px;
     }
 
     /* =========================BLOG========================= */

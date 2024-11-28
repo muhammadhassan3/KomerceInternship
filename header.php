@@ -59,7 +59,7 @@
                     echo "<li class='nav-item navbar-item'><a class='nav-link navbar-link " . esc_attr($activeClass) . "' aria-current='page' href='" . esc_url($item->url) . "'> " . esc_html($item->title) . "</a></li>";
                 }
                 ?>
-                <li>
+                <!-- <li>
                         <div class="language-switch d-flex d-md-none align-items-center">
                             <a href="#" class="language-option ">ID</a>
                             <a href="#" class="language-option active">EN</a>
@@ -77,6 +77,6 @@
             <div class="language-switch d-none d-lg-flex align-items-center">
                 <a href="#" class="language-option">ID</a>
                 <a href="#" class="language-option active">EN</a>
-            </div>
+            </div> -->
     </div>
 </nav>

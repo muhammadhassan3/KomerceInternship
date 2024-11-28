@@ -802,7 +802,14 @@ a {
     cursor: pointer;
 }
 
+
 .styled-button-blog-right {
+    margin-left: 10px;
+    background: linear-gradient(117deg, #F95031 4.61%, #CF2A08 66.71%);
+    transition: background 0.3s ease;
+}
+
+.styled-button-blog-left {
     margin-left: 10px;
     background: linear-gradient(117deg, #F95031 4.61%, #CF2A08 66.71%);
     transition: background 0.3s ease;
@@ -900,10 +907,11 @@ a {
 
 .blog-image {
     border-radius: 14px;
-    width: 100%;
-    height: 210px;
-    object-fit: fill;
+    width: 380px;
+    height: 300px;
+    /* object-fit: cover; */
     object-position: center;
+
 }
 
 .filter {
@@ -1561,7 +1569,7 @@ a {
 
 /* Gaya Kartu */
 .card-society-event {
-    width: 400px;
+    width: 380px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -1579,8 +1587,10 @@ a {
 
 .card-society-event img {
     padding: 15px;
-    width: 400px;
+    width: 380px;
     height: 300px;
+    /* object-fit: cover; */
+    object-position: center;
     border-radius: 20px 20px 0px 0px;
 }
 

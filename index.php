@@ -271,7 +271,10 @@
                         ?>
                     </div>
 
-                    <h2 class="post-title"><?php echo substr(strip_tags(get_the_title()), 0, 35) . "..."; ?></h2>
+                    <h2 class="post-title"><?php
+                            $title = strip_tags(get_the_title());
+                            echo strlen($title) > 40 ? substr($title, 0, 35) . "..." : $title;
+                            ?></h2>
                     <p class="post-description">
                         <?php echo wp_trim_words(get_the_content(), 12, '...'); ?>
                     </p>

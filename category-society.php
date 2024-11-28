@@ -2,16 +2,18 @@
 
 <!-- SOCIETY EVENTS -->
 <div class="background-society">
-    <?php $image = get_template_directory_uri() . "/Images/komerce2.png"; ?>
+    <?php $image = get_template_directory_uri() . "/Images/banner-society.png"; ?>
     <img src="<?= esc_url($image) ?>" alt="KomerceTeam" class="image-society filter-hero">
 
     <!-- Centered Content Wrapper -->
-    <div class="scty-content-wrapper">
-        <div class="scty-main-heading">
-            <span>Society</span>
-            <span class="events-bg">Events</span>
+    <div class="margin-content-wrapper">
+            <div class="scty-content-wrapper">
+                <div class="scty-main-heading">
+                    <span>Society</span>
+                    <span class="events-bg">Events</span>
+                </div>
+                <p class="scty-sub-heading">Ikuti dan jelajahi kegiatan kami!</p>
         </div>
-        <p class="scty-sub-heading">Ikuti dan jelajahi kegiatan kami!</p>
     </div>
 </div>
 <!-- SOCIETY EVENTS -->
